@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dhaa2ss681rt8"]
+
+[node name="Combat" type="Node2D"]
+
+[node name="Foreground" type="VBoxContainer" parent="."]
+offset_right = 1151.0
+offset_bottom = 648.0
+
+[node name="TempLabel" type="Label" parent="Foreground"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Combat Screen!"
