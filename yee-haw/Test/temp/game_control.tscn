@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bu86ac4t2q6rq"]
+
+[ext_resource type="Script" uid="uid://cfpkociqrjlyj" path="res://Test/temp/game_conrtol.gd" id="1_nai1q"]
+[ext_resource type="PackedScene" uid="uid://dhhni2esiva8n" path="res://Test/temp/scene1.tscn" id="2_kmidc"]
+[ext_resource type="PackedScene" uid="uid://bc3q36lsweiat" path="res://Test/temp/scene2.tscn" id="3_w2nim"]
+
+[node name="GameControl" type="Node2D" unique_id=65902789]
+script = ExtResource("1_nai1q")
+scene1 = ExtResource("2_kmidc")
+scene2 = ExtResource("3_w2nim")
