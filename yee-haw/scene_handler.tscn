@@ -1,18 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://jyaogli8hima"]
+[gd_scene format=3 uid="uid://jyaogli8hima"]
 
 [ext_resource type="Script" uid="uid://bqu83p0j4urh" path="res://scene_handler.gd" id="1_qjdn2"]
-[ext_resource type="PackedScene" uid="uid://c228h2u05ni0v" path="res://Scenes/main_menu.tscn" id="2_1lbnm"]
-[ext_resource type="PackedScene" uid="uid://dhaa2ss681rt8" path="res://Scenes/combat.tscn" id="2_cidb5"]
-[ext_resource type="PackedScene" uid="uid://cui3llufng60e" path="res://Scenes/ui.tscn" id="3_qjdn2"]
-[ext_resource type="PackedScene" uid="uid://cbvxlnp0s3hm0" path="res://Scenes/intro.tscn" id="3_rp770"]
+[ext_resource type="PackedScene" uid="uid://dhaa2ss681rt8" path="res://Scenes/combat.tscn" id="2_1lbnm"]
+[ext_resource type="PackedScene" uid="uid://cui3llufng60e" path="res://Scenes/ui.tscn" id="3_rp770"]
+[ext_resource type="PackedScene" uid="uid://c228h2u05ni0v" path="res://Scenes/main_menu.tscn" id="4_a6qyh"]
+[ext_resource type="PackedScene" uid="uid://cbvxlnp0s3hm0" path="res://Scenes/intro.tscn" id="5_7de6e"]
 
-[node name="SceneHandler" type="Node"]
+[node name="SceneHandler" type="Node2D" unique_id=33227034]
 script = ExtResource("1_qjdn2")
-
-[node name="MainMenu" parent="." instance=ExtResource("2_1lbnm")]
-
-[node name="Intro" parent="." instance=ExtResource("3_rp770")]
-
-[node name="Combat" parent="." instance=ExtResource("2_cidb5")]
-
-[node name="UI" parent="." instance=ExtResource("3_qjdn2")]
+combat = ExtResource("2_1lbnm")
+ui = ExtResource("3_rp770")
+main_menu = ExtResource("4_a6qyh")
+intro = ExtResource("5_7de6e")
