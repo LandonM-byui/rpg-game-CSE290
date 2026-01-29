@@ -2,7 +2,7 @@ extends Node2D
 
 # Tbh, just copying Dallin here
 class_name ScenePreset
-@onready var button = $TextureButton
+@onready var button = $VBoxContainer/TextureButton
 
 
 
