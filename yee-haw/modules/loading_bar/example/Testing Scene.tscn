@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bmbuaa5maa8x6"]
+
+[ext_resource type="Script" uid="uid://btl6h3v2wy7fi" path="res://modules/loading_bar/example/progress_testing.gd" id="1_85333"]
+[ext_resource type="PackedScene" uid="uid://dxmes8c4ao4p8" path="res://modules/loading_bar/level_progress_box.tscn" id="2_85333"]
+
+[node name="TestingScene" type="Control" unique_id=49290182]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_85333")
+
+[node name="Button" type="Button" parent="." unique_id=516180327]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 274.0
+offset_right = 596.0
+offset_bottom = 305.0
+scale = Vector2(2, 2)
+text = "Advance Progress
+"
+
+[node name="Timer" type="Timer" parent="." unique_id=830024853]
+wait_time = 0.5
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=631505770]
+wait_time = 2.0
+one_shot = true
+
+[node name="LevelProgressBox" parent="." unique_id=488194222 instance=ExtResource("2_85333")]
+visible = false
+layout_mode = 1
