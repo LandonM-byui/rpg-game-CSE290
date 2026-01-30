@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dxmes8c4ao4p8"]
+
+[ext_resource type="Script" uid="uid://dkdvslhqknpu7" path="res://modules/loading_bar/components/level_progress_controller.gd" id="1_ykfw4"]
+[ext_resource type="PackedScene" uid="uid://qdlvkiyjnv3a" path="res://modules/loading_bar/components/loading_node.tscn" id="2_huvyv"]
+[ext_resource type="Gradient" uid="uid://yrx633ajijbu" path="res://modules/loading_bar/components/loading_bar_gradient.tres" id="3_txu46"]
+
+[sub_resource type="Gradient" id="Gradient_txu46"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o7t27"]
+gradient = SubResource("Gradient_txu46")
+width = 1000
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_txu46"]
+gradient = ExtResource("3_txu46")
+width = 980
+height = 44
+
+[node name="LevelProgressBox" type="ColorRect" unique_id=488194222]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+color = Color(0.57, 0.57, 0.57, 1)
+script = ExtResource("1_ykfw4")
+stages = 3
+base_node = ExtResource("2_huvyv")
+boss_node = ExtResource("2_huvyv")
+deactivated_node_color = Color(0.99999994, 0.8623782, 0.947239, 1)
+slider_gradient = ExtResource("3_txu46")
+loading_speed = 2.0
+
+[node name="Progress Container" type="Control" parent="." unique_id=1112786800]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 100.0
+offset_top = 75.0
+offset_right = -100.0
+offset_bottom = 125.0
+grow_horizontal = 2
+
+[node name="ProgressBar" type="TextureProgressBar" parent="Progress Container" unique_id=116754505]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 3.0
+step = 0.01
+texture_under = SubResource("GradientTexture2D_o7t27")
+texture_progress = SubResource("GradientTexture2D_txu46")
+texture_progress_offset = Vector2(10, 10)
+
+[node name="Timer" type="Timer" parent="Progress Container/ProgressBar" unique_id=68998974]
+one_shot = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Progress Container" unique_id=877541998]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 15.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
