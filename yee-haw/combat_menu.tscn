@@ -5,8 +5,9 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 326.0
-offset_right = 10.0
+offset_top = 433.0
+offset_right = -1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -47,7 +48,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 4.0
 
-[node name="VSeparator2" type="VSeparator" parent="MarginContainer/VBoxContainer" unique_id=1862171958]
+[node name="VSeparator2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=27192552]
 layout_mode = 2
 size_flags_horizontal = 3
 
