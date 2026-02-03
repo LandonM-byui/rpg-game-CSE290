@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://b8nw7hes4x2wx"]
+
+[ext_resource type="Script" uid="uid://e3w36865tyl1" path="res://Combat Menu Scenes/weapons_menu.gd" id="1_3vxps"]
+
+[node name="Weapons Menu" type="Control" unique_id=1269155419]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 433.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3vxps")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1359954426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=632401426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = 38.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=455329322]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1822447677]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Weapon 1"
+
+[node name="VSeparator" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1907308523]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1033147221]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Weapon 2"
+
+[node name="VSeparator2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=27192552]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1508991566]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Weapon 3"
+
+[node name="VSeparator3" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1600279607]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2131424040]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Weapon 4"
+
+[node name="VSeparator4" type="Control" parent="MarginContainer/VBoxContainer" unique_id=235525495]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1116863124]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

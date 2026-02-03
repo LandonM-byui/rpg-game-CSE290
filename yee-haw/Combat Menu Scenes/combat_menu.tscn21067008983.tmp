@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://1a0rprfndu5x"]
+
+[ext_resource type="Script" uid="uid://cdcx041gjt67l" path="res://Combat Menu Scenes/combat_menu.gd" id="1_ank73"]
+
+[node name="Combat Menu" type="Control" unique_id=1269155419]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 433.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ank73")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1359954426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=632401426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = 38.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=455329322]
+layout_mode = 2
+
+[node name="Weapons Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1822447677]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Weapons"
+
+[node name="VSeparator" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1907308523]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Items Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1033147221]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Items"
+
+[node name="VSeparator2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=27192552]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Move Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1508991566]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Move"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Weapons Button" to="." method="_on_weapons_button_pressed"]
