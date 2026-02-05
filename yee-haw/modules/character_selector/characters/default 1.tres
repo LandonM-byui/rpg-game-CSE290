@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cgke0ptdp86qs"]
+
+[ext_resource type="Script" uid="uid://cnofeohs4n8yi" path="res://modules/character_selector/scripts/character_data.gd" id="1_4v7pl"]
+
+[resource]
+script = ExtResource("1_4v7pl")
+name = "Default 1"
+color = Color(0.9297099, 0, 0.019971758, 1)
+metadata/_custom_type_script = "uid://cnofeohs4n8yi"
