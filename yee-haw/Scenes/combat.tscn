@@ -1,39 +1,12 @@
 [gd_scene format=3 uid="uid://dhaa2ss681rt8"]
 
 [ext_resource type="Script" uid="uid://cxast0e82whkc" path="res://Scenes/ScenePreset.gd" id="1_7jmb3"]
-[ext_resource type="Script" uid="uid://q4mgqewj1rvd" path="res://Combat Window/playerlanes.gd" id="2_ubpar"]
 [ext_resource type="PackedScene" uid="uid://bqy3fhb7aeddp" path="res://Combat Window/playerlanes.tscn" id="3_ut0kg"]
 [ext_resource type="PackedScene" uid="uid://dyl8c44ca3131" path="res://Combat Window/enemy.tscn" id="4_yt1oa"]
-[ext_resource type="PackedScene" uid="uid://ddkrbfymqecus" path="res://Scenes/player_character.tscn" id="5_ut0kg"]
+[ext_resource type="PackedScene" uid="uid://ddkrbfymqecus" path="res://Combat Window/player_character.tscn" id="5_ut0kg"]
 
 [node name="Combat" type="Node2D" unique_id=1727925518]
 script = ExtResource("1_7jmb3")
-
-[node name="background" type="ColorRect" parent="." unique_id=870261413]
-offset_right = 1151.0
-offset_bottom = 409.0
-color = Color(0.35164863, 0.48274964, 0.572291, 1)
-script = ExtResource("2_ubpar")
-
-[node name="Foreground" type="VBoxContainer" parent="." unique_id=76304927]
-offset_left = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
-
-[node name="TempLabel" type="Label" parent="Foreground" unique_id=498863367]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 32
-text = "Combat Screen!"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=82524351]
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 41.0
-offset_bottom = 41.0
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer" unique_id=1730470810]
-layout_mode = 2
 
 [node name="Combat Window" type="Node2D" parent="." unique_id=1656921578]
 
