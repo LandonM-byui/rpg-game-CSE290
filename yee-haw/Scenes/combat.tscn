@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://q4mgqewj1rvd" path="res://Combat Window/playerlanes.gd" id="2_ubpar"]
 [ext_resource type="PackedScene" uid="uid://bqy3fhb7aeddp" path="res://Combat Window/playerlanes.tscn" id="3_ut0kg"]
 [ext_resource type="PackedScene" uid="uid://dyl8c44ca3131" path="res://Combat Window/enemy.tscn" id="4_yt1oa"]
+[ext_resource type="PackedScene" uid="uid://ddkrbfymqecus" path="res://Scenes/player_character.tscn" id="5_ut0kg"]
 
 [node name="Combat" type="Node2D" unique_id=1727925518]
 script = ExtResource("1_7jmb3")
@@ -38,7 +39,6 @@ layout_mode = 2
 
 [node name="Lane 1" parent="Combat Window" unique_id=601969368 instance=ExtResource("3_ut0kg")]
 position = Vector2(135, 126)
-script = ExtResource("2_ubpar")
 
 [node name="Lane 2" parent="Combat Window" unique_id=2007841483 instance=ExtResource("3_ut0kg")]
 position = Vector2(133, 191)
@@ -54,3 +54,6 @@ position = Vector2(899, 191)
 
 [node name="Enemy 3" parent="Combat Window" unique_id=1707440029 instance=ExtResource("4_yt1oa")]
 position = Vector2(1006, 255)
+
+[node name="PlayerCharacter" parent="Combat Window" unique_id=2124282093 instance=ExtResource("5_ut0kg")]
+position = Vector2(148, 205)

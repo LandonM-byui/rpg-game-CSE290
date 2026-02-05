@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://csywpp31f2ty3"]
+
+[ext_resource type="Texture2D" uid="uid://cx4kvmvikphr5" path="res://Assets/Sample Assets/White_Rectangle.jpg" id="1_hhc07"]
+
+[node name="PlayerCharacter" type="Node2D" unique_id=2124282093]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1890443542]
+position = Vector2(19, 22.000002)
+scale = Vector2(0.12458472, 0.15925926)
+texture = ExtResource("1_hhc07")
+
+[node name="Label" type="Label" parent="." unique_id=1416929624]
+offset_left = 6.0
+offset_top = -13.0
+offset_right = 32.0
+theme_override_font_sizes/font_size = 9
+text = "40/40"
