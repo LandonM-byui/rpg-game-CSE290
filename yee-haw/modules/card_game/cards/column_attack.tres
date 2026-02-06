@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AttackCard" format=3 uid="uid://b1quaihd43ehj"]
+
+[ext_resource type="Script" uid="uid://dxo41alnarhqr" path="res://modules/card_game/scripts/attack_card.gd" id="1_j6rma"]
+
+[resource]
+script = ExtResource("1_j6rma")
+attack_target = 2
+name = "C. Atk"
+color = Color(0.65860087, 0.6186421, 1, 1)
+metadata/_custom_type_script = "uid://dxo41alnarhqr"

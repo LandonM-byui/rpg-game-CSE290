@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dclor804aadnd"]
+
+[ext_resource type="Script" uid="uid://cujunpinb1vt5" path="res://modules/card_game/scripts/grid_selection_area.gd" id="1_8s3na"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p318l"]
+size = Vector2(850, 1450)
+
+[node name="EnemyGridCollider" type="StaticBody2D" unique_id=1393013119]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_8s3na")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1713780461]
+shape = SubResource("RectangleShape2D_p318l")
