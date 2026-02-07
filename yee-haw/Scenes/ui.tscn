@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cui3llufng60e"]
 
-[node name="UI" type="Control"]
+[node name="UI" type="Control" unique_id=1403733522]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -8,12 +8,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CombatHUD" type="Control" parent="."]
+[node name="CombatHUD" type="Control" parent="." unique_id=319411558]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="UpgradeSelect" type="Control" parent="."]
+[node name="UpgradeSelect" type="Control" parent="." unique_id=732951507]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

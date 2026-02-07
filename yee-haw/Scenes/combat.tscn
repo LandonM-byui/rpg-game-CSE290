@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dhaa2ss681rt8"]
 
 [ext_resource type="Script" uid="uid://cxast0e82whkc" path="res://Scenes/ScenePreset.gd" id="1_7jmb3"]
+[ext_resource type="Script" uid="uid://drhg23o5m88j3" path="res://Scenes/SceneButton.gd" id="2_fe60u"]
+[ext_resource type="Texture2D" uid="uid://cx4kvmvikphr5" path="res://Assets/Sample Assets/White_Rectangle.jpg" id="2_ut0kg"]
+[ext_resource type="Texture2D" uid="uid://7qrtgn2t8fcd" path="res://Assets/Sample Assets/Black_rectangle.jpg" id="3_yt1oa"]
+[ext_resource type="Texture2D" uid="uid://dn1x3a1ky6gqx" path="res://Assets/Sample Assets/Rectangle.jpg" id="4_3w34b"]
 
 [node name="Combat" type="Node2D" unique_id=135003510]
 script = ExtResource("1_7jmb3")
@@ -21,3 +25,7 @@ offset_bottom = 40.0
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer" unique_id=2072509957]
 layout_mode = 2
+texture_normal = ExtResource("2_ut0kg")
+texture_pressed = ExtResource("3_yt1oa")
+texture_hover = ExtResource("4_3w34b")
+script = ExtResource("2_fe60u")
