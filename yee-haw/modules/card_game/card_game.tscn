@@ -3,18 +3,23 @@
 [ext_resource type="Script" uid="uid://bnjw8b4me5ohw" path="res://modules/card_game/scripts/card_selection_controller.gd" id="1_gc4b7"]
 [ext_resource type="PackedScene" uid="uid://ck0qj3qheef65" path="res://modules/card_game/enemy_grid_row.tscn" id="1_niue7"]
 [ext_resource type="PackedScene" uid="uid://bukkanr4pda5r" path="res://modules/card_game/card.tscn" id="1_p4slq"]
+[ext_resource type="Script" uid="uid://dn7qk5td4lxue" path="res://modules/card_game/scripts/game_controller.gd" id="1_x5kpi"]
 [ext_resource type="Resource" uid="uid://b1quaihd43ehj" path="res://modules/card_game/cards/column_attack.tres" id="2_7bmen"]
 [ext_resource type="PackedScene" uid="uid://d1anor68t2gd1" path="res://modules/card_game/enemy_column_collider.tscn" id="2_g6l2h"]
 [ext_resource type="PackedScene" uid="uid://dclor804aadnd" path="res://modules/card_game/enemy_grid_collider.tscn" id="3_f8k5o"]
 [ext_resource type="Resource" uid="uid://dbrw0uewv2dfy" path="res://modules/card_game/cards/all_attack.tres" id="3_gc4b7"]
 [ext_resource type="Resource" uid="uid://b2u0do5ptebtk" path="res://modules/card_game/cards/lane_attack.tres" id="4_niue7"]
+[ext_resource type="PackedScene" uid="uid://2xj1e17wtpj8" path="res://modules/card_game/card_back.tscn" id="9_gxyvq"]
 
 [node name="CardGame" type="Node" unique_id=2120214280]
+
+[node name="Game Controller" type="Node" parent="." unique_id=487759638]
+script = ExtResource("1_x5kpi")
 
 [node name="Game" type="Node2D" parent="." unique_id=857822932]
 
 [node name="Enemy Grids" type="Node2D" parent="Game" unique_id=1241919926]
-position = Vector2(3433.94, 1080)
+position = Vector2(3526, 820)
 
 [node name="EnemyGridRow 0" parent="Game/Enemy Grids" unique_id=2144702210 instance=ExtResource("1_niue7")]
 position = Vector2(0, -600)
@@ -79,36 +84,37 @@ card_pivot = NodePath("../../Card Pivot")
 
 [node name="Card" parent="UI/HBoxContainer/Card Source" unique_id=39510458 instance=ExtResource("1_p4slq")]
 layout_mode = 0
-offset_left = 1352.8954
-offset_top = -126.6297
-offset_right = 1727.8955
-offset_bottom = 435.8703
-rotation = -0.30543262
+offset_left = 1394.4913
+offset_top = -203.53387
+offset_right = 1769.4916
+offset_bottom = 358.96613
+rotation = -0.15707959
 
 [node name="Card2" parent="UI/HBoxContainer/Card Source" unique_id=2079323098 instance=ExtResource("1_p4slq")]
 layout_mode = 0
-offset_left = 1689.8215
-offset_top = -193.73608
-offset_right = 2064.8215
-offset_bottom = 368.76392
-rotation = -0.13962634
+offset_left = 1605.0468
+offset_top = -218.59906
+offset_right = 1980.0468
+offset_bottom = 343.90094
+rotation = -0.052359868
 data = ExtResource("3_gc4b7")
 
 [node name="Card3" parent="UI/HBoxContainer/Card Source" unique_id=749940671 instance=ExtResource("1_p4slq")]
 layout_mode = 0
-offset_left = 1864.134
-offset_top = -212.60574
-offset_right = 2239.134
-offset_bottom = 349.89426
-rotation = -0.06981317
+offset_left = 1816.0233
+offset_top = -211.57266
+offset_right = 2191.024
+offset_bottom = 350.92734
+rotation = 0.052359868
 data = ExtResource("2_7bmen")
 
 [node name="Card4" parent="UI/HBoxContainer/Card Source" unique_id=283707075 instance=ExtResource("1_p4slq")]
 layout_mode = 0
-offset_left = 2039.3384
-offset_top = -219.27026
-offset_right = 2414.3384
-offset_bottom = 343.22974
+offset_left = 2025.1094
+offset_top = -182.53207
+offset_right = 2400.1094
+offset_bottom = 379.96793
+rotation = 0.15707959
 data = ExtResource("4_niue7")
 
 [node name="RSpacer" type="Control" parent="UI/HBoxContainer" unique_id=450901522]
@@ -128,3 +134,38 @@ offset_right = -13.0
 offset_bottom = 1929.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="Deck" type="Control" parent="UI" unique_id=804933803]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Card Back" parent="UI/Deck" unique_id=1840216044 instance=ExtResource("9_gxyvq")]
+layout_mode = 0
+offset_left = 46.0
+offset_top = -581.0
+offset_right = 421.0
+offset_bottom = -18.5
+
+[node name="Discard" type="Control" parent="UI" unique_id=78133498]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Card Back" parent="UI/Discard" unique_id=1655269352 instance=ExtResource("9_gxyvq")]
+layout_mode = 0
+offset_left = -421.0
+offset_top = -581.0
+offset_right = -46.0
+offset_bottom = -18.5

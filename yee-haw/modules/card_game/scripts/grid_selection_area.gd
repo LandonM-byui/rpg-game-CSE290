@@ -1,6 +1,8 @@
 extends EnemySelectionArea
+## Defines an entire enemy grid as a selection area.
 class_name GridSelectionArea
 
+## Every row containing all enemy selection nodes
 @export var all_rows : Array[Node2D]
 
 func select() -> void:

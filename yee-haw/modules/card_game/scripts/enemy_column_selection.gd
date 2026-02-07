@@ -1,9 +1,13 @@
 extends EnemySelectionArea
+## Defines an entire enemy column as a selection area.
 class_name ColumnSelectionArea
 
+## Rows to pull enemy nodes from.
 @export var ref_rows : Array[Node2D]
+## Column index. (Gets children at this index from each row)
 @export var col_id : int
 
+## Tracked nodes that are referenced by this column.
 var linked_vfx : Array[Node2D]
 
 func _ready() -> void:
