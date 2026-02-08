@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://2xj1e17wtpj8"]
+
+[node name="Card Back" type="Control" unique_id=39510458]
+custom_minimum_size = Vector2(375, 562.5)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 225.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Control" type="Control" parent="." unique_id=1433418939]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=234100293]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1714499061]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ColorRect2" type="ColorRect" parent="Control/MarginContainer" unique_id=1840280531]
+layout_mode = 2
+mouse_filter = 2
+color = Color(4.6626663e-08, 0.06265641, 0.08732916, 1)

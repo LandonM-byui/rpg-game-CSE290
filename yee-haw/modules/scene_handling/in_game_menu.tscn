@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bl75eggnjadl7"]
+
+[ext_resource type="Script" uid="uid://b4848wvnjtw85" path="res://modules/scene_handling/scripts/submenu_handler.gd" id="1_yi3ll"]
+[ext_resource type="Script" uid="uid://bp3dd2jdm7lvo" path="res://modules/scene_handling/scripts/full_scene_button.gd" id="2_60frn"]
+[ext_resource type="Script" uid="uid://cdxuup54d36g2" path="res://modules/scene_handling/scripts/sub_scene_button.gd" id="3_m182b"]
+
+[node name="GameMenu" type="VBoxContainer" unique_id=865142876 node_paths=PackedStringArray("close_button", "scene_buttons", "subscene_buttons")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yi3ll")
+close_button = NodePath("CenterContainer/Close Button")
+scene_buttons = [NodePath("ColorRect/MarginContainer/VBoxContainer/Main Menu Button"), NodePath("ColorRect/MarginContainer/VBoxContainer/Leave Game Button")]
+subscene_buttons = [NodePath("ColorRect/MarginContainer/VBoxContainer/Settings Button")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1181493445]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.24658787, 0.2465879, 0.24658787, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=1108543256]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 35
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/MarginContainer" unique_id=1107733328]
+layout_mode = 2
+color = Color(0.5629578, 0.56295776, 0.56295776, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=1198953187]
+layout_mode = 2
+alignment = 1
+
+[node name="Main Menu Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=428488870]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 142
+text = "Main Menu"
+script = ExtResource("2_60frn")
+
+[node name="Spacer" type="Control" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1645638614]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Leave Game Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1540761315]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 142
+text = "Leave Game"
+script = ExtResource("2_60frn")
+scene_link = 1
+
+[node name="Spacer2" type="Control" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1677347722]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Settings Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1082862023]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 142
+text = "Settings"
+script = ExtResource("3_m182b")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1015352204]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="Close Button" type="Button" parent="CenterContainer" unique_id=55798901]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 162
+text = "Close"

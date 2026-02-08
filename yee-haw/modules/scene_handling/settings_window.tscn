@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://vo1hnxymycx7"]
+
+[ext_resource type="Script" uid="uid://b4848wvnjtw85" path="res://modules/scene_handling/scripts/submenu_handler.gd" id="1_vvts7"]
+
+[node name="SettingsWindow" type="VBoxContainer" unique_id=865142876 node_paths=PackedStringArray("close_button")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vvts7")
+close_button = NodePath("CenterContainer/Close Button")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1181493445]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.24658787, 0.2465879, 0.24658787, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=1108543256]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 35
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/MarginContainer" unique_id=1107733328]
+layout_mode = 2
+color = Color(0.5629578, 0.56295776, 0.56295776, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/MarginContainer" unique_id=1888526295]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/CenterContainer" unique_id=1023605839]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.24658787, 0.2465879, 0.24658787, 1)
+theme_override_font_sizes/font_size = 150
+text = "(Settings Here)"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1015352204]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="Close Button" type="Button" parent="CenterContainer" unique_id=55798901]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 162
+text = "Close"

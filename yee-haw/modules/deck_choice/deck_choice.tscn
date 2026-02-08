@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://dg1a80yhp3ovf"]
+
+[ext_resource type="PackedScene" uid="uid://2xj1e17wtpj8" path="res://modules/cards/card_back.tscn" id="1_jpdwo"]
+[ext_resource type="Script" uid="uid://yu2vg7low7x" path="res://modules/scene_handling/scripts/scene_controller.gd" id="1_pokqm"]
+[ext_resource type="Script" uid="uid://bp3dd2jdm7lvo" path="res://modules/scene_handling/scripts/full_scene_button.gd" id="2_uxp6t"]
+[ext_resource type="Script" uid="uid://cdxuup54d36g2" path="res://modules/scene_handling/scripts/sub_scene_button.gd" id="3_pokqm"]
+
+[node name="DeckChoice" type="Control" unique_id=890748103 node_paths=PackedStringArray("scene_buttons", "subscene_buttons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pokqm")
+scene_buttons = [NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container/Menu Button"), NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container/Start Game Button")]
+subscene_buttons = [NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container/Settings Button")]
+
+[node name="BG Outline" type="ColorRect" parent="." unique_id=704320977]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24658787, 0.2465879, 0.24658787, 1)
+
+[node name="Main Margin" type="MarginContainer" parent="." unique_id=326722579]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 35
+
+[node name="Window Divider" type="HBoxContainer" parent="Main Margin" unique_id=742706430]
+layout_mode = 2
+
+[node name="Deck Selector" type="Control" parent="Main Margin/Window Divider" unique_id=2085466542]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="BG" type="ColorRect" parent="Main Margin/Window Divider/Deck Selector" unique_id=1654755735]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5629578, 0.56295776, 0.56295776, 1)
+
+[node name="Inner Margin" type="MarginContainer" parent="Main Margin/Window Divider/Deck Selector" unique_id=946602845]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Deck Selection Column" type="VBoxContainer" parent="Main Margin/Window Divider/Deck Selector/Inner Margin" unique_id=1313626856]
+layout_mode = 2
+
+[node name="Up Button" type="Button" parent="Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column" unique_id=727466847]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 97
+text = "UP"
+
+[node name="Spacer-50-0" type="Control" parent="Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column" unique_id=497054232]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Deck Container" type="CenterContainer" parent="Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column" unique_id=273070098]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Card Back" parent="Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column/Deck Container" unique_id=39510458 instance=ExtResource("1_jpdwo")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Spacer-50-1" type="Control" parent="Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column" unique_id=1044826315]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Down Button" type="Button" parent="Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column" unique_id=1779945828]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 97
+text = "Down"
+
+[node name="Divider" type="Control" parent="Main Margin/Window Divider" unique_id=449587456]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="Stats Screen" type="Control" parent="Main Margin/Window Divider" unique_id=2069767560]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="BG" type="ColorRect" parent="Main Margin/Window Divider/Stats Screen" unique_id=1443280790]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5629578, 0.56295776, 0.56295776, 1)
+
+[node name="Inner Margin" type="MarginContainer" parent="Main Margin/Window Divider/Stats Screen" unique_id=1318534411]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="stat-button divider" type="VBoxContainer" parent="Main Margin/Window Divider/Stats Screen/Inner Margin" unique_id=417579441]
+layout_mode = 2
+
+[node name="Stats screen" type="VBoxContainer" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider" unique_id=1548552925]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="deck name" type="Label" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen" unique_id=261156642]
+layout_mode = 2
+theme_override_font_sizes/font_size = 179
+text = "Deck Name"
+horizontal_alignment = 1
+
+[node name="spacer" type="Control" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen" unique_id=685067891]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="description text" type="Label" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen" unique_id=981657120]
+layout_mode = 2
+theme_override_font_sizes/font_size = 53
+text = "Deck description will go here, as well as a table displaying all cards contained in deck.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+autowrap_mode = 2
+
+[node name="Menu button container" type="HBoxContainer" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider" unique_id=1788120731]
+layout_mode = 2
+alignment = 1
+
+[node name="Menu Button" type="Button" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container" unique_id=1636976526]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 108
+text = "Main Menu"
+script = ExtResource("2_uxp6t")
+
+[node name="Spacer" type="Control" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container" unique_id=67154810]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Settings Button" type="Button" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container" unique_id=175216227]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 108
+text = "Settings"
+script = ExtResource("3_pokqm")
+
+[node name="Spacer2" type="Control" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container" unique_id=1882243180]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Start Game Button" type="Button" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container" unique_id=1457782214]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 108
+text = "Play"
+script = ExtResource("2_uxp6t")
+scene_link = 2

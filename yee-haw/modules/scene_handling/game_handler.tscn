@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://chui41whtr0s2"]
+
+[ext_resource type="Script" uid="uid://dxo0fp8fp6exq" path="res://modules/scene_handling/scripts/game_handler.gd" id="1_auhg0"]
+
+[node name="GameHandler" type="Node" unique_id=610416379 node_paths=PackedStringArray("scene_root", "submenu_root", "full_subscene_root")]
+script = ExtResource("1_auhg0")
+scene_root = NodePath("Scene Root")
+submenu_root = NodePath("Submenu Root/HBoxContainer/Submenu Container/MarginContainer")
+full_subscene_root = NodePath("Submenu Root")
+
+[node name="Scene Root" type="Node" parent="." unique_id=207765204]
+
+[node name="Submenu Root" type="Control" parent="." unique_id=59374629]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="darkening panel" type="ColorRect" parent="Submenu Root" unique_id=400311084]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.68235296)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Submenu Root" unique_id=2040308230]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Control" type="Control" parent="Submenu Root/HBoxContainer" unique_id=2035754958]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Submenu Container" type="Control" parent="Submenu Root/HBoxContainer" unique_id=461670475]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Submenu Root/HBoxContainer/Submenu Container" unique_id=517762554]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Control3" type="Control" parent="Submenu Root/HBoxContainer" unique_id=71394367]
+layout_mode = 2
+size_flags_horizontal = 3

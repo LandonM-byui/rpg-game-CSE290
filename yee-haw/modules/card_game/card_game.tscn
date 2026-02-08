@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://6yy4qsd2i3qx"]
+
+[ext_resource type="Script" uid="uid://bnjw8b4me5ohw" path="res://modules/card_game/scripts/card_selection_controller.gd" id="1_gc4b7"]
+[ext_resource type="PackedScene" uid="uid://ck0qj3qheef65" path="res://modules/card_game/enemy_grid_row.tscn" id="1_niue7"]
+[ext_resource type="PackedScene" uid="uid://bukkanr4pda5r" path="res://modules/cards/hand_card.tscn" id="1_p4slq"]
+[ext_resource type="Script" uid="uid://c63eauk85svgr" path="res://modules/card_game/scripts/card_game.gd" id="1_vo2k6"]
+[ext_resource type="Script" uid="uid://dn7qk5td4lxue" path="res://modules/card_game/scripts/game_controller.gd" id="1_x5kpi"]
+[ext_resource type="Resource" uid="uid://b1quaihd43ehj" path="res://modules/cards/data/column_attack.tres" id="2_7bmen"]
+[ext_resource type="PackedScene" uid="uid://d1anor68t2gd1" path="res://modules/card_game/enemy_column_collider.tscn" id="2_g6l2h"]
+[ext_resource type="PackedScene" uid="uid://dclor804aadnd" path="res://modules/card_game/enemy_grid_collider.tscn" id="3_f8k5o"]
+[ext_resource type="Resource" uid="uid://dbrw0uewv2dfy" path="res://modules/cards/data/all_attack.tres" id="3_gc4b7"]
+[ext_resource type="Resource" uid="uid://b2u0do5ptebtk" path="res://modules/cards/data/lane_attack.tres" id="4_niue7"]
+[ext_resource type="PackedScene" uid="uid://2xj1e17wtpj8" path="res://modules/cards/card_back.tscn" id="9_gxyvq"]
+[ext_resource type="Resource" uid="uid://bl5lxklo0j7sa" path="res://modules/cards/data/test_attack.tres" id="11_vo2k6"]
+
+[node name="CardGame" type="Node" unique_id=2120214280]
+script = ExtResource("1_vo2k6")
+
+[node name="Game Controller" type="Node" parent="." unique_id=487759638]
+script = ExtResource("1_x5kpi")
+
+[node name="Game" type="Node2D" parent="." unique_id=857822932]
+
+[node name="Enemy Grids" type="Node2D" parent="Game" unique_id=1241919926]
+position = Vector2(3526, 820)
+
+[node name="EnemyGridRow 0" parent="Game/Enemy Grids" unique_id=2144702210 instance=ExtResource("1_niue7")]
+position = Vector2(0, -600)
+
+[node name="EnemyGridRow 1" parent="Game/Enemy Grids" unique_id=154150605 instance=ExtResource("1_niue7")]
+position = Vector2(0, -300)
+
+[node name="EnemyGridRow 2" parent="Game/Enemy Grids" unique_id=1773614729 instance=ExtResource("1_niue7")]
+
+[node name="EnemyGridRow 3" parent="Game/Enemy Grids" unique_id=545857772 instance=ExtResource("1_niue7")]
+position = Vector2(0, 300)
+
+[node name="EnemyGridRow 4" parent="Game/Enemy Grids" unique_id=2090927367 instance=ExtResource("1_niue7")]
+position = Vector2(0, 600)
+
+[node name="EnemyColumn 0" parent="Game/Enemy Grids" unique_id=2073529911 node_paths=PackedStringArray("ref_rows") instance=ExtResource("2_g6l2h")]
+position = Vector2(-300, 0)
+ref_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
+
+[node name="EnemyColumn 1" parent="Game/Enemy Grids" unique_id=2140423691 node_paths=PackedStringArray("ref_rows") instance=ExtResource("2_g6l2h")]
+ref_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
+col_id = 1
+
+[node name="EnemyColumn 2" parent="Game/Enemy Grids" unique_id=389549478 node_paths=PackedStringArray("ref_rows") instance=ExtResource("2_g6l2h")]
+position = Vector2(300, 0)
+ref_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
+col_id = 2
+
+[node name="EnemyGridCollider" parent="Game/Enemy Grids" unique_id=1393013119 node_paths=PackedStringArray("all_rows") instance=ExtResource("3_f8k5o")]
+all_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
+
+[node name="Camera2D" type="Camera2D" parent="Game" unique_id=307374076]
+position = Vector2(2048, 1080)
+
+[node name="UI" type="Control" parent="." unique_id=1347147915]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=1833918474]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LSpacer" type="Control" parent="UI/HBoxContainer" unique_id=1811335900]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Card Source" type="Control" parent="UI/HBoxContainer" unique_id=1284131768 node_paths=PackedStringArray("card_pivot")]
+custom_minimum_size = Vector2(30, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_gc4b7")
+card_pivot = NodePath("../../Card Pivot")
+
+[node name="Card" parent="UI/HBoxContainer/Card Source" unique_id=39510458 instance=ExtResource("1_p4slq")]
+layout_mode = 0
+offset_left = 1290.0919
+offset_top = -187.767
+offset_right = 1665.0922
+offset_bottom = 374.733
+rotation = -0.20943947
+
+[node name="Card2" parent="UI/HBoxContainer/Card Source" unique_id=2079323098 instance=ExtResource("1_p4slq")]
+layout_mode = 0
+offset_left = 1499.5708
+offset_top = -213.83157
+offset_right = 1874.5708
+offset_bottom = 348.66843
+rotation = -0.104719736
+data = ExtResource("3_gc4b7")
+
+[node name="Card3" parent="UI/HBoxContainer/Card Source" unique_id=749940671 instance=ExtResource("1_p4slq")]
+layout_mode = 0
+offset_left = 1710.627
+offset_top = -217.85645
+offset_right = 2085.6274
+offset_bottom = 344.64355
+data = ExtResource("2_7bmen")
+
+[node name="Card4" parent="UI/HBoxContainer/Card Source" unique_id=283707075 instance=ExtResource("1_p4slq")]
+layout_mode = 0
+offset_left = 1920.9475
+offset_top = -199.79807
+offset_right = 2295.9475
+offset_bottom = 362.70193
+rotation = 0.10471977
+data = ExtResource("4_niue7")
+
+[node name="Card5" parent="UI/HBoxContainer/Card Source" unique_id=362444173 instance=ExtResource("1_p4slq")]
+layout_mode = 0
+offset_left = 2128.2278
+offset_top = -159.85284
+offset_right = 2503.2278
+offset_bottom = 402.64716
+rotation = 0.20943947
+data = ExtResource("11_vo2k6")
+
+[node name="RSpacer" type="Control" parent="UI/HBoxContainer" unique_id=450901522]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Card Pivot" type="Control" parent="UI" unique_id=1474216332]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = 1929.0
+offset_right = -13.0
+offset_bottom = 1929.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Deck" type="Control" parent="UI" unique_id=804933803]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Card Back" parent="UI/Deck" unique_id=1840216044 instance=ExtResource("9_gxyvq")]
+layout_mode = 0
+offset_left = 46.0
+offset_top = -581.0
+offset_right = 421.0
+offset_bottom = -18.5
+
+[node name="Discard" type="Control" parent="UI" unique_id=78133498]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Card Back" parent="UI/Discard" unique_id=1655269352 instance=ExtResource("9_gxyvq")]
+layout_mode = 0
+offset_left = -421.0
+offset_top = -581.0
+offset_right = -46.0
+offset_bottom = -18.5
