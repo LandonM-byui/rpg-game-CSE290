@@ -13,6 +13,7 @@ class_name SceneHandler
 
 #@export var 
 
+
 enum MainScenes{
 	MainMenu,
 	Intro,
@@ -83,9 +84,10 @@ func disconnect_buttons():
 		if button.scene == MainScenes.CombatMenu:
 			button.pressed.disconnect(_load_combat_menu)
 			print('combat menu button connected')
+		print('tried to connect buttons')
 		pass
-	
-	
+
+
 func connect_buttons():
 		## connect each scene to each scene button 
 	for button in _current_scene.scene_buttons:
@@ -112,6 +114,8 @@ func connect_buttons():
 		if button.scene == MainScenes.CombatMenu:
 			button.pressed.connect(_load_combat_menu)
 			print('combat menu button connected')
+		else:
+			print('tried to connect buttons')
 		pass
 
 
