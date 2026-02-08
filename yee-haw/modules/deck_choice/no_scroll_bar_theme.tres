@@ -1,0 +1,18 @@
+[gd_resource type="Theme" format=3 uid="uid://bq1laoqhq1ssh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qiqrb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c7a47"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7u2gw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_npyog"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7mwt"]
+
+[resource]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_qiqrb")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_c7a47")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_7u2gw")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_npyog")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_f7mwt")

@@ -2,16 +2,19 @@
 
 [ext_resource type="Script" uid="uid://bnjw8b4me5ohw" path="res://modules/card_game/scripts/card_selection_controller.gd" id="1_gc4b7"]
 [ext_resource type="PackedScene" uid="uid://ck0qj3qheef65" path="res://modules/card_game/enemy_grid_row.tscn" id="1_niue7"]
-[ext_resource type="PackedScene" uid="uid://bukkanr4pda5r" path="res://modules/card_game/card.tscn" id="1_p4slq"]
+[ext_resource type="PackedScene" uid="uid://bukkanr4pda5r" path="res://modules/cards/hand_card.tscn" id="1_p4slq"]
+[ext_resource type="Script" uid="uid://c63eauk85svgr" path="res://modules/card_game/scripts/card_game.gd" id="1_vo2k6"]
 [ext_resource type="Script" uid="uid://dn7qk5td4lxue" path="res://modules/card_game/scripts/game_controller.gd" id="1_x5kpi"]
-[ext_resource type="Resource" uid="uid://b1quaihd43ehj" path="res://modules/card_game/cards/column_attack.tres" id="2_7bmen"]
+[ext_resource type="Resource" uid="uid://b1quaihd43ehj" path="res://modules/cards/data/column_attack.tres" id="2_7bmen"]
 [ext_resource type="PackedScene" uid="uid://d1anor68t2gd1" path="res://modules/card_game/enemy_column_collider.tscn" id="2_g6l2h"]
 [ext_resource type="PackedScene" uid="uid://dclor804aadnd" path="res://modules/card_game/enemy_grid_collider.tscn" id="3_f8k5o"]
-[ext_resource type="Resource" uid="uid://dbrw0uewv2dfy" path="res://modules/card_game/cards/all_attack.tres" id="3_gc4b7"]
-[ext_resource type="Resource" uid="uid://b2u0do5ptebtk" path="res://modules/card_game/cards/lane_attack.tres" id="4_niue7"]
-[ext_resource type="PackedScene" uid="uid://2xj1e17wtpj8" path="res://modules/card_game/card_back.tscn" id="9_gxyvq"]
+[ext_resource type="Resource" uid="uid://dbrw0uewv2dfy" path="res://modules/cards/data/all_attack.tres" id="3_gc4b7"]
+[ext_resource type="Resource" uid="uid://b2u0do5ptebtk" path="res://modules/cards/data/lane_attack.tres" id="4_niue7"]
+[ext_resource type="PackedScene" uid="uid://2xj1e17wtpj8" path="res://modules/cards/card_back.tscn" id="9_gxyvq"]
+[ext_resource type="Resource" uid="uid://bl5lxklo0j7sa" path="res://modules/cards/data/test_attack.tres" id="11_vo2k6"]
 
 [node name="CardGame" type="Node" unique_id=2120214280]
+script = ExtResource("1_vo2k6")
 
 [node name="Game Controller" type="Node" parent="." unique_id=487759638]
 script = ExtResource("1_x5kpi")
@@ -84,38 +87,46 @@ card_pivot = NodePath("../../Card Pivot")
 
 [node name="Card" parent="UI/HBoxContainer/Card Source" unique_id=39510458 instance=ExtResource("1_p4slq")]
 layout_mode = 0
-offset_left = 1394.4913
-offset_top = -203.53387
-offset_right = 1769.4916
-offset_bottom = 358.96613
-rotation = -0.15707959
+offset_left = 1290.0919
+offset_top = -187.767
+offset_right = 1665.0922
+offset_bottom = 374.733
+rotation = -0.20943947
 
 [node name="Card2" parent="UI/HBoxContainer/Card Source" unique_id=2079323098 instance=ExtResource("1_p4slq")]
 layout_mode = 0
-offset_left = 1605.0468
-offset_top = -218.59906
-offset_right = 1980.0468
-offset_bottom = 343.90094
-rotation = -0.052359868
+offset_left = 1499.5708
+offset_top = -213.83157
+offset_right = 1874.5708
+offset_bottom = 348.66843
+rotation = -0.104719736
 data = ExtResource("3_gc4b7")
 
 [node name="Card3" parent="UI/HBoxContainer/Card Source" unique_id=749940671 instance=ExtResource("1_p4slq")]
 layout_mode = 0
-offset_left = 1816.0233
-offset_top = -211.57266
-offset_right = 2191.024
-offset_bottom = 350.92734
-rotation = 0.052359868
+offset_left = 1710.627
+offset_top = -217.85645
+offset_right = 2085.6274
+offset_bottom = 344.64355
 data = ExtResource("2_7bmen")
 
 [node name="Card4" parent="UI/HBoxContainer/Card Source" unique_id=283707075 instance=ExtResource("1_p4slq")]
 layout_mode = 0
-offset_left = 2025.1094
-offset_top = -182.53207
-offset_right = 2400.1094
-offset_bottom = 379.96793
-rotation = 0.15707959
+offset_left = 1920.9475
+offset_top = -199.79807
+offset_right = 2295.9475
+offset_bottom = 362.70193
+rotation = 0.10471977
 data = ExtResource("4_niue7")
+
+[node name="Card5" parent="UI/HBoxContainer/Card Source" unique_id=362444173 instance=ExtResource("1_p4slq")]
+layout_mode = 0
+offset_left = 2128.2278
+offset_top = -159.85284
+offset_right = 2503.2278
+offset_bottom = 402.64716
+rotation = 0.20943947
+data = ExtResource("11_vo2k6")
 
 [node name="RSpacer" type="Control" parent="UI/HBoxContainer" unique_id=450901522]
 custom_minimum_size = Vector2(200, 0)

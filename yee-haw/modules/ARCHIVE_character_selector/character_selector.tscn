@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://bp8u0kt30fhq6"]
+
+[ext_resource type="Script" uid="uid://dkfu8u547rhnr" path="res://modules/ARCHIVE_character_selector/scripts/selected_character_bar.gd" id="1_5favt"]
+[ext_resource type="PackedScene" uid="uid://b43txmhisfcjq" path="res://modules/ARCHIVE_character_selector/character_selection.tscn" id="1_bt14a"]
+[ext_resource type="Script" uid="uid://d2ses1yq36w0p" path="res://modules/ARCHIVE_character_selector/scripts/character_selection_scene.gd" id="1_dy58f"]
+[ext_resource type="Resource" uid="uid://io3jucgb86ek" path="res://modules/ARCHIVE_character_selector/characters/default 2.tres" id="2_m1usx"]
+[ext_resource type="Resource" uid="uid://c0hhtonsyhq8m" path="res://modules/ARCHIVE_character_selector/characters/default 3.tres" id="3_yws6f"]
+[ext_resource type="Resource" uid="uid://bc420rebdgw2s" path="res://modules/ARCHIVE_character_selector/characters/default 4.tres" id="4_mssvm"]
+[ext_resource type="Resource" uid="uid://ttdli3rerkra" path="res://modules/ARCHIVE_character_selector/characters/default 5.tres" id="5_wp4up"]
+
+[node name="CharacterSelector" type="Control" unique_id=1045488356 node_paths=PackedStringArray("selection_bar", "selection_options_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dy58f")
+selection_bar = NodePath("MarginContainer/VBoxContainer/HBoxContainer")
+selection_options_container = NodePath("MarginContainer/VBoxContainer/selector/MarginContainer/GridContainer")
+
+[node name="bg" type="ColorRect" parent="." unique_id=1827243223]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4351923, 0.43519226, 0.43519226, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1696239688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=53489052]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=449900285]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+script = ExtResource("1_5favt")
+
+[node name="LEFT END" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=883411027]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RIGHT END" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1958554898]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="selector" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=1136203315]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/selector" unique_id=1100706043]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/selector/MarginContainer" unique_id=750324658]
+layout_mode = 2
+columns = 10
+
+[node name="CharacterSelection" parent="MarginContainer/VBoxContainer/selector/MarginContainer/GridContainer" unique_id=2142328130 instance=ExtResource("1_bt14a")]
+layout_mode = 2
+
+[node name="CharacterSelection2" parent="MarginContainer/VBoxContainer/selector/MarginContainer/GridContainer" unique_id=1027734892 instance=ExtResource("1_bt14a")]
+layout_mode = 2
+data = ExtResource("2_m1usx")
+
+[node name="CharacterSelection3" parent="MarginContainer/VBoxContainer/selector/MarginContainer/GridContainer" unique_id=209970284 instance=ExtResource("1_bt14a")]
+layout_mode = 2
+data = ExtResource("3_yws6f")
+
+[node name="CharacterSelection4" parent="MarginContainer/VBoxContainer/selector/MarginContainer/GridContainer" unique_id=265984474 instance=ExtResource("1_bt14a")]
+layout_mode = 2
+data = ExtResource("4_mssvm")
+
+[node name="CharacterSelection5" parent="MarginContainer/VBoxContainer/selector/MarginContainer/GridContainer" unique_id=531826011 instance=ExtResource("1_bt14a")]
+layout_mode = 2
+data = ExtResource("5_wp4up")

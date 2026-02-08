@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cq2eimbn0rhn4"]
+
+[ext_resource type="Script" uid="uid://bp3dd2jdm7lvo" path="res://modules/scene_handling/scripts/full_scene_button.gd" id="1_74yed"]
+[ext_resource type="Script" uid="uid://yu2vg7low7x" path="res://modules/scene_handling/scripts/scene_controller.gd" id="1_m76fh"]
+[ext_resource type="Script" uid="uid://cdxuup54d36g2" path="res://modules/scene_handling/scripts/sub_scene_button.gd" id="2_m76fh"]
+[ext_resource type="Script" uid="uid://b0y8tbwctt08i" path="res://modules/scene_handling/scripts/quit_button.gd" id="3_so6lk"]
+
+[node name="MainMenu" type="Control" unique_id=840355743 node_paths=PackedStringArray("scene_buttons", "subscene_buttons", "quit_buttons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m76fh")
+scene_buttons = [NodePath("MarginContainer/VBoxContainer/Start")]
+subscene_buttons = [NodePath("MarginContainer/VBoxContainer/Settings")]
+quit_buttons = [NodePath("MarginContainer/VBoxContainer/Quit")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2013970552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24658787, 0.2465879, 0.24658787, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=264269234]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 35
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1568901256]
+layout_mode = 2
+color = Color(0.5629578, 0.56295776, 0.56295776, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=764967343]
+layout_mode = 2
+
+[node name="Spacer-300-0" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1251206186]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="Main Menu text" type="Label" parent="MarginContainer/VBoxContainer" unique_id=339513056]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.5629578, 0.56295776, 0.56295776, 1)
+theme_override_colors/font_outline_color = Color(0.24658787, 0.2465879, 0.24658787, 1)
+theme_override_constants/outline_size = 148
+theme_override_font_sizes/font_size = 166
+text = "MAIN MENU"
+
+[node name="Spacer-200-0" type="Control" parent="MarginContainer/VBoxContainer" unique_id=191105882]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1833742529]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 151
+text = "Start"
+script = ExtResource("1_74yed")
+scene_link = 1
+
+[node name="Spacer-50-0" type="Control" parent="MarginContainer/VBoxContainer" unique_id=481696274]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1430300567]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 151
+text = "Settings"
+script = ExtResource("2_m76fh")
+
+[node name="Spacer-50-1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=2116497748]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1917970250]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 151
+text = "Quit"
+script = ExtResource("3_so6lk")
