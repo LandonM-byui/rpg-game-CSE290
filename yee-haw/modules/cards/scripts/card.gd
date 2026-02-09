@@ -66,9 +66,6 @@ func _update_vfx() -> void:
 func _process(_delta: float) -> void:
 	# only update the card hand placement in-engine
 	if Engine.is_editor_hint():
-		mouse_hover = false
-		_update_placement()
-		_hover_update_vfx()
 		return
 	
 	# track mouse hover
@@ -194,3 +191,16 @@ func _clear_selection() -> void:
 		return
 	last_selected.deselect()
 	last_selected = null
+	
+# ------------ ------------ ------------ ------------ ------------ ------------ ------------
+# ------ External control from scene root ----------- ------------ ------------ ------------
+# ------------ ------------ ------------ ------------ ------------ ------------ ------------
+
+var _indexed_card_base : IndexedCard
+
+func assign_from_indexed_card(ic: IndexedCard) -> void:
+	_indexed_card_base = ic
+	data = ic.data
+
+func get_indexed_card() -> IndexedCard:
+	return _indexed_card_base

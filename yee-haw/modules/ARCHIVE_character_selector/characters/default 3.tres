@@ -1,9 +1,14 @@
 [gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://c0hhtonsyhq8m"]
 
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/scripts/card_data.gd" id="1_446st"]
 [ext_resource type="Script" uid="uid://cnofeohs4n8yi" path="res://modules/ARCHIVE_character_selector/scripts/character_data.gd" id="1_ipvt1"]
+[ext_resource type="Resource" uid="uid://doyyp4x2i6cuh" path="res://modules/cards/data/blue_card.tres" id="2_o27bd"]
 
 [resource]
 script = ExtResource("1_ipvt1")
 name = "Default 3"
 color = Color(0, 0.5371508, 0.7434903, 1)
+included_cards = Dictionary[ExtResource("1_446st"), int]({
+ExtResource("2_o27bd"): 7
+})
 metadata/_custom_type_script = "uid://cnofeohs4n8yi"

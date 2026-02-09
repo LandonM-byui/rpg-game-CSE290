@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cyokdbwn8vcka"]
+
+[ext_resource type="Script" uid="uid://b0afrntlhtfm8" path="res://modules/cards/scripts/small_card.gd" id="1_mooh8"]
+[ext_resource type="Resource" uid="uid://b2u0do5ptebtk" path="res://modules/cards/data/lane_attack.tres" id="2_ng6iq"]
+
+[node name="SmallCard" type="Control" unique_id=837195116 node_paths=PackedStringArray("col_rect", "label")]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 450.0
+size_flags_horizontal = 3
+script = ExtResource("1_mooh8")
+data = ExtResource("2_ng6iq")
+col_rect = NodePath("Control/MarginContainer/ColorRect2")
+label = NodePath("Control/MarginContainer/Label")
+
+[node name="Control" type="Control" parent="." unique_id=1838086623]
+custom_minimum_size = Vector2(300, 450)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 450.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=778838684]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=121828458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ColorRect2" type="ColorRect" parent="Control/MarginContainer" unique_id=919468703]
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.63234204, 0.92879707, 1)
+
+[node name="Label" type="Label" parent="Control/MarginContainer" unique_id=1326186765]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "L. Atk"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

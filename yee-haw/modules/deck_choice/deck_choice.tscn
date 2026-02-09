@@ -1,18 +1,36 @@
 [gd_scene format=3 uid="uid://dg1a80yhp3ovf"]
 
+[ext_resource type="Script" uid="uid://cmqs7qwednsrg" path="res://modules/deck_choice/scripts/deck_choice_scene_controller.gd" id="1_ah6b3"]
 [ext_resource type="PackedScene" uid="uid://2xj1e17wtpj8" path="res://modules/cards/card_back.tscn" id="1_jpdwo"]
-[ext_resource type="Script" uid="uid://yu2vg7low7x" path="res://modules/scene_handling/scripts/scene_controller.gd" id="1_pokqm"]
 [ext_resource type="Script" uid="uid://bp3dd2jdm7lvo" path="res://modules/scene_handling/scripts/full_scene_button.gd" id="2_uxp6t"]
+[ext_resource type="Script" uid="uid://b5edudh4ld3ja" path="res://modules/deck_choice/scripts/deck_preset.gd" id="2_xuahw"]
+[ext_resource type="PackedScene" uid="uid://cyokdbwn8vcka" path="res://modules/cards/small_card.tscn" id="3_dnxtr"]
+[ext_resource type="Resource" uid="uid://7to33g2r6xhy" path="res://modules/deck_choice/data/default_deck_1.tres" id="3_ecq2a"]
 [ext_resource type="Script" uid="uid://cdxuup54d36g2" path="res://modules/scene_handling/scripts/sub_scene_button.gd" id="3_pokqm"]
+[ext_resource type="Resource" uid="uid://dkafuye3lpur7" path="res://modules/deck_choice/data/default_deck_2.tres" id="4_38cia"]
+[ext_resource type="Resource" uid="uid://voioqsfoxomi" path="res://modules/deck_choice/data/default_deck_3.tres" id="5_38cma"]
+[ext_resource type="Resource" uid="uid://rp5rbobpt786" path="res://modules/deck_choice/data/default_deck_4.tres" id="6_r8kvk"]
+[ext_resource type="Resource" uid="uid://cr5jaf36vqjc2" path="res://modules/deck_choice/data/default_deck_5.tres" id="7_8e43c"]
+[ext_resource type="Resource" uid="uid://dalau4f1em4ht" path="res://modules/cards/data/single_attack.tres" id="8_ddxlf"]
+[ext_resource type="Resource" uid="uid://b1quaihd43ehj" path="res://modules/cards/data/column_attack.tres" id="9_38cma"]
+[ext_resource type="Theme" uid="uid://bq1laoqhq1ssh" path="res://modules/deck_choice/no_scroll_bar_theme.tres" id="9_r8kvk"]
+[ext_resource type="Resource" uid="uid://bl5lxklo0j7sa" path="res://modules/cards/data/test_attack.tres" id="10_5euky"]
+[ext_resource type="Resource" uid="uid://ctwg6df8a8qvh" path="res://modules/cards/data/green_card.tres" id="15_8e43c"]
 
-[node name="DeckChoice" type="Control" unique_id=890748103 node_paths=PackedStringArray("scene_buttons", "subscene_buttons")]
+[node name="DeckChoice" type="Control" unique_id=890748103 node_paths=PackedStringArray("deck_display_container", "card_back_display", "deck_name_label", "up_button", "down_button", "scene_buttons", "subscene_buttons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_pokqm")
+script = ExtResource("1_ah6b3")
+valid_decks = Array[ExtResource("2_xuahw")]([ExtResource("3_ecq2a"), ExtResource("4_38cia"), ExtResource("5_38cma"), ExtResource("6_r8kvk"), ExtResource("7_8e43c")])
+deck_display_container = NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer")
+card_back_display = NodePath("Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column/Deck Container/Card Back")
+deck_name_label = NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/deck name")
+up_button = NodePath("Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column/Up Button")
+down_button = NodePath("Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column/Down Button")
 scene_buttons = [NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container/Menu Button"), NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container/Start Game Button")]
 subscene_buttons = [NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Menu button container/Settings Button")]
 
@@ -90,6 +108,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+data = ExtResource("6_r8kvk")
 
 [node name="Spacer-50-1" type="Control" parent="Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column" unique_id=1044826315]
 custom_minimum_size = Vector2(0, 50)
@@ -143,22 +162,82 @@ size_flags_vertical = 3
 [node name="deck name" type="Label" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen" unique_id=261156642]
 layout_mode = 2
 theme_override_font_sizes/font_size = 179
-text = "Deck Name"
+text = "Default Deck 4"
 horizontal_alignment = 1
 
 [node name="spacer" type="Control" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen" unique_id=685067891]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="description text" type="Label" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen" unique_id=981657120]
+[node name="ScrollContainer" type="ScrollContainer" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen" unique_id=48650672]
 layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "Deck description will go here, as well as a table displaying all cards contained in deck.
+size_flags_vertical = 3
+theme = ExtResource("9_r8kvk")
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+[node name="CardGridContainer" type="GridContainer" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer" unique_id=487393439]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 6
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
-autowrap_mode = 2
+[node name="@Control@130921" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=837195116 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("10_5euky")
+
+[node name="@Control@130922" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=988832811 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("10_5euky")
+
+[node name="@Control@130923" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=1997211468 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("10_5euky")
+
+[node name="@Control@130924" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=970549475 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("10_5euky")
+
+[node name="@Control@130925" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=641362344 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("9_38cma")
+
+[node name="@Control@130926" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=500671382 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("9_38cma")
+
+[node name="@Control@130927" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=549982482 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("9_38cma")
+
+[node name="@Control@130928" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=338671083 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("9_38cma")
+
+[node name="@Control@130929" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=1423910635 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("9_38cma")
+
+[node name="@Control@130930" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=1746955124 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("9_38cma")
+
+[node name="@Control@130931" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=2072461196 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("8_ddxlf")
+
+[node name="@Control@130932" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=1065173355 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("8_ddxlf")
+
+[node name="@Control@130933" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=1344736519 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("8_ddxlf")
+
+[node name="@Control@130934" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=609290059 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("15_8e43c")
+
+[node name="@Control@130935" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer" unique_id=1982721792 instance=ExtResource("3_dnxtr")]
+layout_mode = 2
+data = ExtResource("15_8e43c")
 
 [node name="Menu button container" type="HBoxContainer" parent="Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider" unique_id=1788120731]
 layout_mode = 2
