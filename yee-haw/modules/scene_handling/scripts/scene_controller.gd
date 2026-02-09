@@ -29,11 +29,8 @@ func _prop_open_subscene(ref: SubSceneButton.SubSceneReference) -> void:
 func _prop_quit_game() -> void:
 	quit_game.emit()
 
-func _ready() -> void:
-	_connect_all_buttons()
-
 ## Connects all defined buttons to their correct up-propogation signals.
-func _connect_all_buttons() -> void:
+func connect_all_buttons() -> void:
 	for button in scene_buttons:
 		button.switch_scene.connect(_prop_switch_scene)
 	for button in subscene_buttons:
@@ -41,6 +38,10 @@ func _connect_all_buttons() -> void:
 	for button in quit_buttons:
 		button.quit_game.connect(_prop_quit_game)
 
+## Called when the scene is loaded. Inherited classes can use data to alter initialization
+func load_scene(_pd: ProjectData) -> void:
+	pass
+
 ## Called when the scene is unloaded. Inherited classes can alter what is saved.
-func unload_scene(pd: ProjectData) -> void:
+func unload_scene(_pd: ProjectData) -> void:
 	pass

@@ -6,11 +6,11 @@ extends Node
 class_name GameHandler
 
 ## Main scene .tscn
-@onready var main_scene_prefab : PackedScene = preload("uid://cq2eimbn0rhn4")
+@onready var main_scene_prefab : PackedScene = preload(CRef.SCENE_REFERENCES['main_menu'])
 ## Deck choice scene .tscn
-@onready var deck_scene_prefab : PackedScene = preload("uid://dg1a80yhp3ovf")
+@onready var deck_scene_prefab : PackedScene = preload(CRef.SCENE_REFERENCES['deck_selection'])
 ## Game scene .tscn
-@onready var game_scene_prefab : PackedScene = preload("uid://6yy4qsd2i3qx")
+@onready var game_scene_prefab : PackedScene = preload(CRef.SCENE_REFERENCES['battle'])
 
 ## Root node to attach created scenes to
 @export var scene_root : Node
@@ -20,12 +20,12 @@ class_name GameHandler
 @export var full_subscene_root : Control
 
 ## Settings scene .tscn
-@onready var settings_subscene_prefab : PackedScene = preload("uid://vo1hnxymycx7")
+@onready var settings_subscene_prefab : PackedScene = preload(CRef.SCENE_REFERENCES['settings_window'])
 ## Built settings scene
 var _settings : SubmenuHandler
 
 ## Game menu scene .tscn
-@onready var game_menu_subscene_prefab : PackedScene = preload("uid://bl75eggnjadl7")
+@onready var game_menu_subscene_prefab : PackedScene = preload(CRef.SCENE_REFERENCES['in_game_menu'])
 ## Built game menu scene
 var _game_menu : SubmenuHandler
 
@@ -61,7 +61,7 @@ func _load_scene(ref: FullSceneButton.GameSceneReference) -> void:
 	
 	# create the new scene type
 	match ref:
-		FullSceneButton.GameSceneReference.MainMenu: 
+		FullSceneButton.GameSceneReference.MainMenu:
 			_loaded_scene = main_scene_prefab.instantiate()
 		FullSceneButton.GameSceneReference.DeckChoice:
 			_loaded_scene = deck_scene_prefab.instantiate()
@@ -69,8 +69,12 @@ func _load_scene(ref: FullSceneButton.GameSceneReference) -> void:
 			_loaded_scene = game_scene_prefab.instantiate()
 	
 	# connect scene signals
+	_loaded_scene.connect_all_buttons()
 	_connect_prop_signals()
 	_loaded_scene_ref = ref
+	
+	# Let scenes load project data
+	_loaded_scene.load_scene(_project_data)
 	
 	# node parenting
 	scene_root.add_child(_loaded_scene)
@@ -114,7 +118,6 @@ func _open_subscene(ref: SubSceneButton.SubSceneReference) -> void:
 		return
 	
 	if ref == SubSceneButton.SubSceneReference.GameMenu:
-		print("Showing Game Menu")
 		_game_menu.visible = true
 		full_subscene_root.visible = true
 		_game_menu.move_to_front()

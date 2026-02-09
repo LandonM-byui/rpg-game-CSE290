@@ -1,4 +1,3 @@
-@tool
 extends Control
 
 ## Controls all selectable child [Card] nodes.
@@ -22,24 +21,18 @@ const DOWNSET_OVER_DISTANCE : float = 250
 @export var card_pivot : Control
 
 ## All cards in hand.
-var _cards : Array[Card]
+var _cards : Array[Card] = []
 ## Last grabbed card.
 var _last_grabbed : Card = null
 
-func _ready() -> void:
-	# Track all child cards as cards when loaded.
-	_get_cards()
-
 func _process(_delta: float) -> void:
-	if Engine.is_editor_hint():
-		_get_cards()
-
 	# no updates when no children
 	if get_child_count() == 0: return
 	# similar, no updates when no cards
 	if len(_cards) == 0: return
 	
-	_update_card_positioning()
+	if Engine.is_editor_hint():
+		_update_card_positioning()
 	_update_card_positions()
 
 ## Assigns all children that are [Card] nodes into the [member _cards] array.
@@ -165,3 +158,36 @@ func _update_card_positioning() -> void:
 	for i in range(len(_cards)):
 		var card := _cards[i]
 		move_child(card, i)
+
+
+# ------------ ------------ ------------ ------------ ------------ ------------ ------------
+# ------ External control from scene root ----------- ------------ ------------ ------------
+# ------------ ------------ ------------ ------------ ------------ ------------ ------------
+
+
+@export_group("Card Generation")
+@export var card_prefab : PackedScene
+@export var deck_source : Control
+@export var discard_source : Control
+
+# Removes all vfx cards from hand
+func clear_hand_vfx() -> void:
+	_cards = []
+	for child in get_children():
+		child.queue_free()
+
+## Adds all cards to hand
+func add_to_hand(hand: Array[IndexedCard]) -> void:
+	for ic in hand:
+		add_card_to_hand(ic)
+
+## Adds a single card to hand
+func add_card_to_hand(ic: IndexedCard) -> void:
+	var card := card_prefab.instantiate() as Card
+	card.global_position = deck_source.global_position
+	card.assign_from_indexed_card(ic)
+	
+	add_child(card)
+	card.owner = owner
+	
+	_cards.append(card)

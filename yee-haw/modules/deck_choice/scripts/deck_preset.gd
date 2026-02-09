@@ -5,6 +5,9 @@ extends Resource
 ## come from the heroes chosen and other cards added.
 class_name DeckPreset
 
+## Deck name
+@export var name : String = "Unnamed Deck"
+
 ## Base hero included with the deck
 @export var base_hero : CharacterData
 

@@ -1,9 +1,59 @@
 extends Resource
 
-# TODO incomplete
-
 ## Defines data for a queued attack. Can be passed through filtering methods to alter the attack conditions and output.
 class_name AttackData
+
+## Conditions to apply bonus damage on
+enum BonusOption {
+	## First attack played during the turn
+	FirstAttack,
+	## Enemy is the front-most in its lane
+	FrontEnemy,
+	## Per attack used during the current turn
+	AttacksUsedDuringTurn,
+}
+
+## Sources a created card can be added to
+enum CardSource {
+	## Added to the deck of cards
+	Deck,
+	## Added to the top of the deck
+	DeckTop,
+	## Added straight into the player hand
+	Hand,
+	## Added to the discard pile
+	Discard
+}
+
+## Conditions that must be met to create a card
+enum CardAddCondition {
+	## Card is always added
+	Always,
+	## Card added only on a critical hit
+	Crit,
+	
+}
+
+## Special conditions to add triggers to an attack
+enum TriggerModifier {
+	## No modification
+	None,
+	## Adds the count of a card type in hand
+	CountCardTypeInHand
+}
+
+## All card types
+enum CardType {
+	## Special single-use cards
+	Special,
+	## Junk cards
+	Junk,
+	## Attack and damaging cards
+	Attack,
+	## Defense cards
+	Defense
+}
+
 
 ## Damage to be dealt.
 var damage : int

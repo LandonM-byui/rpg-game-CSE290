@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://2xj1e17wtpj8"]
 
-[node name="Card Back" type="Control" unique_id=39510458]
+[ext_resource type="Script" uid="uid://bhl4ehjxf20mj" path="res://modules/cards/scripts/card_back.gd" id="1_jqtxa"]
+[ext_resource type="Resource" uid="uid://7to33g2r6xhy" path="res://modules/deck_choice/data/default_deck_1.tres" id="2_pjoeh"]
+
+[node name="Card Back" type="Control" unique_id=39510458 node_paths=PackedStringArray("col_rect")]
 custom_minimum_size = Vector2(375, 562.5)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 150.0
 offset_bottom = 225.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_jqtxa")
+data = ExtResource("2_pjoeh")
+col_rect = NodePath("Control/MarginContainer/ColorRect2")
 
 [node name="Control" type="Control" parent="." unique_id=1433418939]
 layout_mode = 1
@@ -43,4 +49,4 @@ theme_override_constants/margin_bottom = 30
 [node name="ColorRect2" type="ColorRect" parent="Control/MarginContainer" unique_id=1840280531]
 layout_mode = 2
 mouse_filter = 2
-color = Color(4.6626663e-08, 0.06265641, 0.08732916, 1)
+color = Color(0.5, 0, 0, 1)
