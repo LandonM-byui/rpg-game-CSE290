@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://c4y2ls50eerqu"]
+
+[ext_resource type="Script" uid="uid://0pmjfy18csji" path="res://addons/card_editor/scripts/effect_mod_controller.gd" id="1_6dnr5"]
+
+[node name="EffectModifierEditor" type="VBoxContainer" unique_id=786671113]
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -3304.0
+grow_horizontal = 2
+script = ExtResource("1_6dnr5")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=9448556]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1725583093]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer" unique_id=456102313]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="up_down container" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer" unique_id=519099106]
+layout_mode = 2
+
+[node name="UP BUTTON" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/up_down container" unique_id=2031641783]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+text = " ^ "
+
+[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/MarginContainer/up_down container" unique_id=1812595609]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DOWN BUTTON" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/up_down container" unique_id=913656166]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "v"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/HBoxContainer" unique_id=1225792083]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer2" unique_id=110499743]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1910268278]
+layout_mode = 2
+
+[node name="EFFECT MODIFIER LABEL" type="Label" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=372649224]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "EFFECT MODIFIER"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1351358269]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="DELETE BUTTON" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1629597154]
+unique_name_in_owner = true
+layout_mode = 2
+text = " [DELETE] "
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1115865080]
+layout_mode = 2
+
+[node name="Condition assignment" type="MarginContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1951094006]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Condition assignment" unique_id=66388852]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Condition assignment/HBoxContainer" unique_id=338067963]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+text = "Condition? "
+
+[node name="SELECTED CONDITION" type="MenuButton" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Condition assignment/HBoxContainer" unique_id=432778652]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[VALID CONDITION]"
+flat = false
+
+[node name="Condition Container" type="MarginContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=2077380629]
+layout_mode = 2
+theme_override_constants/margin_left = 174
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Condition Container" unique_id=896947952]
+layout_mode = 2
+
+[node name="CONDITION OPTIONS" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Condition Container" unique_id=1687029660]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=310161723]
+layout_mode = 2
+
+[node name="Container" type="MarginContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1807422633]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Container" unique_id=1233319777]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Container/HBoxContainer" unique_id=1379412784]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+text = "Options"
+
+[node name="Param Container" type="MarginContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Container/HBoxContainer" unique_id=816537041]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Container/HBoxContainer/Param Container" unique_id=444373450]
+layout_mode = 2
+
+[node name="PARAM CONTAINER" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer2/VBoxContainer/Container/HBoxContainer/Param Container" unique_id=2083505795]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="." unique_id=1047763342]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2

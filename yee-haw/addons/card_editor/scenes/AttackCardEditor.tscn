@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://b2khkrdndtsry"]
+
+[ext_resource type="Script" uid="uid://dt2p0q61fwccm" path="res://addons/card_editor/scripts/attack_card_editor.gd" id="1_t3tem"]
+
+[node name="AttackCardEditor" type="VBoxContainer" unique_id=941022272]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2977.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t3tem")
+
+[node name="Attack Card Settings" type="Label" parent="." unique_id=206218002]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Attack Card Settings"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1283882961]
+layout_mode = 2
+
+[node name="Damage Region ---------------" type="Label" parent="." unique_id=1280297873]
+layout_mode = 2
+text = "Base Attack"
+horizontal_alignment = 1
+
+[node name="damage range" type="HBoxContainer" parent="." unique_id=801714352]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="damage range" unique_id=1335765655]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Damage "
+
+[node name="DAMAGE" type="SpinBox" parent="damage range" unique_id=848081781]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+allow_greater = true
+
+[node name="to" type="Label" parent="damage range" unique_id=1688807313]
+unique_name_in_owner = true
+layout_mode = 2
+text = " To "
+
+[node name="DAMAGE MAX" type="SpinBox" parent="damage range" unique_id=383082562]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+allow_greater = true
+
+[node name="VSeparator" type="Control" parent="damage range" unique_id=524876483]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Range?" type="Label" parent="damage range" unique_id=961277348]
+layout_mode = 2
+text = "Range?"
+
+[node name="USE RANGE" type="CheckBox" parent="damage range" unique_id=1496525610]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="type" type="HBoxContainer" parent="." unique_id=1945891345]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="type" unique_id=953068236]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Attack Type "
+
+[node name="ATTACK TYPE" type="MenuButton" parent="type" unique_id=1177148689]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "(Attack Type)"
+flat = false
+
+[node name="targeting" type="HBoxContainer" parent="." unique_id=795797218]
+layout_mode = 2
+
+[node name="label" type="Label" parent="targeting" unique_id=484505371]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Targeting "
+
+[node name="ATTACK TARGET" type="MenuButton" parent="targeting" unique_id=489540561]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "(Targeting)"
+flat = false
+
+[node name="random" type="HBoxContainer" parent="." unique_id=1347929079]
+layout_mode = 2
+
+[node name="label" type="Label" parent="random" unique_id=755519815]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Random?"
+
+[node name="IS RANDOM" type="CheckBox" parent="random" unique_id=1108556159]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="random" unique_id=2057169710]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RANDOM SUBTYPE" type="Label" parent="random/Panel" unique_id=458484661]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+text = "(Random Subtarget)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="uses" type="HBoxContainer" parent="." unique_id=1193602647]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="uses" unique_id=176438601]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Uses"
+
+[node name="USES" type="SpinBox" parent="uses" unique_id=824481231]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+value = 1.0
+allow_greater = true
+
+[node name="triggers" type="HBoxContainer" parent="." unique_id=1009447384]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="triggers" unique_id=1327421451]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Triggers"
+
+[node name="TRIGGERS" type="SpinBox" parent="triggers" unique_id=875257594]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+allow_greater = true
+
+[node name="Crit Region ------------------" type="Label" parent="." unique_id=207875588]
+layout_mode = 2
+text = "
+Critical Hits"
+horizontal_alignment = 1
+
+[node name="crit chance" type="HBoxContainer" parent="." unique_id=239818636]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="crit chance" unique_id=372917515]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Chance (%)"
+
+[node name="CRIT CHANCE" type="SpinBox" parent="crit chance" unique_id=325540189]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="crit_mult" type="HBoxContainer" parent="." unique_id=68731518]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="crit_mult" unique_id=1246028358]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Multiplier"
+
+[node name="CRIT MULTIPLIER" type="SpinBox" parent="crit_mult" unique_id=630186388]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.01
+allow_greater = true
+
+[node name="Effects Region ---------------" type="Label" parent="." unique_id=1682057114]
+layout_mode = 2
+text = "
+On-Play Effects"
+horizontal_alignment = 1
+
+[node name="on_play" type="MarginContainer" parent="." unique_id=237620520]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="ONPLAY EFFECTS" type="VBoxContainer" parent="on_play" unique_id=471179867]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="add_onplay" type="HBoxContainer" parent="." unique_id=137016210]
+layout_mode = 2
+alignment = 1
+
+[node name="HOOK OPTION ONPLAY" type="MenuButton" parent="add_onplay" unique_id=1942985520]
+unique_name_in_owner = true
+layout_mode = 2
+text = "[Remaining Hooks]"
+flat = false
+
+[node name="VSeparator" type="Control" parent="add_onplay" unique_id=1557639393]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="ADD EVENT HOOK ONPLAY" type="Button" parent="add_onplay" unique_id=416772]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Add Event Hook "
+
+[node name="Hand Effects ---------------" type="Label" parent="." unique_id=1955376481]
+layout_mode = 2
+text = "
+In-Hand Effects"
+horizontal_alignment = 1
+
+[node name="in_hand" type="MarginContainer" parent="." unique_id=2141207661]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="INHAND EFFECTS" type="VBoxContainer" parent="in_hand" unique_id=1406842427]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="add_inhand" type="HBoxContainer" parent="." unique_id=1527406975]
+layout_mode = 2
+alignment = 1
+
+[node name="HOOK OPTION INHAND" type="MenuButton" parent="add_inhand" unique_id=918714896]
+unique_name_in_owner = true
+layout_mode = 2
+text = "[Remaining Hooks]"
+flat = false
+
+[node name="VSeparator" type="Control" parent="add_inhand" unique_id=1265128716]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="ADD EVENT HOOK INHAND" type="Button" parent="add_inhand" unique_id=1184578993]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Add Event Hook "

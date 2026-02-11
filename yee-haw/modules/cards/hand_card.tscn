@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bukkanr4pda5r"]
 
-[ext_resource type="Script" uid="uid://u6ohuq2jta42" path="res://modules/card_game/scripts/card.gd" id="1_ytn0q"]
+[ext_resource type="Script" uid="uid://u6ohuq2jta42" path="res://modules/cards/scripts/card.gd" id="1_ytn0q"]
 [ext_resource type="Resource" uid="uid://dalau4f1em4ht" path="res://modules/cards/data/single_attack.tres" id="2_iwj32"]
 
 [node name="Card" type="Control" unique_id=39510458 node_paths=PackedStringArray("col_rect", "label", "vfx_container")]
 custom_minimum_size = Vector2(375, 562.5)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 150.0
-offset_bottom = 225.0
+offset_right = 375.0
+offset_bottom = 562.5
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_ytn0q")
 data = ExtResource("2_iwj32")
@@ -60,6 +60,7 @@ theme_override_font_sizes/font_size = 77
 text = "S. Atk"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

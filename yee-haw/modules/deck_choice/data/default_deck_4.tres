@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="DeckPreset" format=3 uid="uid://rp5rbobpt786"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/scripts/card_data.gd" id="1_hvrut"]
+[ext_resource type="Resource" uid="uid://b1quaihd43ehj" path="res://modules/cards/data/column_attack.tres" id="3_52l4m"]
+[ext_resource type="Resource" uid="uid://dalau4f1em4ht" path="res://modules/cards/data/single_attack.tres" id="4_hvrut"]
+[ext_resource type="Resource" uid="uid://bl5lxklo0j7sa" path="res://modules/cards/data/test_attack.tres" id="4_n37nb"]
+[ext_resource type="Resource" uid="uid://bc420rebdgw2s" path="res://modules/ARCHIVE_character_selector/characters/default 4.tres" id="5_hvrut"]
+[ext_resource type="Script" uid="uid://b5edudh4ld3ja" path="res://modules/deck_choice/scripts/deck_preset.gd" id="6_y7tyr"]
+
+[resource]
+script = ExtResource("6_y7tyr")
+name = "Default Deck 4"
+base_hero = ExtResource("5_hvrut")
+base_cards = Dictionary[ExtResource("1_hvrut"), int]({
+ExtResource("4_n37nb"): 4,
+ExtResource("3_52l4m"): 6,
+ExtResource("4_hvrut"): 3
+})
+color = Color(0.03676087, 0.31479356, 4.813075e-08, 1)
+metadata/_custom_type_script = "uid://b5edudh4ld3ja"
