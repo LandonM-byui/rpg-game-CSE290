@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://h3svhiy2qqpf"]
+
+[ext_resource type="Script" uid="uid://bocxceowmrj17" path="res://addons/card_editor/scripts/card_edit_root.gd" id="1_vv8js"]
+
+[node name="Card Editor" type="Control" unique_id=527611043]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vv8js")
+
+[node name="NO_RES_MESSAGE" type="CenterContainer" parent="." unique_id=1182796245]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="NO_RES_MESSAGE" unique_id=525100875]
+layout_mode = 2
+text = "(Select CardData to start editing)"

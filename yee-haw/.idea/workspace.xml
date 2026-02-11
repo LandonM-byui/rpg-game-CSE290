@@ -6,26 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 1.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 1.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 2.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 2.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 3.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 3.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 4.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 4.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 5.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 5.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/card_game.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/attack_data.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/card_game/scripts/attack_data.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/card.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/scripts/card.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/card.gd.uid" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/scripts/card.gd.uid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/card_game.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/card_game.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/card_selection_controller.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/card_game/scripts/card_selection_controller.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/card_back.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/card_back.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/hand_card.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/hand_card.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/attack_card.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/scripts/attack_card.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/deck_choice/deck_choice.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/deck_choice/deck_choice.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/deck_choice/scripts/deck_preset.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/deck_choice/scripts/deck_preset.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/scene_handling/scripts/game_handler.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/scene_handling/scripts/game_handler.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/scene_handling/scripts/project_data.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/scene_handling/scripts/project_data.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/scene_handling/scripts/scene_controller.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/scene_handling/scripts/scene_controller.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/attack_data.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/attack_data.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCFlag.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/effects/conditions/ABCFlag.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/AttackContext.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/effects/context/AttackContext.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +99,12 @@
       <workItem from="1770541093535" duration="1817000" />
       <workItem from="1770593408820" duration="4105000" />
       <workItem from="1770599145975" duration="7068000" />
+      <workItem from="1770608894581" duration="29201000" />
+      <workItem from="1770647712927" duration="7108000" />
+      <workItem from="1770661145197" duration="7916000" />
+      <workItem from="1770691301016" duration="936000" />
+      <workItem from="1770716913799" duration="8050000" />
+      <workItem from="1770730807459" duration="9825000" />
     </task>
     <servers />
   </component>

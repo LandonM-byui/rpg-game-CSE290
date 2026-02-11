@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://ccksyr4vb7r4y"]
+
+[ext_resource type="Script" uid="uid://disvbj4alibkp" path="res://addons/card_editor/scripts/effect_editor.gd" id="1_fb2ui"]
+
+[node name="EffectEditor" type="VBoxContainer" unique_id=366795289]
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -2764.0
+offset_bottom = 223.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+script = ExtResource("1_fb2ui")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1649520054]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1252802542]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer" unique_id=1441310140]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="up_down container" type="VBoxContainer" parent="PanelContainer/HBoxContainer/MarginContainer" unique_id=1803476673]
+layout_mode = 2
+
+[node name="UP BUTTON" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/up_down container" unique_id=1648270142]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+text = " ^ "
+
+[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/MarginContainer/up_down container" unique_id=634400772]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DOWN BUTTON" type="Button" parent="PanelContainer/HBoxContainer/MarginContainer/up_down container" unique_id=1868316262]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+text = "v"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer" unique_id=1793863790]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=782136653]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/MarginContainer2" unique_id=1187969503]
+layout_mode = 2
+
+[node name="EFFECT HOOK" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=83688147]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "[EFFECT HOOK]"
+
+[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=622443239]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="DELETE BUTTON" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1523502302]
+unique_name_in_owner = true
+layout_mode = 2
+text = " [DELETE] "
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=1804028953]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/MarginContainer" unique_id=1854218848]
+layout_mode = 2
+
+[node name="MODIFIER CONTAINER" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/MarginContainer" unique_id=1282565279]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="CenterContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=1966220338]
+layout_mode = 2
+alignment = 1
+
+[node name="MODIFIER OPTIONS" type="MenuButton" parent="PanelContainer/HBoxContainer/VBoxContainer/CenterContainer" unique_id=329011179]
+unique_name_in_owner = true
+layout_mode = 2
+text = "[MODIFIER OPTION]"
+flat = false
+
+[node name="VSeparator" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/CenterContainer" unique_id=1064658436]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="ADD MODIFIER" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/CenterContainer" unique_id=1147121077]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Add Modifier "
+
+[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer" unique_id=667368179]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="." unique_id=586027414]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2

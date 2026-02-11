@@ -7,5 +7,5 @@ class_name ABCFlag
 func met(ctxt: AttackContext, _battle: BattleContext) -> bool:
 	return flag in ctxt.flags
 	
-func alter_value(_ctxt: AttackContext, _battle: BattleContext, value: int) -> int:
+func alter_value(_ctxt: AttackContext, _battle: BattleContext, value: float) -> float:
 	return value
