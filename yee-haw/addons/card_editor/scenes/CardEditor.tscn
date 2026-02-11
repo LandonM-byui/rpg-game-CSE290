@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cf28nvtb0w3li"]
+
+[ext_resource type="Script" uid="uid://day3r2n33l7g2" path="res://addons/card_editor/scripts/base_card_editor.gd" id="1_iv2tu"]
+
+[node name="CardEditor" type="Control" unique_id=1708086281]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iv2tu")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=542653929]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=501106843]
+layout_mode = 2
+
+[node name="EDITOR SETTINGS" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1612266575]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Main Settings" type="VBoxContainer" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS" unique_id=234211792]
+layout_mode = 2
+
+[node name="Card Settings" type="Label" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings" unique_id=1785018421]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Card Settings"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings" unique_id=100334530]
+layout_mode = 2
+
+[node name="Card Name" type="HBoxContainer" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings" unique_id=624490677]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings/Card Name" unique_id=1738268915]
+layout_mode = 2
+text = "Name: "
+
+[node name="CARDNAME" type="LineEdit" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings/Card Name" unique_id=1257661273]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "Unnamed Card"
+placeholder_text = "Card Name"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings/Card Name" unique_id=1659851165]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings/Card Name" unique_id=1744109581]
+layout_mode = 2
+text = "Color: "
+
+[node name="CARDCOLOR" type="ColorPickerButton" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings/Card Name" unique_id=600842266]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/ScrollContainer/EDITOR SETTINGS/Main Settings" unique_id=474456557]
+layout_mode = 2

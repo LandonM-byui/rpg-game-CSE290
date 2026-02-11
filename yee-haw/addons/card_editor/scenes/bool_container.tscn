@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c5trq5ucuii0s"]
+
+[ext_resource type="Script" uid="uid://bl4p0qkmso6b8" path="res://addons/card_editor/scripts/bool_container.gd" id="1_vayji"]
+
+[node name="BOOL CONTAINER" type="MarginContainer" unique_id=1670625466]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_vayji")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=793916961]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=10680215]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Enable Something"
+
+[node name="BOOL VALUE" type="CheckButton" parent="HBoxContainer" unique_id=51493921]
+layout_mode = 2

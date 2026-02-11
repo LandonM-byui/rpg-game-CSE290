@@ -51,8 +51,8 @@ enum RandomTarget {
 }
 
 ## Returns the matched random type for an attack type (many to one)
-func get_random_type() -> RandomTarget:
-	match target:
+static func get_random_type(tgt: AttackTarget) -> RandomTarget:
+	match tgt:
 		AttackTarget.Single: return RandomTarget.Single
 		AttackTarget.InlineSingle: return RandomTarget.InlineSingle
 		AttackTarget.FrontSingle: return RandomTarget.FrontSingle

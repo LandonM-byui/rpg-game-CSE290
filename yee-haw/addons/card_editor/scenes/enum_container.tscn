@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://uv4yrfsj1d78"]
+
+[ext_resource type="Script" uid="uid://chrw2r3hi30ic" path="res://addons/card_editor/scripts/enum_container.gd" id="1_wjips"]
+
+[node name="ENUM CONTAINER" type="MarginContainer" unique_id=541845115]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_wjips")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1922887755]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=605601654]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Flag"
+
+[node name="ENUM VALUE" type="MenuButton" parent="HBoxContainer" unique_id=318100373]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[Flag Enum]"
+flat = false

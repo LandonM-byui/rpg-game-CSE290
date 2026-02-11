@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dwnsveq5fwrp4"]
+
+[ext_resource type="Script" uid="uid://cliodig8es5t2" path="res://addons/card_editor/scripts/resource_container.gd" id="1_y610g"]
+
+[node name="RESOURCE CONTAINER" type="MarginContainer" unique_id=1601266905]
+offset_right = 469.0
+offset_bottom = 51.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_y610g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2104638407]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=2117007110]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "A Resource"
+
+[node name="RESOURCE PICKER" type="EditorResourcePicker" parent="HBoxContainer" unique_id=1705644561]
+layout_mode = 2
+size_flags_horizontal = 3
+base_type = "Effect"
