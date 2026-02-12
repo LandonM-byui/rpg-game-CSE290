@@ -21,6 +21,9 @@ const MAX_VFX_ROTATION : float = 30.0
 ## Card data
 @export var _data : IndexedCard
 
+var indexed_card : IndexedCard:
+	get: return _data
+
 # STATE TRACKING
 ## True when the mouse is hovering
 var _hovering: bool = false
@@ -199,13 +202,13 @@ func _update_position(selected_index: int, angle: float, angle_offset: float, sk
 	var total_angle := angle_offset + (angle * index)
 	var card_rotation := total_angle + deg_to_rad(90)
 	var direction := Vector2(cos(total_angle), sin(total_angle))
-	var target_position := \
+	var t_position := \
 		_pivot.global_position + \
 		direction * absf(_pivot.position.y) + \
 		Vector2(0, get_parent_control().position.y)
 	
 	# apply tween
-	_tween_position(target_position, 0.075, false, card_rotation)
+	_tween_position(t_position, 0.075, false, card_rotation)
 
 ## Reorder child ordering based on x-positions. Returns if a reordering and position update was called
 func _reorder_child_index() -> bool:

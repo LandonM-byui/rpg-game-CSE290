@@ -10,7 +10,7 @@ class_name BattleSceneController
 @export var deck_vfx : CardBack
 @export var deck_vfx_source : Control
 
-var _project_data : ProjectData
+var _bc : BattleContext
 
 ## Open menu on "show_ui"
 func _input(event: InputEvent) -> void:
@@ -18,10 +18,11 @@ func _input(event: InputEvent) -> void:
 	open_subscene.emit(SubSceneButton.SubSceneReference.GameMenu)
 	
 func load_scene(pd: ProjectData) -> void:
-	_project_data = pd
+	_bc = BattleService.CreateContext(pd)
 	
-	hand_vfx.clear_hand_vfx()
-	var hand := pd.draw_cards(5)
+	hand_vfx.initialize()
+	BattleService.draw_cards(_bc, 7)
+	var hand := BattleService.pull_hand(_bc)
 	hand_vfx.add_to_hand(hand)
 	
 	discard_vfx.data = pd.deck_preset
@@ -29,8 +30,9 @@ func load_scene(pd: ProjectData) -> void:
 	_update_vfx()
 
 func unload_scene(pd: ProjectData) -> void:
-	pd.return_removed_cards_to_deck()
+	BattleService.return_cards_to_project(pd, _bc, hand_vfx.retrieve_cards())
+	pass
 	
 func _update_vfx() -> void:
-	discard_vfx_source.visible = len(_project_data.discard) > 0
-	deck_vfx_source.visible = len(_project_data.full_deck) > 0
+	discard_vfx_source.visible = len(_bc.discard) > 0
+	deck_vfx_source.visible = len(_bc.deck) > 0

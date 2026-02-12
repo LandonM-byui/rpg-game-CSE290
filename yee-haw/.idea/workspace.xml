@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/battle.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/card_game/battle.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/data/all_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/all_attack.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/data/column_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/column_attack.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/data/lane_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/lane_attack.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/data/single_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/single_attack.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/data/test_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/test_attack.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/hand_card.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
-    </list>
+    <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +102,7 @@
       <workItem from="1770821279701" duration="2246000" />
       <workItem from="1770848895137" duration="591000" />
       <workItem from="1770863728151" duration="12017000" />
+      <workItem from="1770880461866" duration="3204000" />
     </task>
     <servers />
   </component>

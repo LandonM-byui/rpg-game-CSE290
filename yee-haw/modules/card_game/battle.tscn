@@ -10,11 +10,11 @@
 
 [node name="CardGame" type="Node" unique_id=2120214280 node_paths=PackedStringArray("hand_vfx", "discard_vfx", "discard_vfx_source", "deck_vfx", "deck_vfx_source")]
 script = ExtResource("1_vo2k6")
-hand_vfx = NodePath("UI/HBoxContainer/HAND")
-discard_vfx = NodePath("UI/Discard/Card Back")
-discard_vfx_source = NodePath("UI/Discard")
-deck_vfx = NodePath("UI/Deck/Card Back")
-deck_vfx_source = NodePath("UI/Deck")
+hand_vfx = NodePath("CanvasLayer/UI/HBoxContainer/HAND")
+discard_vfx = NodePath("CanvasLayer/UI/Discard/Card Back")
+discard_vfx_source = NodePath("CanvasLayer/UI/Discard")
+deck_vfx = NodePath("CanvasLayer/UI/Deck/Card Back")
+deck_vfx_source = NodePath("CanvasLayer/UI/Deck")
 
 [node name="Game Controller" type="Node" parent="." unique_id=487759638]
 script = ExtResource("1_x5kpi")
@@ -57,7 +57,9 @@ all_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePa
 [node name="Camera2D" type="Camera2D" parent="Game" unique_id=307374076]
 position = Vector2(2048, 1080)
 
-[node name="UI" type="Control" parent="." unique_id=1347147915]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1964407677]
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=1347147915]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -65,7 +67,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=1833918474]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI" unique_id=1833918474]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -74,20 +76,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="LSpacer" type="Control" parent="UI/HBoxContainer" unique_id=1811335900]
+[node name="LSpacer" type="Control" parent="CanvasLayer/UI/HBoxContainer" unique_id=1811335900]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="HAND" parent="UI/HBoxContainer" unique_id=306269446 instance=ExtResource("6_ue60r")]
+[node name="HAND" parent="CanvasLayer/UI/HBoxContainer" unique_id=306269446 node_paths=PackedStringArray("deck_source", "discard_source") instance=ExtResource("6_ue60r")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+deck_source = NodePath("../../Deck")
+discard_source = NodePath("../../Discard")
 
-[node name="RSpacer" type="Control" parent="UI/HBoxContainer" unique_id=450901522]
+[node name="RSpacer" type="Control" parent="CanvasLayer/UI/HBoxContainer" unique_id=450901522]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="Card Pivot" type="Control" parent="UI" unique_id=1474216332]
+[node name="Card Pivot" type="Control" parent="CanvasLayer/UI" unique_id=1474216332]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -101,7 +105,7 @@ offset_bottom = 1929.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Deck" type="Control" parent="UI" unique_id=804933803]
+[node name="Deck" type="Control" parent="CanvasLayer/UI" unique_id=804933803]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -110,14 +114,14 @@ offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
 
-[node name="Card Back" parent="UI/Deck" unique_id=1840216044 instance=ExtResource("9_gxyvq")]
+[node name="Card Back" parent="CanvasLayer/UI/Deck" unique_id=1840216044 instance=ExtResource("9_gxyvq")]
 layout_mode = 0
 offset_left = 46.0
 offset_top = -581.0
 offset_right = 421.0
 offset_bottom = -18.5
 
-[node name="Discard" type="Control" parent="UI" unique_id=78133498]
+[node name="Discard" type="Control" parent="CanvasLayer/UI" unique_id=78133498]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -129,7 +133,7 @@ offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="Card Back" parent="UI/Discard" unique_id=1655269352 instance=ExtResource("9_gxyvq")]
+[node name="Card Back" parent="CanvasLayer/UI/Discard" unique_id=1655269352 instance=ExtResource("9_gxyvq")]
 layout_mode = 0
 offset_left = -421.0
 offset_top = -581.0

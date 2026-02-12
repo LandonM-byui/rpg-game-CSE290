@@ -101,6 +101,4 @@ func _save_deck_to_project(pd: ProjectData) -> void:
 		for _i in range(deck.base_hero.included_cards[cd]):
 			pd.add_card_to_deck(cd)
 	
-	pd.shuffle_deck()
-	
 	pd.deck_preset = deck
