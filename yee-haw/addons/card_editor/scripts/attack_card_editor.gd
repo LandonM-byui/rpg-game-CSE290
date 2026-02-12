@@ -64,6 +64,8 @@ func _update_random_subtype(nv: bool) -> void:
 func _create_effect(res: Resource, new_class: String, param: String, container: Control) -> void:
 	var cls = load(CECache.class_cache[new_class]).new()
 	var fxs = res.get(param)
+	if fxs == [] or fxs == null:
+		fxs = []
 	fxs.append(cls)
 	res.set(param, fxs)
 	res.emit_changed()
