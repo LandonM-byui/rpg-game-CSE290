@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AttackCard" format=3 uid="uid://cct8aethfmfwy"]
+
+[ext_resource type="Script" uid="uid://kk7g8xg5gh00" path="res://modules/effects/Effect.gd" id="1_par6g"]
+[ext_resource type="Script" uid="uid://dxo41alnarhqr" path="res://modules/cards/scripts/attack_card.gd" id="2_cmjq7"]
+[ext_resource type="Script" uid="uid://b66mxk68yhsyx" path="res://modules/effects/modifiers/ARModifier.gd" id="2_s8xfl"]
+[ext_resource type="Script" uid="uid://c6dr06x05tinn" path="res://modules/effects/modifiers/ARLaneRecoil.gd" id="3_mgs5d"]
+[ext_resource type="Script" uid="uid://b1ida4ss80jh2" path="res://modules/effects/AttackResultEffect.gd" id="4_mb6as"]
+
+[sub_resource type="Resource" id="Resource_uc1ka"]
+script = ExtResource("3_mgs5d")
+
+[sub_resource type="Resource" id="Resource_kjsqc"]
+script = ExtResource("4_mb6as")
+modifiers = Array[ExtResource("2_s8xfl")]([SubResource("Resource_uc1ka")])
+
+[resource]
+script = ExtResource("2_cmjq7")
+damage = 8
+target = 9
+play_effects = [SubResource("Resource_kjsqc")]
+color = Color(0.6901961, 0.047058824, 0.07058824, 1)
+metadata/_custom_type_script = "uid://dxo41alnarhqr"
