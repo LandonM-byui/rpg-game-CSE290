@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dgr7nfksijukm"]
+
+[ext_resource type="Script" uid="uid://07qvco7s4hw8" path="res://modules/card_game/hand_container/hand_container.gd" id="1_5ei8n"]
+
+[node name="HandContainer" type="Control" unique_id=306269446]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_5ei8n")
+
+[node name="CARD_CONTAINER" type="Control" parent="." unique_id=76392843]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -700.0
+offset_bottom = -700.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PIVOT" type="Control" parent="." unique_id=1547138641]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 3000.0
+offset_bottom = 3000.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3

@@ -4,7 +4,7 @@ extends SceneController
 class_name BattleSceneController
 
 @export_group("VFX controls")
-@export var hand_vfx : CardSelectionController
+@export var hand_vfx : HandContainer
 @export var discard_vfx : CardBack
 @export var discard_vfx_source : Control
 @export var deck_vfx : CardBack

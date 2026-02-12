@@ -73,11 +73,11 @@ func _load_scene(ref: FullSceneButton.GameSceneReference) -> void:
 	_connect_prop_signals()
 	_loaded_scene_ref = ref
 	
-	# Let scenes load project data
-	_loaded_scene.load_scene(_project_data)
-	
 	# node parenting
 	scene_root.add_child(_loaded_scene)
+	
+	# Let scenes load project data
+	_loaded_scene.load_scene(_project_data)
 	
 	# hide subscenes when switching scenes
 	_settings.visible = false

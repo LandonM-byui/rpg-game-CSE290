@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/attack_data.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/attack_data.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCFlag.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/effects/conditions/ABCFlag.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/effects/context/AttackContext.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/effects/context/AttackContext.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/battle.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/card_game/battle.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/all_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/all_attack.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/column_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/column_attack.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/lane_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/lane_attack.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/single_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/single_attack.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/test_attack.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/data/test_attack.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/hand_card.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +50,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;data__driven__cards&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -105,6 +111,9 @@
       <workItem from="1770691301016" duration="936000" />
       <workItem from="1770716913799" duration="8050000" />
       <workItem from="1770730807459" duration="9825000" />
+      <workItem from="1770821279701" duration="2246000" />
+      <workItem from="1770848895137" duration="591000" />
+      <workItem from="1770863728151" duration="12017000" />
     </task>
     <servers />
   </component>
