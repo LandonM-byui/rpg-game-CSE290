@@ -18,6 +18,6 @@ modifiers = Array[ExtResource("2_mr1bx")]([SubResource("Resource_drq43")])
 [resource]
 script = ExtResource("2_7v2l4")
 target = 1
-play_effects = [SubResource("Resource_alky7")]
+play_effects = Array[ExtResource("1_n6req")]([SubResource("Resource_alky7")])
 color = Color(0.6901961, 0.047058824, 0.07058824, 1)
 metadata/_custom_type_script = "uid://dxo41alnarhqr"
