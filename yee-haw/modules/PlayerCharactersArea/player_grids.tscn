@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bk7386qc221vl"]
+
+[ext_resource type="Script" uid="uid://bvcog2fve586m" path="res://modules/PlayerCharactersArea/player_grids.gd" id="1_bxxg4"]
+[ext_resource type="PackedScene" uid="uid://bqdsclcbypmiw" path="res://modules/PlayerCharactersArea/player_grid_row.tscn" id="1_frdn5"]
+[ext_resource type="PackedScene" uid="uid://dk5864qiwsavv" path="res://modules/PlayerCharactersArea/player_character.tscn" id="2_7k6w2"]
+
+[node name="Player Grids" type="Node2D" unique_id=600625148]
+script = ExtResource("1_bxxg4")
+player_characters_scene = ExtResource("2_7k6w2")
+
+[node name="PlayerGridRow 0" parent="." unique_id=445643591 instance=ExtResource("1_frdn5")]
+position = Vector2(0, -600)
+
+[node name="PlayerGridRow 1" parent="." unique_id=2029276830 instance=ExtResource("1_frdn5")]
+position = Vector2(0, -300)
+
+[node name="PlayerGridRow 2" parent="." unique_id=2037034930 instance=ExtResource("1_frdn5")]
+
+[node name="PlayerGridRow 3" parent="." unique_id=134946361 instance=ExtResource("1_frdn5")]
+position = Vector2(0, 300)
+
+[node name="PlayerGridRow 4" parent="." unique_id=1064633916 instance=ExtResource("1_frdn5")]
+position = Vector2(0, 600)

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dk5864qiwsavv"]
+
+[ext_resource type="Script" uid="uid://0sfq6h61icgh" path="res://modules/PlayerCharactersArea/player_character.gd" id="1_h21t8"]
+[ext_resource type="Texture2D" uid="uid://cx4kvmvikphr5" path="res://Assets/Sample Assets/White_Rectangle.jpg" id="2_lm5yo"]
+
+[node name="PlayerCharacter" type="Node2D" unique_id=2054105415]
+script = ExtResource("1_h21t8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1941933083]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lm5yo")
+
+[node name="Health" type="Label" parent="." unique_id=1787309049]
+offset_left = -21.0
+offset_top = 68.0
+offset_right = 22.0
+offset_bottom = 92.0
+text = "10/10"
