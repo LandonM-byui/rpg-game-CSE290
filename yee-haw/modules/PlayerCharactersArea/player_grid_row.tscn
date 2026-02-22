@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bqdsclcbypmiw"]
+
+[ext_resource type="PackedScene" uid="uid://bmonm3860xtuv" path="res://modules/PlayerCharactersArea/player_grid.tscn" id="1_r0ync"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adfgx"]
+size = Vector2(850, 250)
+
+[node name="PlayerGridRow" type="Node2D" unique_id=445643591]
+
+[node name="PlayerGrid 0" parent="." unique_id=994231904 instance=ExtResource("1_r0ync")]
+position = Vector2(-300, 0)
+
+[node name="PlayerGrid 1" parent="." unique_id=310730952 instance=ExtResource("1_r0ync")]
+
+[node name="PlayerGrid 2" parent="." unique_id=1308356032 instance=ExtResource("1_r0ync")]
+position = Vector2(300, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1597856968]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1000652479]
+shape = SubResource("RectangleShape2D_adfgx")
