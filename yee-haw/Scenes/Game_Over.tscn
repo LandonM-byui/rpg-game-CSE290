@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://lxwkqqcfup0f"]
+
+[ext_resource type="Script" uid="uid://caskb54asrxqi" path="res://data/Text Quotes/death_quote_scripte.gd" id="1_lb5mr"]
+
+[node name="Control" type="Control" unique_id=1161016455]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="ColorRect" parent="." unique_id=2141407141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39607844)
+
+[node name="MarginContainer" type="MarginContainer" parent="GameOver" unique_id=1560361915]
+layout_mode = 0
+offset_right = 4096.0
+offset_bottom = 2160.0
+theme_override_constants/margin_left = 500
+theme_override_constants/margin_top = 500
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 500
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver/MarginContainer" unique_id=1893670501]
+layout_mode = 2
+alignment = 1
+script = ExtResource("1_lb5mr")
+
+[node name="Label" type="Label" parent="GameOver/MarginContainer/VBoxContainer" unique_id=1991060562]
+layout_mode = 2
+theme_override_font_sizes/font_size = 271
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="GameOver/MarginContainer/VBoxContainer" unique_id=1048541990]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="GameOver/MarginContainer/VBoxContainer" unique_id=1826810880]
+layout_mode = 2
+theme_override_font_sizes/font_size = 95
+text = "RESTART FIGHT"
+
+[node name="Control" type="Control" parent="GameOver/MarginContainer/VBoxContainer" unique_id=263177896]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="GameOver/MarginContainer/VBoxContainer" unique_id=712107443]
+layout_mode = 2
+theme_override_font_sizes/font_size = 95
+text = "QUIT"
+
+[node name="Control3" type="Control" parent="GameOver/MarginContainer/VBoxContainer" unique_id=560893660]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="QuoteLabel" type="Label" parent="GameOver/MarginContainer/VBoxContainer" unique_id=1017131593]
+layout_mode = 2
+theme_override_font_sizes/font_size = 113
+
+[connection signal="visibility_changed" from="GameOver/MarginContainer/VBoxContainer" to="GameOver/MarginContainer/VBoxContainer" method="_on_visibility_changed"]
