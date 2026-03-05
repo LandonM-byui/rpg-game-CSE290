@@ -1,6 +1,6 @@
 
 extends VBoxContainer
-
+class_name DeathQuoteScript
 var quotes = [
 	"We wouldn't be here if Hard Light was easy to eradicate.",
 	"Well, I didn't get my money's worth.",
