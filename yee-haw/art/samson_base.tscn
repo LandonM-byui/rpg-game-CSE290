@@ -1,0 +1,307 @@
+[gd_scene format=3 uid="uid://c44k0lfl573b2"]
+
+[ext_resource type="Texture2D" uid="uid://b7t55ok5ttuw4" path="res://art/samson_atlas.png" id="1_p57ms"]
+
+[sub_resource type="Animation" id="Animation_p57ms"]
+resource_name = "simon_idle"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("J Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(250, 323)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("J Body/Body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-20, -85)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("J Body/Body/J R Arm:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -64)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("J Body/Body/J R Arm/R Arm:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 32)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("J Body/Body/J Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -93), Vector2(0, -91), Vector2(-1, -93), Vector2(0, -91), Vector2(-1, -93), Vector2(0, -91), Vector2(-1, -93), Vector2(0, -91), Vector2(-1, -93)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("J Body/Body/J Head/Head:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-13, -29), Vector2(-13, -29), Vector2(-13, -29), Vector2(-13, -29), Vector2(-13, -29), Vector2(-13, -29), Vector2(-13, -29), Vector2(-13, -29), Vector2(-13, -29)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("J Body/Body/J Head/Head/J Hair:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15, -34), Vector2(15, -34), Vector2(15, -34), Vector2(15, -34), Vector2(15, -34), Vector2(15, -34), Vector2(15, -34), Vector2(15, -34), Vector2(15, -34)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("J Body/Body/J Head/Head/J Hair/Hair:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-10, 28), Vector2(-10, 28), Vector2(-10, 28), Vector2(-10, 28), Vector2(-10, 28)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("J Body/Body/J L Arm:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(30, -62), Vector2(28, -62), Vector2(30, -62), Vector2(28, -62), Vector2(30, -62), Vector2(28, -62), Vector2(30, -62), Vector2(28, -62), Vector2(30, -62)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("J Body/Body/J L Arm/L Arm:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(19, 37), Vector2(19, 37)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("J Body:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("J Body/Body:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("J Body/Body/J R Arm:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("J Body/Body/J R Arm/R Arm:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("J Body/Body/J Head:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("J Body/Body/J Head/Head:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("J Body/Body/J Head/Head/J Hair:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("J Body/Body/J Head/Head/J Hair/Hair:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("J Body/Body/J L Arm:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.078691766, 0.0, 0.078691766, 0.0, 0.078691766, 0.0, 0.078691766, 0.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("J Body/Body/J L Arm/L Arm:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmdsq"]
+_data = {
+&"simon_idle": SubResource("Animation_p57ms")
+}
+
+[node name="SamsonBase" type="Node2D" unique_id=1713015967]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=628763738]
+libraries/ = SubResource("AnimationLibrary_lmdsq")
+
+[node name="J Body" type="Node2D" parent="." unique_id=140683215]
+position = Vector2(250, 323)
+
+[node name="Body" type="Sprite2D" parent="J Body" unique_id=652492279]
+position = Vector2(-20, -85)
+texture = ExtResource("1_p57ms")
+region_enabled = true
+region_rect = Rect2(68.600006, 201.28398, 185.59999, 270.591)
+
+[node name="J R Arm" type="Node2D" parent="J Body/Body" unique_id=399302571]
+position = Vector2(-23, -64)
+
+[node name="R Arm" type="Sprite2D" parent="J Body/Body/J R Arm" unique_id=1569806539]
+position = Vector2(-1, 32)
+texture = ExtResource("1_p57ms")
+region_enabled = true
+region_rect = Rect2(266, 194.29999, 113.600006, 146.4)
+
+[node name="J Head" type="Node2D" parent="J Body/Body" unique_id=1858632884]
+position = Vector2(-1, -93)
+
+[node name="Head" type="Sprite2D" parent="J Body/Body/J Head" unique_id=1985872655]
+show_behind_parent = true
+z_index = -1
+position = Vector2(-13, -29)
+texture = ExtResource("1_p57ms")
+region_enabled = true
+region_rect = Rect2(164.40001, 38.394, 149.59999, 124.8)
+
+[node name="J Hair" type="Node2D" parent="J Body/Body/J Head/Head" unique_id=1251483245]
+position = Vector2(15, -34)
+
+[node name="Hair" type="Sprite2D" parent="J Body/Body/J Head/Head/J Hair" unique_id=282913244]
+z_index = 1
+position = Vector2(-10, 28)
+texture = ExtResource("1_p57ms")
+region_enabled = true
+region_rect = Rect2(18.80001, 36.476006, 107.19999, 119.99998)
+
+[node name="J L Arm" type="Node2D" parent="J Body/Body" unique_id=1580707048]
+position = Vector2(30, -62)
+
+[node name="L Arm" type="Sprite2D" parent="J Body/Body/J L Arm" unique_id=753501022]
+show_behind_parent = true
+z_index = -1
+position = Vector2(19, 37)
+texture = ExtResource("1_p57ms")
+region_enabled = true
+region_rect = Rect2(431.6, 202.29999, 93.599945, 124)
