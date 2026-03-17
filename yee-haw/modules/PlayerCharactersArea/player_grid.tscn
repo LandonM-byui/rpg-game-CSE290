@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bmonm3860xtuv"]
+
+[ext_resource type="Script" uid="uid://jdwrtd0hib8m" path="res://modules/PlayerCharactersArea/player_grid.gd" id="1_gf6t8"]
+[ext_resource type="Texture2D" uid="uid://cynwov72hmk3b" path="res://icon.svg" id="1_nng1c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf6t8"]
+size = Vector2(203, 201.375)
+
+[node name="PlayerGrid" type="Node2D" unique_id=6715437]
+script = ExtResource("1_gf6t8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1111517741]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_nng1c")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1735856988]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1475695502]
+shape = SubResource("RectangleShape2D_gf6t8")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
