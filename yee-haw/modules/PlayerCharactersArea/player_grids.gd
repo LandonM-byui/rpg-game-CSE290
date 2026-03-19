@@ -3,6 +3,7 @@ extends Node2D
 @export var player_characters_scene: PackedScene
 @export var obstacles_scene: PackedScene
 @export var player_grid_scene: PackedScene
+
 var player_character_array = ["Miner", "Hunter", "Scout"]
 var character_current_index = 0;
 var player_grid_array = [[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null]]
@@ -108,20 +109,52 @@ func _on_player_clicked(pos) -> void:
 				_highlight_around_character(pos[0],pos[1], true)
 				
 
+###############
 func _on_tile_clicked(row, column) -> void:
 	if selected_player == null:
 		return
-	if (player_grid_array[row][column] != null) or (abs(row - selected_player_pos) > 1):
-		pass
-	else:
-		_highlight_around_character(selected_player.player_position[0], selected_player.player_position[1], false)
-		var old_row = selected_player.player_position[0]
-		var old_column = selected_player.player_position[1]
-		player_grid_array[old_row][old_column] = null
-		selected_player._set_player_position(row, column)
-		selected_player.position = player_grid_positions[row][column]
-		player_grid_array[row][column] = selected_player
-		selected_player = null
+	
+	var context = MovementContext.new()
+	context.actor = selected_player
+	context.from_row = selected_player.player_position[0]
+	context.from_col = selected_player.player_position[1]
+	context.to_row = row
+	context.to_col = column
+	
+	context.max_distance = 1
+	
+	_apply_movement_modifiers(context)
+	
+	if not context.is_valid(player_grid_array):
+		return
+	
+	_execute_movement(context)
+	
+func _execute_movement(context: MovementContext) -> void:
+	_highlight_around_character(context.from_row, context.from_col, false)
+	
+	player_grid_array[context.from_row][context.from_col] = null
+	
+	context.actor._set_player_position(context.to_row, context.to_col)
+	context.actor.position = player_grid_positions[context.to_row][context.to_col]
+	
+	player_grid_array[context.to_row][context.to_col] = context.actor
+	
+	selected_player = null
+	
+func _apply_movement_modifiers(context: MovementContext) -> void:
+	# Example: if slowed
+	if "slowed" in context.status_effects:
+		context.max_distance = 0
+	
+	# Example: dash ability
+	if "dash" in context.status_effects:
+		context.max_distance = 2
+	
+	# Example: rooted
+	if "rooted" in context.status_effects:
+		context.action_blocked = true
+ ##############
 
 func _highlight_around_character(row, column, highlight):
 	var current_row = []
