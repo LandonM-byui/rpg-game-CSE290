@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://6yy4qsd2i3qx"]
 
-[ext_resource type="PackedScene" uid="uid://ck0qj3qheef65" path="res://modules/card_game/enemy_grid_row.tscn" id="1_niue7"]
 [ext_resource type="Script" uid="uid://c63eauk85svgr" path="res://modules/card_game/scripts/battle_scene_controller.gd" id="1_vo2k6"]
 [ext_resource type="Script" uid="uid://dn7qk5td4lxue" path="res://modules/card_game/scripts/game_controller.gd" id="1_x5kpi"]
-[ext_resource type="PackedScene" uid="uid://d1anor68t2gd1" path="res://modules/card_game/enemy_column_collider.tscn" id="2_g6l2h"]
-[ext_resource type="PackedScene" uid="uid://dclor804aadnd" path="res://modules/card_game/enemy_grid_collider.tscn" id="3_f8k5o"]
+[ext_resource type="PackedScene" uid="uid://c8gb3qj3p20dd" path="res://modules/enemy_grid_neils/enemy_grids.tscn" id="3_0ukpi"]
 [ext_resource type="PackedScene" uid="uid://dgr7nfksijukm" path="res://modules/card_game/hand_container/hand_container.tscn" id="6_ue60r"]
 [ext_resource type="PackedScene" uid="uid://2xj1e17wtpj8" path="res://modules/cards/card_back.tscn" id="9_gxyvq"]
 
@@ -21,38 +19,8 @@ script = ExtResource("1_x5kpi")
 
 [node name="Game" type="Node2D" parent="." unique_id=857822932]
 
-[node name="Enemy Grids" type="Node2D" parent="Game" unique_id=1241919926]
+[node name="Enemy Grids" parent="Game" unique_id=2063143689 instance=ExtResource("3_0ukpi")]
 position = Vector2(3526, 820)
-
-[node name="EnemyGridRow 0" parent="Game/Enemy Grids" unique_id=2144702210 instance=ExtResource("1_niue7")]
-position = Vector2(0, -600)
-
-[node name="EnemyGridRow 1" parent="Game/Enemy Grids" unique_id=154150605 instance=ExtResource("1_niue7")]
-position = Vector2(0, -300)
-
-[node name="EnemyGridRow 2" parent="Game/Enemy Grids" unique_id=1773614729 instance=ExtResource("1_niue7")]
-
-[node name="EnemyGridRow 3" parent="Game/Enemy Grids" unique_id=545857772 instance=ExtResource("1_niue7")]
-position = Vector2(0, 300)
-
-[node name="EnemyGridRow 4" parent="Game/Enemy Grids" unique_id=2090927367 instance=ExtResource("1_niue7")]
-position = Vector2(0, 600)
-
-[node name="EnemyColumn 0" parent="Game/Enemy Grids" unique_id=2073529911 node_paths=PackedStringArray("ref_rows") instance=ExtResource("2_g6l2h")]
-position = Vector2(-300, 0)
-ref_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
-
-[node name="EnemyColumn 1" parent="Game/Enemy Grids" unique_id=2140423691 node_paths=PackedStringArray("ref_rows") instance=ExtResource("2_g6l2h")]
-ref_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
-col_id = 1
-
-[node name="EnemyColumn 2" parent="Game/Enemy Grids" unique_id=389549478 node_paths=PackedStringArray("ref_rows") instance=ExtResource("2_g6l2h")]
-position = Vector2(300, 0)
-ref_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
-col_id = 2
-
-[node name="EnemyGridCollider" parent="Game/Enemy Grids" unique_id=1393013119 node_paths=PackedStringArray("all_rows") instance=ExtResource("3_f8k5o")]
-all_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
 
 [node name="Camera2D" type="Camera2D" parent="Game" unique_id=307374076]
 position = Vector2(2048, 1080)

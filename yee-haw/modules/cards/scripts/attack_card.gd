@@ -34,7 +34,7 @@ enum AttackType {
 ## Declare this card as an attack type
 func get_type() -> CardType:
 	return CardType.Attack
-
+ 
 ## Returns the selection conditions for the attack when hovering a card
 ## TODO not a complete system, bust account for Target choices and Random
 func get_selection_layer() -> int:

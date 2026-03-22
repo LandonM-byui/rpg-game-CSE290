@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EnemyTypePreset" format=3 uid="uid://byhvj0cue4jek"]
+
+[ext_resource type="Script" uid="uid://dqwwgmpb7ynm7" path="res://modules/enemy_grid_neils/enemy_type_preset/scripts/create_enemy_type_preset_class.gd" id="1_8os7r"]
+[ext_resource type="Resource" uid="uid://ktibqjey7nqf" path="res://modules/enemy_grid_neils/TEST_enemies/data/one.tres" id="2_afycq"]
+[ext_resource type="Resource" uid="uid://d18mu2dqio58c" path="res://modules/enemy_grid_neils/TEST_enemies/data/two.tres" id="3_4n041"]
+[ext_resource type="Resource" uid="uid://dw5v4gi6i5awk" path="res://modules/enemy_grid_neils/TEST_enemies/data/Three.tres" id="4_ytpk2"]
+[ext_resource type="Resource" uid="uid://cnqrvtobn67v2" path="res://modules/enemy_grid_neils/TEST_enemies/Four.tres" id="5_hrrvm"]
+[ext_resource type="Resource" uid="uid://b11kt0ct0h0tu" path="res://modules/enemy_grid_neils/TEST_enemies/data/Five.tres" id="6_velv1"]
+[ext_resource type="Resource" uid="uid://dtlu2x53poiu7" path="res://modules/enemy_grid_neils/TEST_enemies/data/SIX.tres" id="7_cm4ld"]
+[ext_resource type="Resource" uid="uid://bxefm8rggm60h" path="res://modules/enemy_grid_neils/TEST_enemies/data/lucky_billy.tres" id="8_fskte"]
+[ext_resource type="Resource" uid="uid://d3bdjwby3yikj" path="res://modules/enemy_grid_neils/TEST_enemies/data/Ellen.tres" id="9_v8ixd"]
+
+[resource]
+script = ExtResource("1_8os7r")
+type1 = ExtResource("2_afycq")
+type2 = ExtResource("3_4n041")
+type3 = ExtResource("4_ytpk2")
+type4 = ExtResource("5_hrrvm")
+type5 = ExtResource("6_velv1")
+type6 = ExtResource("7_cm4ld")
+type7 = ExtResource("8_fskte")
+type8 = ExtResource("9_v8ixd")
+metadata/_custom_type_script = "uid://dqwwgmpb7ynm7"

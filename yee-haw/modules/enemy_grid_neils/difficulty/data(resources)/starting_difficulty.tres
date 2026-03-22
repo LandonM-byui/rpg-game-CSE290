@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EncounterDifficulty" format=3 uid="uid://b51osaknm7fmd"]
+
+[ext_resource type="Script" uid="uid://b420p682l422t" path="res://modules/enemy_grid_neils/difficulty/scripts/create_difficulty_class.gd" id="1_82nqq"]
+
+[resource]
+script = ExtResource("1_82nqq")
+difficulty = 3
+metadata/_custom_type_script = "uid://b420p682l422t"
