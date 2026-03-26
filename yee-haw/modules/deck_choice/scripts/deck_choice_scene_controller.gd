@@ -48,12 +48,12 @@ func _update_vfx() -> void:
 		for _i in range(deck.base_hero.included_cards[cd]):
 			_add_card_to_group(cd)
 	
-	card_back_display.data = deck
+	card_back_display.initialize(deck.color, "")
 	deck_name_label.text = deck.name
 
 func _add_card_to_group(data: CardData) -> void:
 	var card := _small_card_prefab.instantiate() as CardVfx
-	card.data = data
+	card.initialize(data.color, data.name)
 	deck_display_container.add_child(card)
 	card.owner = deck_display_container.owner
 

@@ -9,12 +9,12 @@
 [ext_resource type="Script" uid="uid://bgq51cuy80jm8" path="res://modules/battle/scripts/card_source_interaction.gd" id="7_gbl27"]
 [ext_resource type="PackedScene" uid="uid://dbc26mu03jyca" path="res://modules/battle/card/card_vfx.tscn" id="8_gbl27"]
 
-[node name="CardGame" type="Node" unique_id=2120214280 node_paths=PackedStringArray("hand_vfx", "discard_vfx_source", "deck_vfx_source")]
+[node name="CardGame" type="Node" unique_id=2120214280 node_paths=PackedStringArray("hand_vfx", "discard_vfx", "discard_vfx_source", "deck_vfx", "deck_vfx_source")]
 script = ExtResource("1_vo2k6")
 hand_vfx = NodePath("CanvasLayer/UI/HBoxContainer/HAND")
-discard_vfx = null
+discard_vfx = NodePath("CanvasLayer/UI/Discard/Card Back - Discard")
 discard_vfx_source = NodePath("CanvasLayer/UI/Discard")
-deck_vfx = null
+deck_vfx = NodePath("CanvasLayer/UI/Deck/Card Back - Deck")
 deck_vfx_source = NodePath("CanvasLayer/UI/Deck")
 
 [node name="GAME_CONTROLLER" type="Node" parent="." unique_id=487759638]

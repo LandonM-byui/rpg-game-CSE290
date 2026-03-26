@@ -18,11 +18,10 @@ func _input(event: InputEvent) -> void:
 	open_subscene.emit(SubSceneButton.SubSceneReference.GameMenu)
 	
 func load_scene(pd: ProjectData) -> void:
-	_bc = BattleService.CreateContext(pd)
+	_bc = BattleContext.NewContext(pd)
 	
 	hand_vfx.initialize()
-	BattleService.draw_cards(_bc, 7)
-	var hand := BattleService.pull_hand(_bc)
+	var hand := _bc.draw_cards(7)
 	hand_vfx.add_to_hand(hand)
 	
 	discard_vfx.initialize(pd.deck_preset.color, "")
@@ -30,7 +29,7 @@ func load_scene(pd: ProjectData) -> void:
 	_update_vfx()
 
 func unload_scene(pd: ProjectData) -> void:
-	BattleService.return_cards_to_project(pd, _bc, hand_vfx.retrieve_cards())
+#	BattleService.return_cards_to_project(pd, _bc, hand_vfx.retrieve_cards())
 	pass
 	
 func _update_vfx() -> void:

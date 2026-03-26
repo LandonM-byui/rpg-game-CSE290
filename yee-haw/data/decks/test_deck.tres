@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="DeckPreset" format=3 uid="uid://doyxefwur27xi"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_bfs7x"]
+[ext_resource type="Resource" uid="uid://djpuo1ftxpnar" path="res://data/attacks/knife.tres" id="2_hsubf"]
+[ext_resource type="Script" uid="uid://b5edudh4ld3ja" path="res://modules/deck_choice/scripts/deck_preset.gd" id="2_nmq1y"]
+[ext_resource type="Resource" uid="uid://bpxy5q0mpar7q" path="res://data/attacks/retreating_shot.tres" id="3_p7n2b"]
+[ext_resource type="Resource" uid="uid://dxdmimq0uvg4" path="res://data/attacks/cover.tres" id="4_52heg"]
+[ext_resource type="Resource" uid="uid://cc2m43djojrb5" path="res://data/attacks/revolver.tres" id="5_hsubf"]
+[ext_resource type="Resource" uid="uid://cgke0ptdp86qs" path="res://modules/ARCHIVE_character_selector/characters/default 1.tres" id="6_p7n2b"]
+
+[resource]
+script = ExtResource("2_nmq1y")
+name = "Test Deck"
+base_hero = ExtResource("6_p7n2b")
+base_cards = Dictionary[ExtResource("1_bfs7x"), int]({
+ExtResource("2_hsubf"): 2,
+ExtResource("3_p7n2b"): 2,
+ExtResource("4_52heg"): 2,
+ExtResource("5_hsubf"): 2
+})
+color = Color(0.55842364, 3.3643395e-05, 0.44157198, 1)
+metadata/_custom_type_script = "uid://b5edudh4ld3ja"

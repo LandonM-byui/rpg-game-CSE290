@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://djpuo1ftxpnar"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_pqk7n"]
+
+[resource]
+script = ExtResource("1_pqk7n")
+name = "Knife"
+color = Color(0.6706895, 0.6706895, 0.6706895, 1)
+card_copies = 1
+create_source = 2
+metadata/_custom_type_script = "uid://47wak76myq0k"
