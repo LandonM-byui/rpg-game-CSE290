@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b7t55ok5ttuw4" path="res://art/samson_atlas.png" id="1_p57ms"]
 
 [sub_resource type="Animation" id="Animation_p57ms"]
-resource_name = "simon_idle"
+resource_name = "idle"
 length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -248,7 +248,7 @@ tracks/19/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lmdsq"]
 _data = {
-&"simon_idle": SubResource("Animation_p57ms")
+&"idle": SubResource("Animation_p57ms")
 }
 
 [node name="SamsonBase" type="Node2D" unique_id=1713015967]
