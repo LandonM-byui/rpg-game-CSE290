@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://wp60yi4mlr0d"]
+
+[ext_resource type="Script" uid="uid://dx3q7h3an11gn" path="res://modules/enemy_grid_neils/enemy_node/enemy.gd" id="1_vm6d8"]
+[ext_resource type="Texture2D" uid="uid://cx4kvmvikphr5" path="res://Assets/Sample Assets/White_Rectangle.jpg" id="2_qy3fs"]
+[ext_resource type="Script" uid="uid://83greb1mhwux" path="res://modules/enemy_grid_neils/enemy_node/set_sprite.gd" id="3_kt50p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtfir"]
+
+[node name="generic_enemy" type="Node2D" unique_id=2057989823]
+script = ExtResource("1_vm6d8")
+
+[node name="cool_sprite" type="AnimatedSprite2D" parent="." unique_id=1086907711]
+sprite_frames = SubResource("SpriteFrames_gtfir")
+
+[node name="lame_sprite" type="Sprite2D" parent="." unique_id=69633929]
+texture = ExtResource("2_qy3fs")
+script = ExtResource("3_kt50p")

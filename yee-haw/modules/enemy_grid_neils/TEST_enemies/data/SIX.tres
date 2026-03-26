@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_v6res")
-health = 6
 attack = 7
 difficulty_rating = 6
 enemy_name = 5
+sprite_path = "res://Assets/Sample Assets/Black_rectangle.jpg"
 metadata/_custom_type_script = "uid://uk6lx88nhi5j"

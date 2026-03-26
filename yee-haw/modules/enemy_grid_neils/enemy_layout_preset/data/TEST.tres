@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyLayoutPreset" format=3 uid="uid://iogd7dbtih6j"]
+
+[ext_resource type="Resource" uid="uid://d3bdjwby3yikj" path="res://modules/enemy_grid_neils/TEST_enemies/data/Ellen.tres" id="1_gtoks"]
+[ext_resource type="Resource" uid="uid://ct5djqitmjyox" path="res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres" id="2_dq6lq"]
+[ext_resource type="Resource" uid="uid://ktibqjey7nqf" path="res://modules/enemy_grid_neils/TEST_enemies/data/one.tres" id="3_r3fjk"]
+[ext_resource type="Resource" uid="uid://dtlu2x53poiu7" path="res://modules/enemy_grid_neils/TEST_enemies/data/SIX.tres" id="4_b6pv1"]
+[ext_resource type="Resource" uid="uid://d18mu2dqio58c" path="res://modules/enemy_grid_neils/TEST_enemies/data/two.tres" id="5_y83hd"]
+[ext_resource type="Script" uid="uid://blk6hbrougjkp" path="res://modules/enemy_grid_neils/enemy_layout_preset/scripts/create_enemy_layout_class.gd" id="6_75e6m"]
+
+[resource]
+script = ExtResource("6_75e6m")
+enemy0_position = ExtResource("1_gtoks")
+enemy1_position = ExtResource("4_b6pv1")
+enemy2_position = ExtResource("5_y83hd")
+enemy6_position = ExtResource("5_y83hd")
+enemy14_position = ExtResource("3_r3fjk")
+layout = null
+metadata/_custom_type_script = "uid://blk6hbrougjkp"

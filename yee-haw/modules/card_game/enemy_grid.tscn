@@ -6,8 +6,10 @@
 size = Vector2(200, 200)
 
 [node name="EnemyGrid" type="StaticBody2D" unique_id=200143169]
+scale = Vector2(1.5, 0.8)
 collision_layer = 16
 collision_mask = 16
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=362440414]
 scale = Vector2(1.5, 1.5)

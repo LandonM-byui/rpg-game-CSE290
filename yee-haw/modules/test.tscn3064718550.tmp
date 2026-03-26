@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dnk7px3xl0pkk"]
+
+[ext_resource type="Script" uid="uid://etu70mnxan6g" path="res://modules/enemy_grid_neils/scripts/generate_encounter.gd" id="1_8yopt"]
+
+[node name="test" type="Node2D" unique_id=61818205]
+script = ExtResource("1_8yopt")

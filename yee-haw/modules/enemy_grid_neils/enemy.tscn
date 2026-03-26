@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://wp60yi4mlr0d"]
-
-[ext_resource type="Script" uid="uid://dmdv3q3pw0f8h" path="res://modules/enemy_grid_neils/enemy_stuff.gd" id="1_gtfir"]
-
-[node name="Enemy" type="Node2D" unique_id=2057989823]
-script = ExtResource("1_gtfir")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1086907711]

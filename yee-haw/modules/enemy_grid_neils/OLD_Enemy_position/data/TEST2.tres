@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="EnemyPosition" format=3 uid="uid://bhmjivh3k3m0"]
 
-[ext_resource type="Script" uid="uid://b2s3wcrpfiluc" path="res://modules/enemy_grid_neils/Enemy_position/scripts/create_position_class.gd" id="1_vu4yr"]
+[ext_resource type="Script" uid="uid://b2s3wcrpfiluc" path="res://modules/enemy_grid_neils/OLD_Enemy_position/scripts/create_position_class.gd" id="1_vu4yr"]
 
 [resource]
 script = ExtResource("1_vu4yr")

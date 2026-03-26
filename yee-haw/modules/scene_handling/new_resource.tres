@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="EnemyLayoutPreset" format=3 uid="uid://dqjp8xlf7bxe3"]
 
-[ext_resource type="Script" uid="uid://73omrkv0lal2" path="res://modules/enemy_grid_neils/choose_enemy_layout.gd" id="1_sd6e1"]
+[ext_resource type="Script" uid="uid://73omrkv0lal2" path="res://modules/enemy_grid_neils/OLD_choose_enemy_layout.gd" id="1_sd6e1"]
 
 [resource]
 script = ExtResource("1_sd6e1")
