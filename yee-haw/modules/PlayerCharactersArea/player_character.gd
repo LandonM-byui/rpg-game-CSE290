@@ -6,6 +6,7 @@ var char_name = ""
 var player_position = []
 var player_health = 10
 var player_max_health = 10
+var defense = 0
 var moved = 0
 var current = false
 
@@ -15,6 +16,7 @@ func initialize(id: int, name: String, in_party: bool, row: int, column: int) ->
 	char_name = name;
 	player_position.append(row)
 	player_position.append(column)
+	$Health.text = str(player_health) + "/" + str(player_max_health)
 	
 func _set_player_position(row: int, column: int) -> void:
 	player_position.clear()
@@ -53,6 +55,23 @@ func _get_topmost():
 
 func add_move():
 	moved -= 1
+	
+func mod_defense(val):
+	defense += val
+
+func take_dmg(val):
+	defense -= val
+	if defense < 0:
+		player_health -= defense
+		defense = 0
+		$Health.text = str(player_health) + "/" + str(player_max_health)
+
+func death_check():
+	if player_health <= 0:
+		var row = player_position[0]
+		var col = player_position[1]
+		get_parent().player_grid_array[row][col] = null
+		queue_free()
 	
 func toggle_hit_box():
 	if $Area2D/CollisionShape2D.disabled == true:

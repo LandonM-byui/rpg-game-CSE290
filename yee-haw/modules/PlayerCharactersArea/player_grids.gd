@@ -33,8 +33,7 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("Cycle_PCs"):
-
-		_cycle_hero()
+		_reset_turn()
 		
 		
 func _set_up_characters(characters) -> void:
@@ -75,10 +74,11 @@ func _find_random_spot(str) -> Array:
 	
 
 ## Use the up arrow to cycle through the characters needs cooldown
-func _cycle_hero() -> void:
+func _reset_turn() -> void:
 	for child in get_children():
 		if child.has_method("_set_player_position"):
 			child.moved = 0
+			child.defense = 0
 
 	
 func _path_clear(hero) -> bool:
