@@ -13,15 +13,15 @@ obstacles_scene = ExtResource("3_vdnvk")
 player_grid_scene = ExtResource("4_hml6c")
 
 [node name="PlayerGridRow 0" parent="." unique_id=445643591 instance=ExtResource("1_frdn5")]
-position = Vector2(0, -600)
+position = Vector2(0, -300)
 
 [node name="PlayerGridRow 1" parent="." unique_id=2029276830 instance=ExtResource("1_frdn5")]
-position = Vector2(0, -300)
+position = Vector2(0, -150)
 
 [node name="PlayerGridRow 2" parent="." unique_id=2037034930 instance=ExtResource("1_frdn5")]
 
 [node name="PlayerGridRow 3" parent="." unique_id=134946361 instance=ExtResource("1_frdn5")]
-position = Vector2(0, 300)
+position = Vector2(0, 150)
 
 [node name="PlayerGridRow 4" parent="." unique_id=1064633916 instance=ExtResource("1_frdn5")]
-position = Vector2(0, 600)
+position = Vector2(0, 300)

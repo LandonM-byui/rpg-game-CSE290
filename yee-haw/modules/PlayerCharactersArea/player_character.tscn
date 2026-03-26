@@ -1,28 +1,29 @@
 [gd_scene format=3 uid="uid://dk5864qiwsavv"]
 
 [ext_resource type="Script" uid="uid://0sfq6h61icgh" path="res://modules/PlayerCharactersArea/player_character.gd" id="1_h21t8"]
-[ext_resource type="Texture2D" uid="uid://cx4kvmvikphr5" path="res://Assets/Sample Assets/White_Rectangle.jpg" id="2_lm5yo"]
+[ext_resource type="PackedScene" uid="uid://c44k0lfl573b2" path="res://art/samson_base.tscn" id="2_h21t8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h21t8"]
-size = Vector2(154, 138)
+size = Vector2(96, 265)
 
 [node name="PlayerCharacter" type="Node2D" unique_id=2054105415]
 script = ExtResource("1_h21t8")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=558092487]
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1941933083]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_lm5yo")
+[node name="SamsonBase" parent="Area2D" unique_id=1713015967 instance=ExtResource("2_h21t8")]
+position = Vector2(-243, -284)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=925626280]
+position = Vector2(-8, -79.5)
 shape = SubResource("RectangleShape2D_h21t8")
 
 [node name="Health" type="Label" parent="." unique_id=1787309049]
-offset_left = -21.0
-offset_top = 68.0
-offset_right = 22.0
-offset_bottom = 92.0
+offset_left = -41.0
+offset_top = 49.0
+offset_right = 39.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 30
 text = "10/10"
 
 [connection signal="player_clicked" from="." to="." method="_on_player_clicked"]

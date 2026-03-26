@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bmonm3860xtuv" path="res://modules/PlayerCharactersArea/player_grid.tscn" id="1_r0ync"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adfgx"]
-size = Vector2(850, 250)
+size = Vector2(825, 135)
 
 [node name="PlayerGridRow" type="Node2D" unique_id=445643591]
 
@@ -12,6 +12,7 @@ collision_layer = 32
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1000652479]
+position = Vector2(1.5, 0.5)
 shape = SubResource("RectangleShape2D_adfgx")
 
 [node name="PlayerGrid 0" parent="." unique_id=994231904 instance=ExtResource("1_r0ync")]

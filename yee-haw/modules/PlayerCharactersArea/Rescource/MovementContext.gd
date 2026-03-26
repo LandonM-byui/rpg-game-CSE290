@@ -41,6 +41,7 @@ func is_valid(grid) -> bool:
 	if distance()[0] > max_distance or distance()[1] > max_distance:
 		return false
 	
+	
 	# Check occupancy
 	if not ignore_obstacles and grid[to_row][to_col] != null:
 		return false
