@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bukkanr4pda5r"]
 
 [ext_resource type="Script" uid="uid://u6ohuq2jta42" path="res://modules/card_game/card/card.gd" id="1_wo8ig"]
-[ext_resource type="Resource" uid="uid://dalau4f1em4ht" path="res://modules/cards/data/single_attack.tres" id="2_si1j2"]
 [ext_resource type="PackedScene" uid="uid://dbc26mu03jyca" path="res://modules/card_game/card/card_vfx.tscn" id="3_ryk8o"]
 
 [node name="Card" type="Control" unique_id=39510458]
@@ -14,7 +13,6 @@ offset_right = 187.5
 offset_bottom = 281.25
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_wo8ig")
-_data = ExtResource("2_si1j2")
 
 [node name="CardVfx" parent="." unique_id=646182243 instance=ExtResource("3_ryk8o")]
 unique_name_in_owner = true
