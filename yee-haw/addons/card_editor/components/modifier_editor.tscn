@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bod4iueukap7j"]
+
+[ext_resource type="Script" uid="uid://bi53d8r7yext1" path="res://addons/card_editor/components/modifier_editor.gd" id="1_nv6fw"]
+[ext_resource type="Texture2D" uid="uid://ptkwb2m44cxu" path="res://Assets/icons/trash-can.png" id="2_hdqbl"]
+
+[node name="ModifierEditor" type="HBoxContainer" unique_id=1875978514]
+offset_right = 835.0
+offset_bottom = 31.0
+size_flags_horizontal = 3
+script = ExtResource("1_nv6fw")
+
+[node name="delete" type="Control" parent="." unique_id=1850142675]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="DELETE" type="TextureButton" parent="delete" unique_id=73927621]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_hdqbl")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="context" type="HBoxContainer" parent="." unique_id=172093082]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="context" unique_id=370463570]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Context"
+
+[node name="CONTEXT" type="MenuButton" parent="context" unique_id=600022919]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Context"
+flat = false
+
+[node name="VSeparator" type="VSeparator" parent="." unique_id=1759013481]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="parameter" type="HBoxContainer" parent="." unique_id=784417391]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="parameter" unique_id=1486630493]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Parameter"
+
+[node name="PARAMETER" type="MenuButton" parent="parameter" unique_id=1331208525]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Param"
+flat = false
+alignment = 2
+
+[node name="METHOD" type="MenuButton" parent="parameter" unique_id=1604586138]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Set"
+flat = false
+
+[node name="INT" type="SpinBox" parent="parameter" unique_id=743346345]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+allow_greater = true
+allow_lesser = true
+
+[node name="FLOAT" type="SpinBox" parent="parameter" unique_id=1520771230]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.01
+allow_greater = true
+allow_lesser = true
+
+[node name="BOOL" type="CheckButton" parent="parameter" unique_id=1753870374]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ENUM" type="MenuButton" parent="parameter" unique_id=581646806]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enum"
+flat = false
+alignment = 0

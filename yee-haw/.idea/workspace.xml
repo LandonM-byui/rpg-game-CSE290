@@ -4,7 +4,175 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="" />
+    <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/card_editor.gd" beforeDir="false" afterPath="$PROJECT_DIR$/addons/card_editor/card_editor.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/AttackCardEditor.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/CardEditor.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/CardEditorRoot.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/EffectEditor.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/EffectModifierEditor.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/bool_container.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/enum_container.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/float_container.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/int_container.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scenes/resource_container.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/attack_card_editor.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/attack_card_editor.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/base_card_editor.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/base_card_editor.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/bool_container.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/bool_container.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/card_edit_root.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/card_edit_root.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/ce_cache.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/ce_cache.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/ce_sig.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/ce_sig.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/effect_editor.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/effect_editor.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/effect_mod_controller.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/effect_mod_controller.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/enum_container.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/enum_container.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/float_container.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/float_container.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/int_container.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/int_container.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/resource_container.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/card_editor/scripts/resource_container.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.gd" beforeDir="false" afterPath="$PROJECT_DIR$/constants.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/attacks/firearms/Long_Rifle.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/attacks/firearms/Sawed_Off_Shotgun.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/attacks/firearms/pistol.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/attacks/tools/dynamite.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/status/cracked.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/battle.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/card/card.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/card/card.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/card/card.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/card/card_vfx.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/card/card_vfx.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/card/card_vfx.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/enemy_column_collider.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/enemy_grid.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/enemy_grid_collider.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/enemy_grid_row.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/hand_container/hand_container.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/hand_container/hand_container.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/hand_container/hand_container.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/readme.atk_targeting.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/battle_scene_controller.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/battle_scene_controller.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/enemy_column_selection.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/enemy_column_selection.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/enemy_row_selection.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/enemy_row_selection.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/enemy_selection_area.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/enemy_selection_area.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/game_controller.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/game_controller.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/game_data.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/game_data.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/grid_selection_area.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/card_game/scripts/grid_selection_area.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/card_back.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/all_attack.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/blue_card.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/column_attack.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/green_card.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/lane_attack.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/purple_card.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/red_card.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/single_attack.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/test_attack.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/data/yellow_card.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/attack_card.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/attack_card.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card_back.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card_back.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card_data.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card_data.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/small_card.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/small_card.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/small_card.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/deck_choice/data/default_deck_1.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/deck_choice/data/default_deck_2.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/deck_choice/data/default_deck_3.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/deck_choice/data/default_deck_4.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/deck_choice/data/default_deck_5.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/deck_choice/deck_choice.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/deck_choice/deck_choice.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/deck_choice/scripts/deck_choice_scene_controller.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/deck_choice/scripts/deck_choice_scene_controller.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/AttackBuilderEffect.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/AttackBuilderEffect.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/AttackResultEffect.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/AttackResultEffect.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/DamageEffect.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/DamageEffect.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/Effect.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/Effect.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/Status.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/Status.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCCardCount.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCCardCount.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCCount.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCCount.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCCountType.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCCountType.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCFlag.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCFlag.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCondition.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ABCondition.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ARCFlag.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ARCFlag.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ARCondition.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/ARCondition.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/DCFlag.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/DCFlag.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/DCondition.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/conditions/DCondition.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/AttackContext.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/AttackContext.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/AttackResultContext.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/AttackResultContext.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/BattleContext.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/BattleContext.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/DamageContext.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/DamageContext.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/RecoilContext.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/RecoilContext.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/StatusApplication.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/context/StatusApplication.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABChangeCritMult.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABChangeCritMult.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABChangeTarget.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABChangeTarget.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABChangeValue.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABChangeValue.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABModifier.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABModifier.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABTargetRandom.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ABTargetRandom.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARAddCard.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARAddCard.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARLaneRecoil.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARLaneRecoil.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARModifier.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARModifier.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARMoveCards.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARMoveCards.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARRecoil.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/ARRecoil.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/DChangeValue.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/DChangeValue.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/DModifier.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/DModifier.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/DStatus.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/modifiers/DStatus.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/services/BattleService.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/effects/services/BattleService.gd.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +193,7 @@
     &quot;accountId&quot;: &quot;063e99e5-9116-4f66-bb83-bcaf72271732&quot;
   }
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -103,12 +272,29 @@
       <workItem from="1770848895137" duration="591000" />
       <workItem from="1770863728151" duration="12017000" />
       <workItem from="1770880461866" duration="3204000" />
+      <workItem from="1770903845217" duration="6781000" />
+      <workItem from="1770917558920" duration="1775000" />
+      <workItem from="1770967754584" duration="995000" />
+      <workItem from="1770971151590" duration="414000" />
+      <workItem from="1770976292400" duration="350000" />
+      <workItem from="1770981722938" duration="1904000" />
+      <workItem from="1770996893557" duration="2406000" />
+      <workItem from="1771060926884" duration="3304000" />
+      <workItem from="1771069292044" duration="4104000" />
+      <workItem from="1771225562669" duration="501000" />
+      <workItem from="1771235737092" duration="1412000" />
+      <workItem from="1771313859188" duration="4362000" />
+      <workItem from="1771327639330" duration="11238000" />
+      <workItem from="1771357284873" duration="2595000" />
+      <workItem from="1771498891770" duration="7428000" />
+      <workItem from="1771637162747" duration="1492000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

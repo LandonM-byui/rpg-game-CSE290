@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://bbdk187uucp73"]
+
+[ext_resource type="Script" uid="uid://c6ukd1jvvs6i8" path="res://addons/card_editor/attack_editor.gd" id="1_cm65j"]
+
+[node name="AttackEditor" type="Control" unique_id=435453120]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2558.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cm65j")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=530064436]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=4433776]
+layout_mode = 2
+
+[node name="type" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1174987180]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/type" unique_id=555490510]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Type"
+
+[node name="TYPE" type="MenuButton" parent="MarginContainer/VBoxContainer/type" unique_id=1657896564]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TYPE"
+flat = false
+
+[node name="uses" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=800417385]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/uses" unique_id=943083729]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Uses"
+
+[node name="USES" type="SpinBox" parent="MarginContainer/VBoxContainer/uses" unique_id=372437608]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+value = 1.0
+
+[node name="triggers" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1148617046]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/triggers" unique_id=2072991443]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Triggers"
+
+[node name="TRIGGERS" type="SpinBox" parent="MarginContainer/VBoxContainer/triggers" unique_id=1452764339]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1895579277]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="target" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1530338536]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/target" unique_id=163873782]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Target"
+
+[node name="TARGET" type="MenuButton" parent="MarginContainer/VBoxContainer/target" unique_id=435772945]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TARGET"
+flat = false
+
+[node name="damage" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1748712168]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/damage" unique_id=1856365449]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Damage"
+
+[node name="DAMAGE_MIN" type="SpinBox" parent="MarginContainer/VBoxContainer/damage" unique_id=580388847]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+allow_greater = true
+
+[node name="TO_LABEL" type="Label" parent="MarginContainer/VBoxContainer/damage" unique_id=582809363]
+unique_name_in_owner = true
+layout_mode = 2
+text = " To "
+
+[node name="DAMAGE_MAX" type="SpinBox" parent="MarginContainer/VBoxContainer/damage" unique_id=141650565]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+allow_greater = true
+
+[node name="USE_RANGE" type="CheckButton" parent="MarginContainer/VBoxContainer/damage" unique_id=404565759]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Use Range?"
+
+[node name="crits" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=651274785]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/crits" unique_id=1151506993]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Critical Hits"
+
+[node name="Chance" type="Label" parent="MarginContainer/VBoxContainer/crits" unique_id=1529076722]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Chance (%)"
+
+[node name="CRIT_CHANCE" type="SpinBox" parent="MarginContainer/VBoxContainer/crits" unique_id=1469233746]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Multiplier" type="Label" parent="MarginContainer/VBoxContainer/crits" unique_id=1381420133]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = " Multiplier"
+
+[node name="CRIT_MULT" type="SpinBox" parent="MarginContainer/VBoxContainer/crits" unique_id=1493474677]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.01
+value = 2.0
+
+[node name="random" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1735130169]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/random" unique_id=265243598]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Random"
+
+[node name="RANDOM_TARGETING" type="CheckButton" parent="MarginContainer/VBoxContainer/random" unique_id=1771945719]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="VSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1376315313]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="play_effects" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=154906826]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/play_effects" unique_id=74503408]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Play Effects"
+
+[node name="effects" type="VBoxContainer" parent="MarginContainer/VBoxContainer/play_effects" unique_id=399020907]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PLAY_EFFECTS" type="VBoxContainer" parent="MarginContainer/VBoxContainer/play_effects/effects" unique_id=1409199816]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Add New" type="HBoxContainer" parent="MarginContainer/VBoxContainer/play_effects/effects" unique_id=1045460666]
+layout_mode = 2
+alignment = 1
+
+[node name="PLAY_FX_CHOICE" type="MenuButton" parent="MarginContainer/VBoxContainer/play_effects/effects/Add New" unique_id=894615585]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "PLAY FX"
+flat = false
+
+[node name="ADD_PLAY_EFFECT" type="Button" parent="MarginContainer/VBoxContainer/play_effects/effects/Add New" unique_id=1596253192]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add New"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=595874542]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="hand_effects" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1539476176]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/hand_effects" unique_id=1941458688]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "In-Hand Effects"
+
+[node name="effects" type="VBoxContainer" parent="MarginContainer/VBoxContainer/hand_effects" unique_id=135487333]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HAND_EFFECTS" type="VBoxContainer" parent="MarginContainer/VBoxContainer/hand_effects/effects" unique_id=1620879629]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Add New" type="HBoxContainer" parent="MarginContainer/VBoxContainer/hand_effects/effects" unique_id=94389621]
+layout_mode = 2
+alignment = 1
+
+[node name="HAND_FX_CHOICE" type="MenuButton" parent="MarginContainer/VBoxContainer/hand_effects/effects/Add New" unique_id=390932318]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "HAND FX"
+flat = false
+
+[node name="ADD_HAND_EFFECT" type="Button" parent="MarginContainer/VBoxContainer/hand_effects/effects/Add New" unique_id=249452942]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add New"

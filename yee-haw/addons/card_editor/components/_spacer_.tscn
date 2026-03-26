@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://63anmatan025"]
+
+[node name="_spacer_" type="Control" unique_id=187557842]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 3
+anchors_preset = 0
