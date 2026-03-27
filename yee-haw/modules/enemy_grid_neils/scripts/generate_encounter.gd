@@ -252,7 +252,7 @@ func instantiate_enemy(enemy,position,packed_node) -> void:
 	var this_enemy = enemy#.instantiate()
 	var node = packed_node.instantiate()
 	node.enemy_data = this_enemy #making the resource accesible through the node!
-	
+	this_enemy.current_position = position #hopefully makes it easier to get the position later!
 	node.position = position #+ Vector2(1000,1000)
 	#node.position = Vector2(400,800) # temp fix
 	#this_enemy.position = position

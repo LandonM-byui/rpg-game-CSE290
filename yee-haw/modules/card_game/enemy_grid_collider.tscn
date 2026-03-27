@@ -6,6 +6,7 @@
 size = Vector2(850, 1450)
 
 [node name="EnemyGridCollider" type="StaticBody2D" unique_id=1393013119]
+scale = Vector2(1, 0.5)
 collision_layer = 128
 collision_mask = 128
 script = ExtResource("1_8s3na")

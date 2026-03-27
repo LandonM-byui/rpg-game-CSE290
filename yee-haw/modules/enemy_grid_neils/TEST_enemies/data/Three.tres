@@ -4,7 +4,6 @@
 
 [resource]
 script = ExtResource("1_2rhn6")
-health = 3
 attack = 3
 difficulty_rating = 3
 enemy_name = 2

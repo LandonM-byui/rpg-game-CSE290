@@ -23,4 +23,5 @@ script = ExtResource("2_m8xui")
 nodes = [NodePath("../EnemyGrid 0"), NodePath("../EnemyGrid 1"), NodePath("../EnemyGrid 2")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=439432105]
+scale = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_aivvq")

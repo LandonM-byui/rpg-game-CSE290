@@ -4,8 +4,6 @@
 
 [resource]
 script = ExtResource("1_k3gng")
-enemy_name = "FOUR"
-health = 4
 attack = 4
 difficulty_rating = 4
 metadata/_custom_type_script = "uid://uk6lx88nhi5j"

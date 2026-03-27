@@ -6,6 +6,9 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gtfir"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vm6d8"]
+size = Vector2(381, 427)
+
 [node name="generic_enemy" type="Node2D" unique_id=2057989823]
 script = ExtResource("1_vm6d8")
 
@@ -15,3 +18,8 @@ sprite_frames = SubResource("SpriteFrames_gtfir")
 [node name="lame_sprite" type="Sprite2D" parent="." unique_id=69633929]
 texture = ExtResource("2_qy3fs")
 script = ExtResource("3_kt50p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=102007628]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1367475538]
+shape = SubResource("RectangleShape2D_vm6d8")

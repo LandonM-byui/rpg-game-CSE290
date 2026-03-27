@@ -4,8 +4,6 @@
 
 [resource]
 script = ExtResource("1_ah3vm")
-enemy_name = "One"
-health = 1
 attack = 1
 difficulty_rating = 1
 metadata/_custom_type_script = "uid://uk6lx88nhi5j"
