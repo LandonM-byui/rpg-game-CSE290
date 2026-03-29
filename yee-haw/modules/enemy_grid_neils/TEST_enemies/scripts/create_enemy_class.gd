@@ -33,3 +33,4 @@ enum EnemyName {
 
 @export var sprite_path = "res://Assets/Sample Assets/Rectangle.jpg"
 @export var current_position : Vector2 = Vector2(0,0)
+@export var grid = []

@@ -220,7 +220,7 @@ func instantiate_enemies(chosen_preset: Array, enemy_grid_positions: Array, pack
 			if cell.resource_path == no.resource_path:
 				continue
 			var position = enemy_grid_positions[c_index][r_index]
-			instantiate_enemy(cell, position, packed_node)
+			instantiate_enemy(cell, position, packed_node,c_index,r_index)
 	
 	
 	
@@ -247,13 +247,14 @@ func instantiate_enemies(chosen_preset: Array, enemy_grid_positions: Array, pack
 
 
 
-func instantiate_enemy(enemy,position,packed_node) -> void:
+func instantiate_enemy(enemy,position,packed_node,c_index,r_index) -> void:
 	'''both intantiates the enemy and assigns the sprite!'''
 	var this_enemy = enemy#.instantiate()
 	var node = packed_node.instantiate()
 	node.enemy_data = this_enemy #making the resource accesible through the node!
 	this_enemy.current_position = position #hopefully makes it easier to get the position later!
 	node.position = position #+ Vector2(1000,1000)
+	this_enemy.grid = [c_index,r_index]
 	#node.position = Vector2(400,800) # temp fix
 	#this_enemy.position = position
 	
