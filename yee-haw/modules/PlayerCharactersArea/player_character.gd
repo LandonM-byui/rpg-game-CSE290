@@ -65,6 +65,8 @@ func take_dmg(val):
 		player_health -= defense
 		defense = 0
 		$Health.text = str(player_health) + "/" + str(player_max_health)
+		death_check()
+		
 
 func death_check():
 	if player_health <= 0:
