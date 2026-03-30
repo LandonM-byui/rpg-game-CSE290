@@ -5,72 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/icons/trash-can.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/icons/trash-can.png.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/attack_editor.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/attack_editor.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/attack_editor.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/card_editor.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/card_editor.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/card_editor.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/card_sig.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/card_sig.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/ce_cache.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/ce_cache.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/_spacer_.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/condition_editor.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/condition_editor.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/condition_editor.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/effect_editor.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/effect_editor.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/effect_editor.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/modifier_editor.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/modifier_editor.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/components/modifier_editor.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/addons/card_editor/plugin.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/attacks/firearms/Long_Rifle.tres" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/attacks/firearms/Sawed_Off_Shotgun.tres" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/Status.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/Status.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/AttackContext.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/AttackContext.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/AttackResultContext.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/AttackResultContext.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/BattleContext.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/BattleContext.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/DamageContext.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/DamageContext.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/QueuedCard.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/QueuedCard.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/RecoilContext.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/RecoilContext.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/StatusApplication.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/context/StatusApplication.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/Condition.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/Condition.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/Effect.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/Effect.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/IContext.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/IContext.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/Modifier.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/Modifier.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/Sustain.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/models/Sustain.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/services/BattleService.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook/services/BattleService.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 1.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 1.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 2.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 2.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 3.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 3.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 4.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 4.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 5.tres" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ARCHIVE_character_selector/characters/default 5.tres" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/AdobeStock_861381995_converted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/AdobeStock_861381995_converted.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/seaslug_idle_atlas.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/seaslug_idle_atlas.PNG.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/weasel_idle_atlas.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seaslug_base.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weasel_base.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/art/ostrich_base.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/art/ostrich_base.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/art/samson_base.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/art/samson_base.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/art/weasel_idle_atlas.PNG.import" beforeDir="false" afterPath="$PROJECT_DIR$/art/weasel_idle_atlas.PNG.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/Rescource/MovementContext.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/Rescource/MovementContext.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/obstacle.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/obstacle.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_character.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_character.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_character.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_character.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grid.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grid.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grid_row.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grid_row.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grids.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grids.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grids.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grids.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/battle/battle.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/battle/battle.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/battle/scripts/battle_scene_controller.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/battle/scripts/battle_scene_controller.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/attack_card.gd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/attack_card.gd.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/cards/card_data.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/card_data.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/deck_choice/deck_choice.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/deck_choice/deck_choice.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/deck_choice/scripts/deck_choice_scene_controller.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/deck_choice/scripts/deck_choice_scene_controller.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/scene_handling/scripts/full_scene_button.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/scene_handling/scripts/full_scene_button.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/battle/card/card.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/battle/card/card.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card_data.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/scripts/card_data.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,22 +57,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Old-card-editor&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#22 on Merging Old-card-editor",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="GdScript Start and Debug.Player GDScript">
+}]]></component>
+  <component name="RunManager">
     <configuration name="Player GDScript" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory" show_console_on_std_err="false" show_console_on_std_out="false" port="6006">
       <option name="address" value="127.0.0.1" />
       <option name="allowRunningInParallel" value="false" />
@@ -139,6 +95,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-bf879d056d4a-297dacbbd45d-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-253.30387.154" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -197,23 +160,5 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
