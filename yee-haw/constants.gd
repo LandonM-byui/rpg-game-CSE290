@@ -9,7 +9,7 @@ const SCENE_REFERENCES : Dictionary[String, String] = {
 	"battle" : "uid://6yy4qsd2i3qx"
 }
 
-const SMALL_CARD_PREFAB := "uid://cyokdbwn8vcka"
+const CARD_VFX_PREFAB := "uid://dbc26mu03jyca"
 
 const HAND_CARD_PREFAB := "uid://bukkanr4pda5r"
 
