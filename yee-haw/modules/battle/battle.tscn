@@ -1,25 +1,30 @@
 [gd_scene format=3 uid="uid://6yy4qsd2i3qx"]
 
-[ext_resource type="PackedScene" uid="uid://ck0qj3qheef65" path="res://modules/battle/enemy_grid_row.tscn" id="1_niue7"]
-[ext_resource type="Script" uid="uid://c63eauk85svgr" path="res://modules/battle/scripts/battle_scene_controller.gd" id="1_vo2k6"]
-[ext_resource type="Script" uid="uid://dn7qk5td4lxue" path="res://modules/battle/scripts/game_controller.gd" id="1_x5kpi"]
-[ext_resource type="PackedScene" uid="uid://d1anor68t2gd1" path="res://modules/battle/enemy_column_collider.tscn" id="2_g6l2h"]
-[ext_resource type="PackedScene" uid="uid://dclor804aadnd" path="res://modules/battle/enemy_grid_collider.tscn" id="3_f8k5o"]
-[ext_resource type="PackedScene" uid="uid://dgr7nfksijukm" path="res://modules/battle/hand_container/hand_container.tscn" id="6_ue60r"]
-[ext_resource type="Script" uid="uid://bgq51cuy80jm8" path="res://modules/battle/scripts/card_source_interaction.gd" id="7_gbl27"]
-[ext_resource type="PackedScene" uid="uid://dbc26mu03jyca" path="res://modules/battle/card/card_vfx.tscn" id="8_gbl27"]
+[ext_resource type="PackedScene" uid="uid://ck0qj3qheef65" path="res://modules/card_game/enemy_grid_row.tscn" id="1_niue7"]
+[ext_resource type="Script" uid="uid://c63eauk85svgr" path="res://modules/card_game/scripts/battle_scene_controller.gd" id="1_vo2k6"]
+[ext_resource type="Script" uid="uid://dn7qk5td4lxue" path="res://modules/card_game/scripts/game_controller.gd" id="1_x5kpi"]
+[ext_resource type="PackedScene" uid="uid://d1anor68t2gd1" path="res://modules/card_game/enemy_column_collider.tscn" id="2_g6l2h"]
+[ext_resource type="PackedScene" uid="uid://dclor804aadnd" path="res://modules/card_game/enemy_grid_collider.tscn" id="3_f8k5o"]
+[ext_resource type="Texture2D" uid="uid://c8ka73rfk3qtv" path="res://art/AdobeStock_861381995_converted.png" id="3_qsv2q"]
+[ext_resource type="PackedScene" uid="uid://bk7386qc221vl" path="res://modules/PlayerCharactersArea/player_grids.tscn" id="6_tvlvn"]
+[ext_resource type="PackedScene" uid="uid://dgr7nfksijukm" path="res://modules/card_game/hand_container/hand_container.tscn" id="6_ue60r"]
+[ext_resource type="PackedScene" uid="uid://2xj1e17wtpj8" path="res://modules/cards/card_back.tscn" id="9_gxyvq"]
 
 [node name="CardGame" type="Node" unique_id=2120214280 node_paths=PackedStringArray("hand_vfx", "discard_vfx", "discard_vfx_source", "deck_vfx", "deck_vfx_source")]
 script = ExtResource("1_vo2k6")
 hand_vfx = NodePath("CanvasLayer/UI/HBoxContainer/HAND")
-discard_vfx = NodePath("CanvasLayer/UI/Discard/Card Back - Discard")
+discard_vfx = NodePath("CanvasLayer/UI/Discard/Card Back")
 discard_vfx_source = NodePath("CanvasLayer/UI/Discard")
-deck_vfx = NodePath("CanvasLayer/UI/Deck/Card Back - Deck")
+deck_vfx = NodePath("CanvasLayer/UI/Deck/Card Back")
 deck_vfx_source = NodePath("CanvasLayer/UI/Deck")
 
-[node name="GAME_CONTROLLER" type="Node" parent="." unique_id=487759638]
-unique_name_in_owner = true
+[node name="Game Controller" type="Node" parent="." unique_id=487759638]
 script = ExtResource("1_x5kpi")
+
+[node name="AdobeStock861381995Converted" type="Sprite2D" parent="." unique_id=1637129037]
+position = Vector2(2042, 574)
+scale = Vector2(5.174782, 5.174781)
+texture = ExtResource("3_qsv2q")
 
 [node name="Game" type="Node2D" parent="." unique_id=857822932]
 
@@ -56,6 +61,9 @@ col_id = 2
 [node name="EnemyGridCollider" parent="Game/Enemy Grids" unique_id=1393013119 node_paths=PackedStringArray("all_rows") instance=ExtResource("3_f8k5o")]
 all_rows = [NodePath("../EnemyGridRow 0"), NodePath("../EnemyGridRow 1"), NodePath("../EnemyGridRow 2"), NodePath("../EnemyGridRow 3"), NodePath("../EnemyGridRow 4")]
 
+[node name="Player Grids" parent="Game" unique_id=600625148 instance=ExtResource("6_tvlvn")]
+position = Vector2(798, 997)
+
 [node name="Camera2D" type="Camera2D" parent="Game" unique_id=307374076]
 position = Vector2(2048, 1080)
 
@@ -66,6 +74,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1526.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -82,10 +91,12 @@ grow_vertical = 0
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="HAND" parent="CanvasLayer/UI/HBoxContainer" unique_id=306269446 instance=ExtResource("6_ue60r")]
+[node name="HAND" parent="CanvasLayer/UI/HBoxContainer" unique_id=306269446 node_paths=PackedStringArray("deck_source", "discard_source") instance=ExtResource("6_ue60r")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+deck_source = NodePath("../../Deck")
+discard_source = NodePath("../../Discard")
 
 [node name="RSpacer" type="Control" parent="CanvasLayer/UI/HBoxContainer" unique_id=450901522]
 custom_minimum_size = Vector2(200, 0)
@@ -105,35 +116,37 @@ offset_bottom = 1929.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Deck" type="Button" parent="CanvasLayer/UI" unique_id=523325200]
+[node name="Deck" type="Control" parent="CanvasLayer/UI" unique_id=804933803]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -660.0
-offset_right = 480.0
-offset_bottom = -10.0
+offset_top = -40.0
+offset_right = 40.0
 grow_vertical = 0
-flat = true
-script = ExtResource("7_gbl27")
 
-[node name="Card Back - Deck" parent="CanvasLayer/UI/Deck" unique_id=646182243 instance=ExtResource("8_gbl27")]
-layout_mode = 1
+[node name="Card Back" parent="CanvasLayer/UI/Deck" unique_id=1840216044 instance=ExtResource("9_gxyvq")]
+layout_mode = 0
+offset_left = 46.0
+offset_top = -581.0
+offset_right = 421.0
+offset_bottom = -18.5
 
-[node name="Discard" type="Button" parent="CanvasLayer/UI" unique_id=28783892]
+[node name="Discard" type="Control" parent="CanvasLayer/UI" unique_id=78133498]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -480.0
-offset_top = -650.0
+offset_left = -40.0
+offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
-flat = true
-script = ExtResource("7_gbl27")
-source = 1
 
-[node name="Card Back - Discard" parent="CanvasLayer/UI/Discard" unique_id=42298109 instance=ExtResource("8_gbl27")]
-layout_mode = 1
+[node name="Card Back" parent="CanvasLayer/UI/Discard" unique_id=1655269352 instance=ExtResource("9_gxyvq")]
+layout_mode = 0
+offset_left = -421.0
+offset_top = -581.0
+offset_right = -46.0
+offset_bottom = -18.5

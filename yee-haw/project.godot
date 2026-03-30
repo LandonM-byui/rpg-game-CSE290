@@ -60,3 +60,4 @@ Click={
 2d_physics/layer_6="enemy row"
 2d_physics/layer_7="enemy column"
 2d_physics/layer_8="enemy grid"
+2d_physics/layer_9="character_select"
