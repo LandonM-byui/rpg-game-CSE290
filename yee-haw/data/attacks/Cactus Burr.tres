@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cw8t0sq5qwxnd"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_mrchy"]
+
+[resource]
+script = ExtResource("1_mrchy")
+name = "Cactus Burr"
+color = Color(0.6117647, 0.24313726, 0, 1)
+type = 3
+destroy_in_deck = 1
+block_card_draw = true
+after_play = 0
+turn_def_change = -2
+metadata/_custom_type_script = "uid://47wak76myq0k"

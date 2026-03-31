@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cddt4u7ix7yeb"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_xnioh"]
+
+[resource]
+script = ExtResource("1_xnioh")
+name = "Broken Lamp"
+color = Color(0.6117647, 0.24313726, 0, 1)
+type = 3
+block_card_draw = true
+metadata/_custom_type_script = "uid://47wak76myq0k"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://prt5hlis0t36"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_hsvdk"]
+
+[resource]
+script = ExtResource("1_hsvdk")
+name = "Winchester"
+color = Color(0.74509805, 0, 0, 1)
+damage_range = Vector2i(4, 0)
+targeting = 3
+metadata/_custom_type_script = "uid://47wak76myq0k"

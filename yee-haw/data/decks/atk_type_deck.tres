@@ -1,18 +1,40 @@
 [gd_resource type="Resource" script_class="DeckPreset" format=3 uid="uid://d321m6bx64j5w"]
 
 [ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_17b4l"]
-[ext_resource type="Resource" uid="uid://nuuilqo1yuo3" path="res://data/attacks/COLUMN.tres" id="2_lg87f"]
+[ext_resource type="Resource" uid="uid://bnqxsay621emj" path="res://data/attacks/Shotgun.tres" id="2_esv13"]
 [ext_resource type="Script" uid="uid://b5edudh4ld3ja" path="res://modules/deck_choice/scripts/deck_preset.gd" id="2_qr5kg"]
-[ext_resource type="Resource" uid="uid://bg0teixro6jf8" path="res://data/attacks/ROW.tres" id="3_085cn"]
-[ext_resource type="Resource" uid="uid://cgke0ptdp86qs" path="res://modules/ARCHIVE_character_selector/characters/default 1.tres" id="4_ctelk"]
+[ext_resource type="Resource" uid="uid://b45lsplpg4fm" path="res://data/attacks/Reload.tres" id="3_240t6"]
+[ext_resource type="Resource" uid="uid://d4jwj4n6sktp3" path="res://data/attacks/Sawed-Off.tres" id="4_wudey"]
+[ext_resource type="Resource" uid="uid://cc2m43djojrb5" path="res://data/attacks/revolver.tres" id="5_rlcdw"]
+[ext_resource type="Resource" uid="uid://bpxy5q0mpar7q" path="res://data/attacks/retreating_shot.tres" id="6_itpk1"]
+[ext_resource type="Resource" uid="uid://cdwmvo11vu2fk" path="res://data/attacks/Caution to the Wind.tres" id="7_gids8"]
+[ext_resource type="Resource" uid="uid://do5bwijffkn8v" path="res://data/attacks/Hammer.tres" id="8_32kjn"]
+[ext_resource type="Resource" uid="uid://cirm04sgv2062" path="res://data/attacks/Wrench.tres" id="9_ceodl"]
+[ext_resource type="Resource" uid="uid://dbgx4bjr6yk74" path="res://data/attacks/Energize.tres" id="10_wudey"]
+[ext_resource type="Resource" uid="uid://dxdmimq0uvg4" path="res://data/attacks/cover.tres" id="11_rlcdw"]
+[ext_resource type="Resource" uid="uid://prt5hlis0t36" path="res://data/attacks/Winchester.tres" id="12_32kjn"]
+[ext_resource type="Resource" uid="uid://sw2ak0a2e8j1" path="res://data/attacks/Straw.tres" id="13_ceodl"]
+[ext_resource type="Resource" uid="uid://cddt4u7ix7yeb" path="res://data/attacks/Broken Lamp.tres" id="14_80hv2"]
+[ext_resource type="Resource" uid="uid://cw8t0sq5qwxnd" path="res://data/attacks/Cactus Burr.tres" id="15_la7q8"]
 
 [resource]
 script = ExtResource("2_qr5kg")
 name = "ATTACK TYPE DECK"
-base_hero = ExtResource("4_ctelk")
 base_cards = Dictionary[ExtResource("1_17b4l"), int]({
-ExtResource("2_lg87f"): 2,
-ExtResource("3_085cn"): 2
+ExtResource("2_esv13"): 4,
+ExtResource("3_240t6"): 5,
+ExtResource("4_wudey"): 3,
+ExtResource("5_rlcdw"): 7,
+ExtResource("6_itpk1"): 3,
+ExtResource("7_gids8"): 2,
+ExtResource("8_32kjn"): 2,
+ExtResource("9_ceodl"): 3,
+ExtResource("10_wudey"): 2,
+ExtResource("11_rlcdw"): 4,
+ExtResource("12_32kjn"): 5,
+ExtResource("13_ceodl"): 4,
+ExtResource("14_80hv2"): 2,
+ExtResource("15_la7q8"): 2
 })
 color = Color(1, 0, 0.49019608, 1)
 metadata/_custom_type_script = "uid://b5edudh4ld3ja"

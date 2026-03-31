@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://do5bwijffkn8v"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_wgqhe"]
+
+[resource]
+script = ExtResource("1_wgqhe")
+name = "Hammer"
+color = Color(1, 0.8509804, 0.11764706, 1)
+type = 2
+damage_range = Vector2i(2, 0)
+targeting = 1
+destroy_in_deck = 3
+after_play = 0
+metadata/_custom_type_script = "uid://47wak76myq0k"
