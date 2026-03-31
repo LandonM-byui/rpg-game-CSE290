@@ -6,6 +6,9 @@ extends Node #may change later
 @export var current_difficulty : EncounterDifficulty
 
 @export var packed_node : PackedScene #The generic node for the enemy sprite!
+@export var col_nodes : Array[ColumnSelectionArea]
+@export var row_nodes : Array[RowSelectionArea]
+#@export var test : int
 
 '''
 Nested to show the order they are called, will move them down when coding for ease of reading
@@ -255,6 +258,13 @@ func instantiate_enemy(enemy,position,packed_node,c_index,r_index) -> void:
 	this_enemy.current_position = position #hopefully makes it easier to get the position later!
 	node.position = position #+ Vector2(1000,1000)
 	this_enemy.grid = [c_index,r_index]
+	node.grid_column = c_index
+	node.grid_row = r_index
+	give_col_ref(c_index,node)
+	give_row_ref(r_index,node)
+	
+	
+	print(node.grid_column, node.grid_row)
 	#node.position = Vector2(400,800) # temp fix
 	#this_enemy.position = position
 	
@@ -279,6 +289,17 @@ func set_enemy_node_sprite(this_enemy,node) -> void:
 	#add_child(sprite_node)
 
 	
+
+func give_col_ref(col,node):
+	col_nodes[col].node_ref = node.path
+	
+
+
+func give_row_ref(row,node):
+	col_nodes[row].node_ref = node.path
+	
+
+
 
 
 func _ready():

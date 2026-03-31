@@ -7,6 +7,8 @@ class_name ColumnSelectionArea
 ## Column index. (Gets children at this index from each row)
 @export var col_id : int
 
+var node_ref = ''
+
 ## Tracked nodes that are referenced by this column.
 var linked_vfx : Array[Node2D]
 
