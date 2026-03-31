@@ -59,8 +59,10 @@ func end_player_turn() -> void:
 	_bc.turn_end_reset()
 	
 	_update_vfx()
+	$Game/PlayerGrids._reset_turn()
 	
 	run_enemy_turn()
+	
 	
 func run_enemy_turn():
 	turn = 1

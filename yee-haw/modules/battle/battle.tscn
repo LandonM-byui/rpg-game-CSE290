@@ -73,7 +73,7 @@ position = Vector2(-300, 0)
 [node name="EnemyColumn 2" parent="Game/Enemy Grids" unique_id=389549478 instance=ExtResource("2_g6l2h")]
 position = Vector2(300, 0)
 
-[node name="Player Grids" parent="Game" unique_id=600625148 instance=ExtResource("6_tvlvn")]
+[node name="PlayerGrids" parent="Game" unique_id=600625148 instance=ExtResource("6_tvlvn")]
 position = Vector2(798, 820)
 
 [node name="Camera2D" type="Camera2D" parent="Game" unique_id=307374076]
