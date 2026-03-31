@@ -1,19 +1,21 @@
 extends Node2D
+class_name PlayerCharacter
+
 signal player_clicked(pos)
 
-var player_id = 0
-var char_name = ""
-var player_position = []
-var player_health = 10
-var player_max_health = 10
-var defense = 0
-var moved = 0
-var current = false
+var player_id := 0
+var char_name := ""
+var player_position := []
+var player_health := 10
+var player_max_health := 10
+var defense := 0
+var moved := 0
+var current := false
 
-func initialize(id: int, name: String, in_party: bool, row: int, column: int) -> void:
+func initialize(id: int, node_name: String, in_party: bool, row: int, column: int) -> void:
 	player_id = id;
 	current = in_party;
-	char_name = name;
+	char_name = node_name;
 	player_position.append(row)
 	player_position.append(column)
 	$Health.text = str(player_health) + "/" + str(player_max_health)
@@ -24,24 +26,24 @@ func _set_player_position(row: int, column: int) -> void:
 	player_position.append(column)
 
 
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		#if not _get_topmost():
 			#return
 		player_clicked.emit(player_position)
 
 func _get_topmost():
-	var space_state = get_world_2d().direct_space_state
+	var space_state := get_world_2d().direct_space_state
 	
 	var query = PhysicsPointQueryParameters2D.new()
 	query.position = get_global_mouse_position()
 	query.collide_with_areas = true
 	query.collide_with_bodies = true
 	
-	var results = space_state.intersect_point(query)
+	var results := space_state.intersect_point(query)
 	
 	var best = null
-	var highest_z = -INF
+	var highest_z := -INF
 	
 	for r in results:
 		var obj = r.collider
@@ -53,19 +55,22 @@ func _get_topmost():
 	
 	return best
 
-func add_move():
-	moved -= 1
+func add_moves(moves: int):
+	moved -= moves
 	
 func mod_defense(val):
 	defense += val
 
 func take_dmg(val):
-	defense -= val
-	if defense < 0:
-		player_health -= defense
-		defense = 0
-		$Health.text = str(player_health) + "/" + str(player_max_health)
-		death_check()
+	if defense > val:
+		defense -= val
+		return
+	
+	val -= defense
+	player_health -= val
+	defense = 0
+	$Health.text = str(player_health) + "/" + str(player_max_health)
+	death_check()
 		
 
 func death_check():
@@ -85,3 +90,9 @@ func _select():
 	$Area2D/SamsonBase.modulate = Color(0, 1, 0)
 func _un_highlight():
 	$Area2D/SamsonBase.modulate = Color(1, 1, 1)
+	
+func select():
+	_select()
+	
+func deselect():
+	_un_highlight()

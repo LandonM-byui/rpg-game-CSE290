@@ -13,6 +13,7 @@ size = Vector2(381, 427)
 script = ExtResource("1_vm6d8")
 
 [node name="cool_sprite" type="AnimatedSprite2D" parent="." unique_id=1086907711]
+visible = false
 sprite_frames = SubResource("SpriteFrames_gtfir")
 
 [node name="lame_sprite" type="Sprite2D" parent="." unique_id=69633929]
@@ -20,6 +21,8 @@ texture = ExtResource("2_qy3fs")
 script = ExtResource("3_kt50p")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=102007628]
+collision_layer = 16
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1367475538]
 shape = SubResource("RectangleShape2D_vm6d8")

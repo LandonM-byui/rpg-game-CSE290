@@ -16,7 +16,7 @@ enum CardPermanance {
 ## All card types
 enum CardType {
 	Attack,
-	Defense,
+	Buff,
 	Item,
 	Junk
 }
@@ -46,6 +46,8 @@ enum CardSource {
 
 @export var damage_range := Vector2i(0, 0)
 
+@export var extra_moves : int = 0
+
 @export var defense : int = 0
 
 @export var targeting := AttackTarget.None
@@ -59,8 +61,6 @@ enum CardSource {
 @export var create_source := CardSource.Hand
 
 @export var destroy_in_deck : int = 0
-
-@export var destroy_in_hand : int = 0
 
 @export var block_card_draw : bool = false
 

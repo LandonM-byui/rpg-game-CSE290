@@ -44,9 +44,6 @@ func _update_vfx() -> void:
 	for cd in deck.base_cards:
 		for _i in range(deck.base_cards[cd]):
 			_add_card_to_group(cd)
-	for cd in deck.base_hero.included_cards:
-		for _i in range(deck.base_hero.included_cards[cd]):
-			_add_card_to_group(cd)
 	
 	card_back_display.initialize(deck.color, "")
 	deck_name_label.text = deck.name
@@ -96,9 +93,6 @@ func _save_deck_to_project(pd: ProjectData) -> void:
 	
 	for cd in deck.base_cards:
 		for _i in range(deck.base_cards[cd]):
-			pd.add_card_to_deck(cd)
-	for cd in deck.base_hero.included_cards:
-		for _i in range(deck.base_hero.included_cards[cd]):
 			pd.add_card_to_deck(cd)
 	
 	pd.deck_preset = deck

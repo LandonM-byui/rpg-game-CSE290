@@ -9,8 +9,17 @@ class_name BattleSceneController
 @export var discard_vfx_source : Control
 @export var deck_vfx : CardVfx
 @export var deck_vfx_source : Control
+@export var end_turn_button : Button
+@export var deck_count_label : Label
+@export var discard_count_label : Label
+@export var enemy_grid_controller : EnemyGridController
 
 var _bc : BattleContext
+
+var turn := -1
+
+func context() -> BattleContext:
+	return _bc
 
 ## Open menu on "show_ui"
 func _input(event: InputEvent) -> void:
@@ -20,18 +29,59 @@ func _input(event: InputEvent) -> void:
 func load_scene(pd: ProjectData) -> void:
 	_bc = BattleContext.NewContext(pd)
 	
-	hand_vfx.initialize()
-	var hand := _bc.draw_cards(7)
-	hand_vfx.add_to_hand(hand)
+	end_turn_button.pressed.connect(end_player_turn)
 	
 	discard_vfx.initialize(pd.deck_preset.color, "")
 	deck_vfx.initialize(pd.deck_preset.color, "")
 	_update_vfx()
+	
+	run_player_turn()
 
-func unload_scene(pd: ProjectData) -> void:
+func unload_scene(_pd: ProjectData) -> void:
 #	BattleService.return_cards_to_project(pd, _bc, hand_vfx.retrieve_cards())
 	pass
 	
 func _update_vfx() -> void:
 	discard_vfx_source.visible = len(_bc.discard) > 0
 	deck_vfx_source.visible = len(_bc.deck) > 0
+	
+	discard_count_label.text = str(len(_bc.discard))
+	deck_count_label.text = str(len(_bc.deck))
+
+func add_cards_to_hand(count: int) -> void:
+	var cards := _bc.draw_cards(count)
+	hand_vfx.add_to_hand(cards)
+	
+func end_player_turn() -> void:
+	if turn != 0: return
+	
+	hand_vfx.discard_hand()
+	_bc.turn_end_reset()
+	
+	_update_vfx()
+	
+	run_enemy_turn()
+	
+func run_enemy_turn():
+	turn = 1
+	print("ENEMY TURN!: ")
+	
+	if enemy_grid_controller.get_enemy_count() == 0:
+		(get_parent().get_parent() as GameHandler)._load_scene(FullSceneButton.GameSceneReference.DeckChoice)
+	
+	# TODO enemies attack players
+	
+	_update_vfx()
+	
+	run_player_turn()
+	
+func run_player_turn():
+	print("PLAYER TURN!")
+	
+	hand_vfx.initialize()
+	var hand := _bc.draw_cards(7)
+	await hand_vfx.add_to_hand(hand, true)
+	
+	_update_vfx()
+	
+	turn = 0

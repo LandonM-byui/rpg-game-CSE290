@@ -1,32 +1,23 @@
-extends EnemySelectionArea
+extends CollisionObject2D
 ## Defines an entire enemy column as a selection area.
 class_name ColumnSelectionArea
 
-## Rows to pull enemy nodes from.
-@export var ref_rows : Array[Node2D]
-## Column index. (Gets children at this index from each row)
-@export var col_id : int
-
-var node_ref = ''
-
-## Tracked nodes that are referenced by this column.
-var linked_vfx : Array[Node2D]
-
-func _ready() -> void:
-	linked_vfx = []
-	
-	if col_id < 0:
-		return
-	
-	for ref in ref_rows:
-		if ref.get_child_count() <= col_id:
-			continue
-		linked_vfx.append(ref.get_child(col_id))
+@export var enemy_refs : Array[EnemyController] = []
 
 func select() -> void:
-	for vfx in linked_vfx:
-		vfx.modulate = SELECTION_COLOR
+	for en in enemy_refs:
+		en.select()
 
 func deselect() -> void:
-	for vfx in linked_vfx:
-		vfx.modulate = NORMAL_COLOR
+	for en in enemy_refs:
+		en.deselect()
+		
+func add_reference(enemy: EnemyController) -> void:
+	enemy_refs.append(enemy)
+
+func remove(enemy: EnemyController) -> void:
+	for i in range(len(enemy_refs)):
+		if not enemy_refs[i] == enemy: continue
+			
+		enemy_refs.pop_at(i)
+		return

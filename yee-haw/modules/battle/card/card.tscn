@@ -4,19 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://dbc26mu03jyca" path="res://modules/battle/card/card_vfx.tscn" id="3_ryk8o"]
 
 [node name="Card" type="Control" unique_id=39510458]
-custom_minimum_size = Vector2(375, 562.5)
 layout_mode = 3
 anchors_preset = 0
-offset_left = -187.5
-offset_top = -281.25
-offset_right = 187.5
-offset_bottom = 281.25
+offset_left = -140.125
+offset_top = -210.937
+offset_right = 140.125
+offset_bottom = 210.938
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("1_wo8ig")
 
 [node name="CardVfx" parent="." unique_id=646182243 instance=ExtResource("3_ryk8o")]
 unique_name_in_owner = true
 layout_mode = 1
+scale = Vector2(0.75, 0.75)
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

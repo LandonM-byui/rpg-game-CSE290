@@ -35,6 +35,9 @@ var deck : Array[IndexedCard]
 var counter_id : int = 0
 var discard : Array[IndexedCard]
 var block_card_draw: bool = false
+var special_already_played: bool = false
+var turn_damage_change : int = 0
+var turn_defense_change : int = 0
 
 func add_to_discard(card: IndexedCard) -> void:
 	discard.append(card)
@@ -48,10 +51,20 @@ func next_card_id() -> int:
 	
 func create_in_deck(cards: Array[CardData]) -> void:
 	for data in cards:
-		var card := IndexedCard.Create(next_card_id(), data)
+		var card := create_card(data)
 		deck.append(card)
 
 func create_in_discard(cards: Array[CardData]) -> void:
 	for data in cards:
-		var card := IndexedCard.Create(next_card_id(), data)
+		var card := create_card(data)
 		discard.append(card)
+		
+func create_card(data: CardData) -> IndexedCard:
+	return IndexedCard.Create(next_card_id(), data)
+	
+func turn_end_reset() -> void:
+	block_card_draw	= false
+	special_already_played = false
+	turn_damage_change = 0
+	turn_defense_change = 0
+	

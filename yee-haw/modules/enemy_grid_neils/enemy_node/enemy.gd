@@ -1,34 +1,37 @@
 extends Node2D
+class_name EnemyController
 
-'''assign this to enemy resource when instantiating the node!'''
 var enemy_data : Enemy
+
+var health : int = 0
 
 var grid_column : int = -1
 var grid_row : int = -1
 
+var row_ref : RowSelectionArea
+var col_ref : ColumnSelectionArea
+var remove : Callable
 
-func take_dmg(enemy_data,damage_value):
-	'''take damage, using reference to enemy resource associated with this node'''
-	'''call externally'''
-	enemy_data.health = enemy_data.health - damage_value
-	is_dead(enemy_data)
+func full_heal() -> void:
+	health = enemy_data.max_health
 
+func take_dmg(damage_value):
+	if damage_value <= 0: return
 
-func is_dead(enemy_data):
-	if enemy_data.health <= 0:
+	health = max(0, health - damage_value)
+	is_dead()
+
+func is_dead():
+	if health <= 0:
+		row_ref.remove(self)
+		col_ref.remove(self)
+		remove.call()
 		queue_free()
 
-
-func enemy_damage(enemy_data):
-	'''call externally'''
-	#num = ((randi() %2) +1.5 ) /3  #damage multiplyer between ~.5 and 1.5?
-	var damage = enemy_data.attack    # * num
-	return damage
-
-
 func select():
-	$cool_sprite.modulate = Color(1, 0, 0)
+	$cool_sprite.self_modulate = Color(1, 0, 0)
+	$lame_sprite.self_modulate = Color(1, 0, 0)
 
-
-func unhighlight():
-	$cool_sprite.modulate = Color(1, 1, 1)
+func deselect():
+	$cool_sprite.self_modulate = Color(1, 1, 1)
+	$lame_sprite.self_modulate = Color(1, 1, 1)

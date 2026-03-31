@@ -4,16 +4,25 @@ extends Node2D
 @export var obstacles_scene: PackedScene
 @export var player_grid_scene: PackedScene
 
-var player_character_array = ["Miner", "Hunter", "Scout"]
-var character_current_index = 0;
-var player_grid_array = [[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null]]
-var grid = []
-var player_grid_positions = [[Vector2(-300, -300), Vector2(0, -300), Vector2(300, -300)],[Vector2(-300, -150), Vector2(0, -150), Vector2(300, -150)], [Vector2(-300, 0), Vector2(0, 0), Vector2(300, 0)], [Vector2(-300, 150), Vector2(0, 150), Vector2(300, 150)], [Vector2(-300, 300), Vector2(0, 300), Vector2(300, 300)]]
+var player_character_array := ["Miner", "Hunter", "Scout"]
+var character_current_index := 0;
+var player_grid_array := [[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null]]
+var grid := []
+@export var player_grid_rows : Array[float] = [-300, -150, 0, 150, 300]
+@export var player_grid_columns : Array[float] = [-300, 0, 300]
+var player_grid_positions : Array
 var selected_player = null
-var selected_player_pos = 0;
+var selected_player_pos := 0;
 
 
 func _ready() -> void:
+	player_grid_positions = []
+	for row in player_grid_rows:
+		var data : Array[Vector2] = []
+		for col in player_grid_columns:
+			data.append(Vector2(col, row))
+		player_grid_positions.append(data)
+
 	randomize()
 	grid.clear()
 	grid = [[null,null,null],[null,null,null],[null,null,null],[null,null,null],[null,null,null]]
@@ -31,17 +40,17 @@ func _ready() -> void:
 	#pc._set_player_position(Vector2(600, 600))
 	#add_child(pc)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_pressed("Cycle_PCs"):
 		_reset_turn()
 		
 		
 func _set_up_characters(characters) -> void:
-	var i = 0
-	for char in characters:
-		var pc = player_characters_scene.instantiate()
-		var grid_pos = _find_random_spot(pc)
-		pc.initialize(i, char, true, grid_pos[0], grid_pos[1])
+	var i := 0
+	for character in characters:
+		var pc := player_characters_scene.instantiate()
+		var grid_pos := _find_random_spot(pc)
+		pc.initialize(i, character, true, grid_pos[0], grid_pos[1])
 		pc.position = player_grid_positions[grid_pos[0]][grid_pos[1]]
 		pc.z_index = grid_pos[1] + 1
 		pc.player_clicked.connect(_on_player_clicked)
@@ -49,11 +58,10 @@ func _set_up_characters(characters) -> void:
 		i+=1
 		
 func _set_up_obstacles(num: int) -> void:
-	var n = num
-	var temp;
+	var n := num
 	while n != 0:
-		var ob = obstacles_scene.instantiate()
-		var grid_pos = _find_random_spot("rock")
+		var ob := obstacles_scene.instantiate()
+		var grid_pos := _find_random_spot("rock")
 		ob.instantiate(grid_pos[0], grid_pos[1])
 		ob.position = player_grid_positions[grid_pos[0]][grid_pos[1]]
 		ob.z_index = grid_pos[1] + 1
@@ -61,15 +69,15 @@ func _set_up_obstacles(num: int) -> void:
 		n -= 1
 		
 		
-func _find_random_spot(str) -> Array:
-	var check = true
+func _find_random_spot(node_name) -> Array:
+	var check := true
 	var row;
 	var column
 	while check:
 		row = randi() % 5
 		column = randi() % 3
 		if player_grid_array[row][column] == null:
-			player_grid_array[row][column] = str
+			player_grid_array[row][column] = node_name
 			check = false
 	return [row, column]
 	
@@ -83,8 +91,7 @@ func _reset_turn() -> void:
 
 	
 func _path_clear(hero) -> bool:
-	var row = 0;
-	var column = 0;
+	var column := 0;
 	for r in player_grid_array:
 		if r.has(hero):
 			column = r.find(hero)
@@ -156,10 +163,10 @@ func _apply_movement_modifiers(context: MovementContext) -> void:
 	# Example: rooted
 	if "rooted" in context.status_effects:
 		context.action_blocked = true
- ##############
+##############
 
 func _highlight_around_character(row, column, highlight):
-	var current_row = []
+	var current_row := []
 	for vert in range(-1, 2):
 		if (vert + row >= 0) and (vert + row <= player_grid_array.size() - 1):
 			current_row = player_grid_array[row + vert]

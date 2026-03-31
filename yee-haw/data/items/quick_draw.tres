@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cy6sw1spyl3gu"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_6qoqd"]
+
+[resource]
+script = ExtResource("1_6qoqd")
+name = "Quick Draw"
+color = Color(0.29770645, 0.29770645, 0.29770643, 1)
+draw_cards = 2
+metadata/_custom_type_script = "uid://47wak76myq0k"

@@ -8,6 +8,5 @@ name = "Cover"
 color = Color(0.17118153, 0.7461356, 0.8514302, 1)
 type = 1
 defense = 7
-targeting = 1
 perma_stat_change = -1
 metadata/_custom_type_script = "uid://47wak76myq0k"

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbc26mu03jyca"]
 
-[ext_resource type="Script" uid="uid://y6hk4a5yrhqx" path="res://modules/card_game/card/card_vfx.gd" id="1_c20qk"]
+[ext_resource type="Script" uid="uid://y6hk4a5yrhqx" path="res://modules/battle/card/card_vfx.gd" id="1_c20qk"]
 
 [node name="CardVfx" type="Control" unique_id=646182243]
 custom_minimum_size = Vector2(375, 562.5)

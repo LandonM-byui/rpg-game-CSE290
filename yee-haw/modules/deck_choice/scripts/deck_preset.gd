@@ -8,9 +8,6 @@ class_name DeckPreset
 ## Deck name
 @export var name : String = "Unnamed Deck"
 
-## Base hero included with the deck
-@export var base_hero : CharacterData
-
 ## Base cards included in the chosen deck
 @export var base_cards : Dictionary[CardData, int]
 

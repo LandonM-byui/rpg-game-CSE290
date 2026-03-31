@@ -10,12 +10,14 @@ size = Vector2(96, 265)
 script = ExtResource("1_h21t8")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=558092487]
+collision_layer = 256
+collision_mask = 256
 
 [node name="SamsonBase" parent="Area2D" unique_id=1713015967 instance=ExtResource("2_h21t8")]
 position = Vector2(-243, -284)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=925626280]
-position = Vector2(-8, -79.5)
+position = Vector2(-8, -6)
 shape = SubResource("RectangleShape2D_h21t8")
 
 [node name="Health" type="Label" parent="." unique_id=1787309049]
