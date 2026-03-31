@@ -3,6 +3,9 @@ extends Node2D
 '''assign this to enemy resource when instantiating the node!'''
 var enemy_data : Enemy
 
+var grid_column : int = -1
+var grid_row : int = -1
+
 
 func take_dmg(enemy_data,damage_value):
 	'''take damage, using reference to enemy resource associated with this node'''
