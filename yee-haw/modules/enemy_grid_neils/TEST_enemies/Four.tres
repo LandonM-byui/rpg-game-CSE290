@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Enemy" format=3 uid="uid://cnqrvtobn67v2"]
 
-[ext_resource type="Script" uid="uid://uk6lx88nhi5j" path="res://modules/enemy_grid_neils/TEST_enemies/scripts/create_enemy_class.gd" id="1_k3gng"]
+[ext_resource type="Script" uid="uid://uk6lx88nhi5j" path="res://modules/enemy_grid_neils/final_enemies/scripts/create_enemy_class.gd" id="1_k3gng"]
 
 [resource]
 script = ExtResource("1_k3gng")

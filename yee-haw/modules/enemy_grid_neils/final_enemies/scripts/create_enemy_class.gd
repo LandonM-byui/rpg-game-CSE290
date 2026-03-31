@@ -19,6 +19,7 @@ var health : int
 '''When creating a new enemy type, add the name in all caps to the enum EnemyName!
 '''
 enum EnemyName {
+	Lumostrich,
 	YES,
 	ONE,
 	TWO,
