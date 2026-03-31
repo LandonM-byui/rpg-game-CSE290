@@ -1,0 +1,235 @@
+[gd_scene format=3 uid="uid://weurm1j3ycly"]
+
+[ext_resource type="PackedScene" uid="uid://dbc26mu03jyca" path="res://modules/card_game/card/card_vfx.tscn" id="1_7tmwf"]
+[ext_resource type="Theme" uid="uid://bq1laoqhq1ssh" path="res://modules/deck_choice/no_scroll_bar_theme.tres" id="1_y5sii"]
+
+[node name="DeckViewer" type="Control" unique_id=657599615]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1076990105]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1137.5
+offset_top = -1064.5
+offset_right = 1137.5
+offset_bottom = 1064.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_y5sii")
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=1506754504]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 5
+
+[node name="CardVfx" parent="ScrollContainer/GridContainer" unique_id=646182243 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx2" parent="ScrollContainer/GridContainer" unique_id=1731619689 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx3" parent="ScrollContainer/GridContainer" unique_id=1961593128 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx4" parent="ScrollContainer/GridContainer" unique_id=341249574 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx5" parent="ScrollContainer/GridContainer" unique_id=1865439406 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx6" parent="ScrollContainer/GridContainer" unique_id=1929934861 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx7" parent="ScrollContainer/GridContainer" unique_id=602358053 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx8" parent="ScrollContainer/GridContainer" unique_id=1789075295 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx9" parent="ScrollContainer/GridContainer" unique_id=47706589 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx10" parent="ScrollContainer/GridContainer" unique_id=1670175403 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx11" parent="ScrollContainer/GridContainer" unique_id=1354935198 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx12" parent="ScrollContainer/GridContainer" unique_id=48366253 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx13" parent="ScrollContainer/GridContainer" unique_id=1743723516 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx14" parent="ScrollContainer/GridContainer" unique_id=1850284206 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx15" parent="ScrollContainer/GridContainer" unique_id=239214902 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx16" parent="ScrollContainer/GridContainer" unique_id=2029365056 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx17" parent="ScrollContainer/GridContainer" unique_id=958619483 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx18" parent="ScrollContainer/GridContainer" unique_id=375780581 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx19" parent="ScrollContainer/GridContainer" unique_id=1827731818 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx20" parent="ScrollContainer/GridContainer" unique_id=1366719869 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx21" parent="ScrollContainer/GridContainer" unique_id=978613500 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx22" parent="ScrollContainer/GridContainer" unique_id=1803818819 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx23" parent="ScrollContainer/GridContainer" unique_id=397664999 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx24" parent="ScrollContainer/GridContainer" unique_id=1839402611 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx25" parent="ScrollContainer/GridContainer" unique_id=921232945 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx26" parent="ScrollContainer/GridContainer" unique_id=975950067 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx27" parent="ScrollContainer/GridContainer" unique_id=342906813 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx28" parent="ScrollContainer/GridContainer" unique_id=514703843 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx29" parent="ScrollContainer/GridContainer" unique_id=1878320942 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx30" parent="ScrollContainer/GridContainer" unique_id=2097307012 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx31" parent="ScrollContainer/GridContainer" unique_id=76810513 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx32" parent="ScrollContainer/GridContainer" unique_id=1600173694 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx33" parent="ScrollContainer/GridContainer" unique_id=563545740 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx34" parent="ScrollContainer/GridContainer" unique_id=395737231 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx35" parent="ScrollContainer/GridContainer" unique_id=748386383 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx36" parent="ScrollContainer/GridContainer" unique_id=701480863 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx37" parent="ScrollContainer/GridContainer" unique_id=820321563 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx38" parent="ScrollContainer/GridContainer" unique_id=1785868055 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx39" parent="ScrollContainer/GridContainer" unique_id=1233643390 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx40" parent="ScrollContainer/GridContainer" unique_id=1584970416 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx41" parent="ScrollContainer/GridContainer" unique_id=738757105 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx42" parent="ScrollContainer/GridContainer" unique_id=1741066927 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx43" parent="ScrollContainer/GridContainer" unique_id=1970600745 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx44" parent="ScrollContainer/GridContainer" unique_id=842111784 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx45" parent="ScrollContainer/GridContainer" unique_id=886700018 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx46" parent="ScrollContainer/GridContainer" unique_id=1974092245 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx47" parent="ScrollContainer/GridContainer" unique_id=1587680757 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx48" parent="ScrollContainer/GridContainer" unique_id=1942107284 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx49" parent="ScrollContainer/GridContainer" unique_id=1452104337 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardVfx50" parent="ScrollContainer/GridContainer" unique_id=1795061183 instance=ExtResource("1_7tmwf")]
+unique_name_in_owner = true
+layout_mode = 2
