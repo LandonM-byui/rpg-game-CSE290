@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="" />
+    <list default="true" id="a82f52ac-49aa-4657-b07c-7305d44a62c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/art/AdobeStock_861381995_converted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/AdobeStock_861381995_converted.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/seaslug_idle_atlas.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/seaslug_idle_atlas.PNG.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/art/weasel_idle_atlas.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seaslug_base.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weasel_base.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/art/ostrich_base.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/art/ostrich_base.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/art/samson_base.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/art/samson_base.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/art/weasel_idle_atlas.PNG.import" beforeDir="false" afterPath="$PROJECT_DIR$/art/weasel_idle_atlas.PNG.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/Rescource/MovementContext.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/Rescource/MovementContext.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/obstacle.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/obstacle.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_character.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_character.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_character.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_character.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grid.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grid.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grid_row.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grid_row.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grids.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grids.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grids.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/PlayerCharactersArea/player_grids.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/battle/battle.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/battle/battle.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/battle/card/card.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/modules/battle/card/card.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/cards/scripts/card_data.gd" beforeDir="false" afterPath="$PROJECT_DIR$/modules/cards/scripts/card_data.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +48,7 @@
     &quot;accountId&quot;: &quot;063e99e5-9116-4f66-bb83-bcaf72271732&quot;
   }
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -33,22 +57,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#22 on Merging Old-card-editor",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="GdScript Start and Debug.Player GDScript">
+}]]></component>
+  <component name="RunManager">
     <configuration name="Player GDScript" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory" show_console_on_std_err="false" show_console_on_std_out="false" port="6006">
       <option name="address" value="127.0.0.1" />
       <option name="allowRunningInParallel" value="false" />
@@ -71,6 +95,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-bf879d056d4a-297dacbbd45d-com.jetbrains.pycharm.ds.sharedIndexes.bundled-DS-253.30387.154" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,32 +134,31 @@
       <workItem from="1770848895137" duration="591000" />
       <workItem from="1770863728151" duration="12017000" />
       <workItem from="1770880461866" duration="3204000" />
+      <workItem from="1770903845217" duration="6781000" />
+      <workItem from="1770917558920" duration="1775000" />
+      <workItem from="1770967754584" duration="995000" />
+      <workItem from="1770971151590" duration="414000" />
+      <workItem from="1770976292400" duration="350000" />
+      <workItem from="1770981722938" duration="1904000" />
+      <workItem from="1770996893557" duration="2406000" />
+      <workItem from="1771060926884" duration="3304000" />
+      <workItem from="1771069292044" duration="4104000" />
+      <workItem from="1771225562669" duration="501000" />
+      <workItem from="1771235737092" duration="1412000" />
+      <workItem from="1771313859188" duration="4362000" />
+      <workItem from="1771327639330" duration="11238000" />
+      <workItem from="1771357284873" duration="2595000" />
+      <workItem from="1771498891770" duration="7428000" />
+      <workItem from="1771637162747" duration="1492000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
