@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="EnemyTypePreset" format=3 uid="uid://u6slef88qiim"]
+
+[ext_resource type="Script" uid="uid://dqwwgmpb7ynm7" path="res://modules/enemy_grid_neils/enemy_type_preset/scripts/create_enemy_type_preset_class.gd" id="1_ln5t5"]
+
+[resource]
+script = ExtResource("1_ln5t5")
+metadata/_custom_type_script = "uid://dqwwgmpb7ynm7"

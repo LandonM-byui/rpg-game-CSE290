@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemyTypePreset" format=3 uid="uid://c4wie3y5lolnj"]
+
+[ext_resource type="Script" uid="uid://dqwwgmpb7ynm7" path="res://modules/enemy_grid_neils/enemy_type_preset/scripts/create_enemy_type_preset_class.gd" id="1_qn4pl"]
+[ext_resource type="Resource" uid="uid://bxefm8rggm60h" path="res://modules/enemy_grid_neils/TEST_enemies/data/lucky_billy.tres" id="2_u2iwg"]
+
+[resource]
+script = ExtResource("1_qn4pl")
+type1 = ExtResource("2_u2iwg")
+metadata/_custom_type_script = "uid://dqwwgmpb7ynm7"
