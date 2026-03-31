@@ -24,6 +24,10 @@ class_name GameHandler
 ## Built settings scene
 var _settings : SubmenuHandler
 
+
+
+
+
 ## Game menu scene .tscn
 @onready var game_menu_subscene_prefab : PackedScene = preload(CRef.SCENE_REFERENCES['in_game_menu'])
 ## Built game menu scene
@@ -38,6 +42,7 @@ var _loaded_scene_ref : FullSceneButton.GameSceneReference
 var _project_data : ProjectData
 
 func _ready() -> void:
+	music()
 	# initialize project data
 	_project_data = ProjectData.new()
 	
@@ -168,3 +173,11 @@ func _update_darkening_panel() -> void:
 		return
 	
 	full_subscene_root.visible = false
+	
+func music() -> void:
+	var battle = $"Combat Theme"
+	battle.stream = load("res://Assets/Soundtrack/Battle Theme 1.mp3")
+	battle.play(true)
+	battle.volume_db = 8
+	battle.pitch_scale = 1.0
+	
