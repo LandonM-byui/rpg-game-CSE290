@@ -32,9 +32,9 @@ func is_dead():
 		queue_free()
 		
 		
-func enemy_attack() -> void:
+func enemy_attack():
 	var dmg = enemy_data.attack
-	grid_root.attack.queue[grid_row].append(dmg)
+	return dmg
 	
 
 func select():

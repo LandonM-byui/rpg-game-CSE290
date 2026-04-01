@@ -233,3 +233,6 @@ theme_override_constants/margin_bottom = -10
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/UI/card_text/MarginContainer" unique_id=2066002643]
 layout_mode = 2
 color = Color(1, 1, 1, 0.4509804)
+
+[connection signal="turn_start" from="." to="Game/Enemy Grids" method="queue_attacks"]
+[connection signal="turn_start" from="." to="Game/Player Grids" method="_reset_turn"]

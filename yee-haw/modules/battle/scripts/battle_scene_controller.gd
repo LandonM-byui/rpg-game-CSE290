@@ -14,6 +14,9 @@ class_name BattleSceneController
 @export var discard_count_label : Label
 @export var enemy_grid_controller : EnemyGridController
 
+signal turn_start()
+
+
 var _bc : BattleContext
 
 var turn := -1
@@ -70,13 +73,27 @@ func run_enemy_turn():
 		(get_parent().get_parent() as GameHandler)._load_scene(FullSceneButton.GameSceneReference.DeckChoice)
 	
 	# TODO enemies attack players
-	
+	var temp_queue = $Game/'Enemy Grids'.attack_queue
+	print(temp_queue)
+	var temp_players = $Game/'Player Grids'.player_grid_array
+	for r in range(temp_queue.size()):
+		for dmg in temp_queue[r]:
+			for c in range(temp_players[r].size() - 1, -1, -1):
+				if temp_players[r][c] != null:
+						temp_players[r][c].take_dmg(dmg)
+						break
+	if $Game/'Player Grids'._death_check() == 0:
+		(get_parent().get_parent() as GameHandler)._load_scene(FullSceneButton.GameSceneReference.DeckChoice)
 	_update_vfx()
 	
 	run_player_turn()
 	
 func run_player_turn():
+	if $Game/'Player Grids'._death_check() == 0:
+		(get_parent().get_parent() as GameHandler)._load_scene(FullSceneButton.GameSceneReference.DeckChoice)
+
 	print("PLAYER TURN!")
+	turn_start.emit()
 	
 	hand_vfx.initialize()
 	var hand := _bc.draw_cards(7)
