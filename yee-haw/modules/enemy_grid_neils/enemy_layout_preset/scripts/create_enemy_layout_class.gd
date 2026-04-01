@@ -3,21 +3,21 @@ extends Resource
 class_name EnemyLayoutPreset
 # Zero is one of the viable positions, so it cananot be the default value
 
-@export var enemy0_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy1_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy2_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy3_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy4_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy5_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy6_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy7_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy8_position: Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy9_position: Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy10_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy11_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy12_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy13_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
-@export var enemy14_position : Enemy = preload("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
+@export var enemy0_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy1_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy2_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy3_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy4_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy5_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy6_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy7_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy8_position: Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy9_position: Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy10_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy11_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy12_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy13_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+@export var enemy14_position : Enemy = preload("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
 
 
 '''

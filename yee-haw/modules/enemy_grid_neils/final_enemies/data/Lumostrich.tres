@@ -4,4 +4,9 @@
 
 [resource]
 script = ExtResource("1_4lh1w")
+max_health = 4
+attack = 2
+difficulty_rating = 1
+enemy_name = 0
+sprite_path = "res://art/ostrich_base.tscn"
 metadata/_custom_type_script = "uid://uk6lx88nhi5j"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyLayoutPreset" format=3 uid="uid://bda7ohe56m6ls"]
+
+[ext_resource type="Resource" uid="uid://ct5djqitmjyox" path="res://modules/enemy_grid_neils/final_enemies/data/NO.tres" id="1_sffxc"]
+[ext_resource type="Script" uid="uid://blk6hbrougjkp" path="res://modules/enemy_grid_neils/enemy_layout_preset/scripts/create_enemy_layout_class.gd" id="2_6ogfx"]
+[ext_resource type="Resource" uid="uid://bytsken35vb3s" path="res://modules/enemy_grid_neils/final_enemies/data/Lumostrich.tres" id="2_drtcm"]
+
+[resource]
+script = ExtResource("2_6ogfx")
+enemy1_position = ExtResource("2_drtcm")
+enemy5_position = ExtResource("2_drtcm")
+layout = null
+metadata/_custom_type_script = "uid://blk6hbrougjkp"
