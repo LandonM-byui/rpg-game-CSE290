@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="DeckPreset" format=3 uid="uid://cssaox756tlrn"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_8kx32"]
+[ext_resource type="Script" uid="uid://b5edudh4ld3ja" path="res://modules/deck_choice/scripts/deck_preset.gd" id="2_cpxpf"]
+[ext_resource type="Resource" uid="uid://cw8t0sq5qwxnd" path="res://data/attacks/Cactus Burr.tres" id="2_scq1t"]
+[ext_resource type="Resource" uid="uid://cddt4u7ix7yeb" path="res://data/attacks/Broken Lamp.tres" id="3_6jt4n"]
+[ext_resource type="Resource" uid="uid://sw2ak0a2e8j1" path="res://data/attacks/Straw.tres" id="4_ufusj"]
+[ext_resource type="Resource" uid="uid://dxdmimq0uvg4" path="res://data/attacks/cover.tres" id="5_ktwus"]
+[ext_resource type="Resource" uid="uid://dbgx4bjr6yk74" path="res://data/attacks/Energize.tres" id="6_76rs8"]
+[ext_resource type="Resource" uid="uid://cirm04sgv2062" path="res://data/attacks/Wrench.tres" id="7_wlc5g"]
+[ext_resource type="Resource" uid="uid://prt5hlis0t36" path="res://data/attacks/Winchester.tres" id="8_o14ra"]
+[ext_resource type="Resource" uid="uid://do5bwijffkn8v" path="res://data/attacks/Hammer.tres" id="9_hus2q"]
+[ext_resource type="Resource" uid="uid://cc2m43djojrb5" path="res://data/attacks/revolver.tres" id="10_3an3m"]
+[ext_resource type="Resource" uid="uid://djpuo1ftxpnar" path="res://data/attacks/knife.tres" id="11_35ifl"]
+[ext_resource type="Resource" uid="uid://bnqxsay621emj" path="res://data/attacks/Shotgun.tres" id="12_gpfbd"]
+[ext_resource type="Resource" uid="uid://d4jwj4n6sktp3" path="res://data/attacks/Sawed-Off.tres" id="13_db0j8"]
+[ext_resource type="Resource" uid="uid://b1tmnc1nx1j2w" path="res://data/attacks/Empty the Pockets.tres" id="14_12e6l"]
+
+[resource]
+script = ExtResource("2_cpxpf")
+name = "Defender"
+base_cards = Dictionary[ExtResource("1_8kx32"), int]({
+ExtResource("2_scq1t"): 4,
+ExtResource("3_6jt4n"): 6,
+ExtResource("4_ufusj"): 4,
+ExtResource("5_ktwus"): 7,
+ExtResource("6_76rs8"): 5,
+ExtResource("7_wlc5g"): 6,
+ExtResource("8_o14ra"): 3,
+ExtResource("9_hus2q"): 7,
+ExtResource("10_3an3m"): 6,
+ExtResource("11_35ifl"): 4,
+ExtResource("12_gpfbd"): 5,
+ExtResource("13_db0j8"): 3,
+ExtResource("14_12e6l"): 5
+})
+color = Color(0.41568628, 0.85490197, 1, 1)
+metadata/_custom_type_script = "uid://b5edudh4ld3ja"

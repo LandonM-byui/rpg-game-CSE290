@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b1tmnc1nx1j2w"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_cl2uu"]
+
+[resource]
+script = ExtResource("1_cl2uu")
+name = "Empty the Pockets"
+color = Color(0, 0.7921569, 0.8784314, 1)
+type = 1
+defense = 2
+draw_cards = 3
+destroy_in_deck = 1
+perma_stat_change = 1
+metadata/_custom_type_script = "uid://47wak76myq0k"
