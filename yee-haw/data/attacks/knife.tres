@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cmnyuu8d6utx0"]
+
+[ext_resource type="Script" uid="uid://hsj4gdgipx5r" path="res://modules/cards/card_data.gd" id="1_pqk7n"]
+
+[resource]
+script = ExtResource("1_pqk7n")
+color = Color(1, 1, 1, 1)
+card_copies = 1
+create_source = 2
+metadata/_custom_type_script = "uid://47wak76myq0k"
