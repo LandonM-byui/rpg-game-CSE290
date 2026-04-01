@@ -3,6 +3,8 @@ class_name EnemyController
 
 var enemy_data : Enemy
 
+var grid_root : EnemyGridController
+
 var health : int = 0
 
 var grid_column : int = -1
@@ -11,6 +13,7 @@ var grid_row : int = -1
 var row_ref : RowSelectionArea
 var col_ref : ColumnSelectionArea
 var remove : Callable
+
 
 func full_heal() -> void:
 	health = enemy_data.max_health
@@ -27,6 +30,12 @@ func is_dead():
 		col_ref.remove(self)
 		remove.call()
 		queue_free()
+		
+		
+func enemy_attack() -> void:
+	var dmg = enemy_data.attack
+	grid_root.attack.queue[grid_row].append(dmg)
+	
 
 func select():
 	$cool_sprite.self_modulate = Color(1, 0, 0)

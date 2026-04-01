@@ -36,6 +36,33 @@ var current_enemies : Array
 
 var num := 0
 
+
+var attack_queue : Array = [
+	[0],
+	[0],
+	[0],
+	[0],
+	[0]
+]
+
+
+
+func queue_attacks() -> void:
+	#turn_signal = _______.connect()
+	
+	for r in current_enemies:
+		for c in r:
+			c.enemy_attack()
+	
+
+
+
+
+''' some functions below are legacy, and unused in order to simplify the game for completion for the expo.
+		I am leaving them here for proof of work done!
+		
+	A few functions below, particuarly at the bottom are still very much used!
+		'''
 func pick_type_preset():
 	num = (randi_range(1,len(type_presets)) -1)
 	var chosen_type_preset = type_presets[num]
