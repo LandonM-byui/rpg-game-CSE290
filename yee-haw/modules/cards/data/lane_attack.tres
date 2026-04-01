@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="AttackCard" format=3 uid="uid://b2u0do5ptebtk"]
 
 [ext_resource type="Script" uid="uid://dxo41alnarhqr" path="res://modules/cards/scripts/attack_card.gd" id="1_7uvqh"]
+[ext_resource type="Script" uid="uid://kk7g8xg5gh00" path="res://modules/effects/Effect.gd" id="1_vttlc"]
 
 [resource]
 script = ExtResource("1_7uvqh")
-attack_target = 1
+target = 4
 name = "L. Atk"
 color = Color(1, 0.63234204, 0.92879707, 1)
 metadata/_custom_type_script = "uid://dxo41alnarhqr"

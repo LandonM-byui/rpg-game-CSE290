@@ -27,9 +27,9 @@ enum AttackType {
 ## How many times the attack triggers
 @export var trigger_count : int = 1
 ## All effects tied to the play of this card
-@export var play_effects : Array[Effect] = []
+@export var play_effects : Array[Effect]
 ## All passive effects tied to this card when in hand
-@export var hand_effects : Array[Effect] = []
+@export var hand_effects : Array[Effect]
 
 ## Declare this card as an attack type
 func get_type() -> CardType:
