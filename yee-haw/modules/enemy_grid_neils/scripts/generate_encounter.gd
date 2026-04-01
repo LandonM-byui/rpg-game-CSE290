@@ -45,12 +45,11 @@ var attack_queue : Array = [
 	[0]
 ]
 
-
-
 func queue_attacks() -> void:
+	attack_queue = [[0],[0],[0],[0],[0]]
 	for r in range(current_enemies.size()):
 		for c in current_enemies[r]:
-			if c != null:
+			if c != null && c.deaded != true:
 				var dmg = c.enemy_attack()
 				attack_queue[r].append(dmg)
 	

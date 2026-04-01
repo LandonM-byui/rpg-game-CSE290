@@ -73,8 +73,8 @@ func run_enemy_turn():
 		(get_parent().get_parent() as GameHandler)._load_scene(FullSceneButton.GameSceneReference.DeckChoice)
 	
 	# TODO enemies attack players
+	turn_start.emit()
 	var temp_queue = $Game/'Enemy Grids'.attack_queue
-	print(temp_queue)
 	var temp_players = $Game/'Player Grids'.player_grid_array
 	for r in range(temp_queue.size()):
 		for dmg in temp_queue[r]:
@@ -94,6 +94,8 @@ func run_player_turn():
 
 	print("PLAYER TURN!")
 	turn_start.emit()
+	
+	
 	
 	hand_vfx.initialize()
 	var hand := _bc.draw_cards(7)

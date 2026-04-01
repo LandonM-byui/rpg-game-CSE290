@@ -13,6 +13,7 @@ var grid_row : int = -1
 var row_ref : RowSelectionArea
 var col_ref : ColumnSelectionArea
 var remove : Callable
+var deaded = false
 
 
 func full_heal() -> void:
@@ -29,6 +30,7 @@ func is_dead():
 		row_ref.remove(self)
 		col_ref.remove(self)
 		remove.call()
+		deaded = true
 		queue_free()
 		
 		

@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://c44k0lfl573b2"]
 
+[ext_resource type="Script" uid="uid://caxnteetxsgws" path="res://art/samson_base.gd" id="1_7xtpk"]
 [ext_resource type="Texture2D" uid="uid://b7t55ok5ttuw4" path="res://art/samson_atlas.png" id="1_p57ms"]
 
 [sub_resource type="Animation" id="Animation_p57ms"]
 resource_name = "idle"
 length = 4.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -252,6 +254,7 @@ _data = {
 }
 
 [node name="SamsonBase" type="Node2D" unique_id=1713015967]
+script = ExtResource("1_7xtpk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=628763738]
 libraries/ = SubResource("AnimationLibrary_lmdsq")

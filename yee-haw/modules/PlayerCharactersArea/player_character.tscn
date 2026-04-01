@@ -17,7 +17,7 @@ collision_mask = 256
 position = Vector2(-243, -284)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=925626280]
-position = Vector2(-8, -6)
+position = Vector2(0, -86)
 shape = SubResource("RectangleShape2D_h21t8")
 
 [node name="Health" type="Label" parent="." unique_id=1787309049]

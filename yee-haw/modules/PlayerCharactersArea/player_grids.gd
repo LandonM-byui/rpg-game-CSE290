@@ -64,7 +64,6 @@ func _set_up_obstacles(num: int) -> void:
 		var grid_pos := _find_random_spot(ob)
 		ob.instantiate(grid_pos[0], grid_pos[1])
 		ob.position = player_grid_positions[grid_pos[0]][grid_pos[1]]
-		ob.z_index = grid_pos[1] + 1
 		add_child(ob)
 		n -= 1
 		
