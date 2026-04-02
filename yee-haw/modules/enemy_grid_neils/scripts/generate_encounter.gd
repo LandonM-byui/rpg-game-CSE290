@@ -48,14 +48,13 @@ var attack_queue : Array = [
 	[0]
 ]
 
-
-
 func queue_attacks() -> void:
-	#turn_signal = _______.connect()
-	
-	for r in current_enemies:
-		for c in r:
-			c.enemy_attack()
+	attack_queue = [[0],[0],[0],[0],[0]]
+	for r in range(current_enemies.size()):
+		for c in current_enemies[r]:
+			if c != null && c.deaded != true:
+				var dmg = c.enemy_attack()
+				attack_queue[r].append(dmg)
 	
 
 
@@ -113,10 +112,10 @@ func make_enemy_grid(chosen_layout_preset, chosen_type_preset):
 func instantiate_enemies(chosen_preset: Array) -> void:
 	current_enemies = []
 	for _r in range(5): current_enemies.append([null, null, null])
-	
+
 	print(current_enemies)
-	
 	var no = load("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+
 	if chosen_preset.size() != enemy_grid_positions.size():
 		push_error("chosen_preset and enemy_grid_positions column count mismatch")
 	for c_index in range(chosen_preset.size()):
@@ -132,6 +131,8 @@ func instantiate_enemies(chosen_preset: Array) -> void:
 				continue
 			var position = enemy_grid_positions[c_index][r_index]
 			instantiate_enemy(cell, position,c_index,r_index)
+	print(current_enemies)
+
 
 
 func instantiate_enemy(enemy,position,c_index,r_index) -> void:

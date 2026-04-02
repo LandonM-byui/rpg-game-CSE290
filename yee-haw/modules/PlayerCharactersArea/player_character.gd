@@ -58,19 +58,20 @@ func _get_topmost():
 func add_moves(moves: int):
 	moved -= moves
 	
-func mod_defense(val):
+func mod_defense(val: int):
+	print(val)
 	defense += val
 
 func take_dmg(val):
+	print(defense,val)
 	if defense > val:
 		defense -= val
-		return
-	
-	val -= defense
-	player_health -= val
-	defense = 0
-	$Health.text = str(player_health) + "/" + str(player_max_health)
-	death_check()
+	else:
+		val -= defense
+		player_health -= val
+		defense = 0
+		$Health.text = str(player_health) + "/" + str(player_max_health)
+		death_check()
 		
 
 func death_check():
