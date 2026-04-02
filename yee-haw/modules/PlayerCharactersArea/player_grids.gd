@@ -61,10 +61,9 @@ func _set_up_obstacles(num: int) -> void:
 	var n := num
 	while n != 0:
 		var ob := obstacles_scene.instantiate()
-		var grid_pos := _find_random_spot("rock")
+		var grid_pos := _find_random_spot(ob)
 		ob.instantiate(grid_pos[0], grid_pos[1])
 		ob.position = player_grid_positions[grid_pos[0]][grid_pos[1]]
-		ob.z_index = grid_pos[1] + 1
 		add_child(ob)
 		n -= 1
 		
@@ -87,7 +86,7 @@ func _reset_turn() -> void:
 	for child in get_children():
 		if child.has_method("_set_player_position"):
 			child.moved = 0
-			child.defense = 0
+			child.defense -= child.defense
 
 	
 func _path_clear(hero) -> bool:
@@ -177,3 +176,14 @@ func _highlight_around_character(row, column, highlight):
 							grid[row+vert][column+hor]._highlight()
 						else:
 							grid[row+vert][column+hor]._un_highlight()
+
+func _death_check():
+	var i = 0;
+	for child in get_children():
+		if child.has_method("_set_player_position"):
+			i+=1
+	return i
+
+
+func _on_card_game_turn_start() -> void:
+	pass # Replace with function body.

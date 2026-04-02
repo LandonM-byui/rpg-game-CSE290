@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chfx72xed2fic"]
 
 [ext_resource type="Texture2D" uid="uid://8dxksrvpbuda" path="res://art/ostrich_atlas.png" id="1_kqxh2"]
+[ext_resource type="Script" uid="uid://8bpwbikc5t57" path="res://art/animation_player.gd" id="1_uwoha"]
 
 [sub_resource type="Animation" id="Animation_kqxh2"]
 length = 0.001
@@ -492,6 +493,7 @@ tracks/19/keys = {
 [sub_resource type="Animation" id="Animation_uwoha"]
 resource_name = "idle"
 length = 4.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -741,6 +743,8 @@ _data = {
 }
 
 [node name="Ostrich Base" type="Node2D" unique_id=980535264]
+position = Vector2(-236, -403)
+script = ExtResource("1_uwoha")
 metadata/_edit_vertical_guides_ = [335.0]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1252197858]

@@ -362,6 +362,7 @@ func _buff_player(player: PlayerCharacter) -> void:
 		
 	var defend : int = max(0, _data.data.defense + _bc.context().turn_defense_change + _data.stat_change)
 	if defend > 0:
+		print(defend)
 		player.mod_defense(defend)
 	
 	_card_played()

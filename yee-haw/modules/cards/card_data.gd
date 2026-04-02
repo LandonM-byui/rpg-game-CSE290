@@ -75,3 +75,4 @@ enum CardSource {
 @export var sound_effect : AudioStream
 
 @export var perma_stat_change : int = 0
+

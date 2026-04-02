@@ -18,20 +18,15 @@ var health : int
 @export var enemy_name = EnemyName.NO
 '''When creating a new enemy type, add the name in all caps to the enum EnemyName!
 '''
+
 enum EnemyName {
 	Lumostrich,
-	YES,
-	ONE,
-	TWO,
-	THREE,
-	FOUR,
-	FIVE,
-	SIX,
-	LUCKY,
-	ELLEN,
+	SeaSlug,
+	Weasel,
 	NO
 }
 
-@export var sprite_path = "res://Assets/Sample Assets/Rectangle.jpg"
+@export var sprite_path : String = ''
+#@export var sprite_node : PackedScene
 @export var current_position : Vector2 = Vector2(0,0)
 @export var grid = []

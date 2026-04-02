@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bsr1rfi140bql"]
 
-[ext_resource type="Texture2D" uid="uid://6j43bvjlna7u" path="res://art/weasel_idle_atlas.PNG" id="1_ov8n2"]
+[ext_resource type="Texture2D" uid="uid://6j43bvjlna7u" path="res://art/weasel_idle_atlas.PNG" id="1_ooh3x"]
+[ext_resource type="Script" uid="uid://8bpwbikc5t57" path="res://art/animation_player.gd" id="1_ywiyv"]
 
 [sub_resource type="Animation" id="Animation_ov8n2"]
 length = 0.001
@@ -203,6 +204,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id="Animation_qyexg"]
 resource_name = "idle"
 length = 4.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -308,6 +310,8 @@ _data = {
 }
 
 [node name="weasel_base" type="Node2D" unique_id=426785509]
+position = Vector2(-337, -242)
+script = ExtResource("1_ywiyv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=693616406]
 libraries/ = SubResource("AnimationLibrary_mq21e")
@@ -317,7 +321,7 @@ libraries/ = SubResource("AnimationLibrary_mq21e")
 [node name="Body" type="Sprite2D" parent="J Body" unique_id=1855041754]
 position = Vector2(408, 166)
 rotation = 0.29481888
-texture = ExtResource("1_ov8n2")
+texture = ExtResource("1_ooh3x")
 region_enabled = true
 region_rect = Rect2(191.07962, 163.57353, 314.62958, 185.65977)
 
@@ -326,7 +330,7 @@ region_rect = Rect2(191.07962, 163.57353, 314.62958, 185.65977)
 [node name="Head" type="Sprite2D" parent="J Head" unique_id=1444461383]
 position = Vector2(302, 121)
 rotation = 0.65507567
-texture = ExtResource("1_ov8n2")
+texture = ExtResource("1_ooh3x")
 region_enabled = true
 region_rect = Rect2(23.6362, 261.7339, 140.30777, 165.8183)
 
@@ -335,7 +339,7 @@ region_rect = Rect2(23.6362, 261.7339, 140.30777, 165.8183)
 [node name="Front Legs" type="Sprite2D" parent="J Front Legs" unique_id=263397284]
 position = Vector2(304.99997, 199)
 rotation = 0.09353648
-texture = ExtResource("1_ov8n2")
+texture = ExtResource("1_ooh3x")
 region_enabled = true
 region_rect = Rect2(184.74841, 356.9743, 123.7699, 107.00464)
 
@@ -343,6 +347,6 @@ region_rect = Rect2(184.74841, 356.9743, 123.7699, 107.00464)
 
 [node name="Back Legs" type="Sprite2D" parent="J Back Legs" unique_id=850957060]
 position = Vector2(391, 229)
-texture = ExtResource("1_ov8n2")
+texture = ExtResource("1_ooh3x")
 region_enabled = true
 region_rect = Rect2(346.07748, 344.33362, 153.42572, 124.10516)

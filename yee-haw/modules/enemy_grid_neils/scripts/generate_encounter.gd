@@ -18,7 +18,10 @@ var approved_enemy_preset5 = preload("res://modules/enemy_grid_neils/enemy_type_
 var type_presets : Array = [approved_enemy_preset1, approved_enemy_preset2, approved_enemy_preset3, 
 approved_enemy_preset4, approved_enemy_preset5]
 
-@export var presets : Array[EnemyLayoutPreset]
+@export var preset_list : Array[String] = ["res://modules/enemy_grid_neils/enemy_layout_preset/data/twoLumostriches.tres",
+											"res://modules/enemy_grid_neils/enemy_layout_preset/data/1L,1S,1W.tres", 
+											"res://modules/enemy_grid_neils/enemy_layout_preset/data/1L,2S.tres",
+											"res://modules/enemy_grid_neils/enemy_layout_preset/data/2W,1S.tres" ]
 
 var layout
 
@@ -36,6 +39,32 @@ var current_enemies : Array
 
 var num := 0
 
+
+var attack_queue : Array = [
+	[0],
+	[0],
+	[0],
+	[0],
+	[0]
+]
+
+func queue_attacks() -> void:
+	attack_queue = [[0],[0],[0],[0],[0]]
+	for r in range(current_enemies.size()):
+		for c in current_enemies[r]:
+			if c != null && c.deaded != true:
+				var dmg = c.enemy_attack()
+				attack_queue[r].append(dmg)
+	
+
+
+
+
+''' some functions below are legacy, and unused in order to simplify the game for completion for the expo.
+		I am leaving them here for proof of work done!
+		
+	A few functions below, particuarly at the bottom are still very much used!
+		'''
 func pick_type_preset():
 	num = (randi_range(1,len(type_presets)) -1)
 	var chosen_type_preset = type_presets[num]
@@ -50,8 +79,8 @@ func pick_layout_preset(layout_presets):
 	return chosen_layout_preset
 
 func pick_preset() -> Array:
-	num = (randi_range(0,(len(presets) - 1)))
-	var chosen_preset := presets[num]
+	num = (randi_range(0,(len(preset_list) - 1)))
+	var chosen_preset := load(preset_list[num])
 	var l := [
 		[chosen_preset.enemy0_position, chosen_preset.enemy3_position, chosen_preset.enemy6_position, chosen_preset.enemy9_position, chosen_preset.enemy12_position],
 		[chosen_preset.enemy1_position, chosen_preset.enemy4_position, chosen_preset.enemy7_position, chosen_preset.enemy10_position, chosen_preset.enemy13_position],
@@ -83,10 +112,10 @@ func make_enemy_grid(chosen_layout_preset, chosen_type_preset):
 func instantiate_enemies(chosen_preset: Array) -> void:
 	current_enemies = []
 	for _r in range(5): current_enemies.append([null, null, null])
-	
+
 	print(current_enemies)
-	
-	var no = load("res://modules/enemy_grid_neils/TEST_enemies/data/NO.tres")
+	var no = load("res://modules/enemy_grid_neils/final_enemies/data/NO.tres")
+
 	if chosen_preset.size() != enemy_grid_positions.size():
 		push_error("chosen_preset and enemy_grid_positions column count mismatch")
 	for c_index in range(chosen_preset.size()):
@@ -102,6 +131,8 @@ func instantiate_enemies(chosen_preset: Array) -> void:
 				continue
 			var position = enemy_grid_positions[c_index][r_index]
 			instantiate_enemy(cell, position,c_index,r_index)
+	print(current_enemies)
+
 
 
 func instantiate_enemy(enemy,position,c_index,r_index) -> void:
@@ -124,12 +155,13 @@ func instantiate_enemy(enemy,position,c_index,r_index) -> void:
 	node.full_heal()
 
 func _nullify(x: int, y: int):
-	current_enemies[x][y] = null	
+	current_enemies[x][y] = null
+
 
 func set_enemy_node_sprite(this_enemy,node) -> void:
-	var sprite_node = node.get_node('lame_sprite')
-	var new_path = this_enemy.sprite_path
-	sprite_node.path = new_path
+	var node_path = load(this_enemy.sprite_path)
+	var sprite_node = node_path.instantiate()
+	node.add_child(sprite_node)
 	
 
 func give_col_ref(col,en: EnemyController):

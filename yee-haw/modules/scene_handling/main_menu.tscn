@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bp3dd2jdm7lvo" path="res://modules/scene_handling/scripts/full_scene_button.gd" id="1_74yed"]
 [ext_resource type="Script" uid="uid://yu2vg7low7x" path="res://modules/scene_handling/scripts/scene_controller.gd" id="1_m76fh"]
 [ext_resource type="Script" uid="uid://cdxuup54d36g2" path="res://modules/scene_handling/scripts/sub_scene_button.gd" id="2_m76fh"]
+[ext_resource type="Texture2D" uid="uid://ngtf66yybc20" path="res://art/Cover Art.webp" id="2_so6lk"]
 [ext_resource type="Script" uid="uid://b0y8tbwctt08i" path="res://modules/scene_handling/scripts/quit_button.gd" id="3_so6lk"]
 
 [node name="MainMenu" type="Control" unique_id=840355743 node_paths=PackedStringArray("scene_buttons", "subscene_buttons", "quit_buttons")]
@@ -16,15 +17,6 @@ script = ExtResource("1_m76fh")
 scene_buttons = [NodePath("MarginContainer/VBoxContainer/Start")]
 subscene_buttons = [NodePath("MarginContainer/VBoxContainer/Settings")]
 quit_buttons = [NodePath("MarginContainer/VBoxContainer/Quit")]
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2013970552]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.24658787, 0.2465879, 0.24658787, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=264269234]
 layout_mode = 1
@@ -40,7 +32,12 @@ theme_override_constants/margin_bottom = 35
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1568901256]
 layout_mode = 2
-color = Color(0.5629578, 0.56295776, 0.56295776, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=825109815]
+layout_mode = 2
+texture = ExtResource("2_so6lk")
+stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=764967343]
 layout_mode = 2
@@ -49,11 +46,19 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 
+[node name="Spacer-300-1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=319756283]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="Spacer-200-1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=884512982]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
 [node name="Main Menu text" type="Label" parent="MarginContainer/VBoxContainer" unique_id=339513056]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.5629578, 0.56295776, 0.56295776, 1)
-theme_override_colors/font_outline_color = Color(0.24658787, 0.2465879, 0.24658787, 1)
+theme_override_colors/font_color = Color(0.42745098, 0.41568628, 0.40784314, 1)
+theme_override_colors/font_outline_color = Color(0.38431373, 0.972549, 0.6, 1)
 theme_override_constants/outline_size = 148
 theme_override_font_sizes/font_size = 166
 text = "MAIN MENU"

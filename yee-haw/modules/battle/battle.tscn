@@ -32,18 +32,24 @@ deck_count_label = NodePath("CanvasLayer/UI/Deck/CardVfx/Label")
 discard_count_label = NodePath("CanvasLayer/UI/Discard/CardVfx/Label")
 enemy_grid_controller = NodePath("Game/Enemy Grids")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1805912768]
+offset_top = 1526.0
+offset_right = 4104.0
+offset_bottom = 2322.0
+color = Color(0.67058825, 0.40392157, 0.18431373, 1)
+
 [node name="Game Controller" type="Node" parent="." unique_id=487759638]
 script = ExtResource("1_x5kpi")
 
 [node name="AdobeStock861381995Converted" type="Sprite2D" parent="." unique_id=1637129037]
-position = Vector2(2042, 1041)
+position = Vector2(2048, 785)
 scale = Vector2(5.174782, 5.174781)
 texture = ExtResource("3_qsv2q")
 
 [node name="Game" type="Node2D" parent="." unique_id=857822932]
 
 [node name="Enemy Grids" type="Node2D" parent="Game" unique_id=1241919926 node_paths=PackedStringArray("col_nodes", "row_nodes")]
-position = Vector2(3526, 820)
+position = Vector2(3354, 1170)
 script = ExtResource("4_24sfe")
 current_difficulty = ExtResource("5_lxpvy")
 packed_node = ExtResource("6_do0iy")
@@ -73,14 +79,14 @@ position = Vector2(-300, 0)
 [node name="EnemyColumn 2" parent="Game/Enemy Grids" unique_id=389549478 instance=ExtResource("2_g6l2h")]
 position = Vector2(300, 0)
 
-[node name="PlayerGrids" parent="Game" unique_id=600625148 instance=ExtResource("6_tvlvn")]
-position = Vector2(798, 820)
+[node name="Player Grids" parent="Game" unique_id=600625148 instance=ExtResource("6_tvlvn")]
+position = Vector2(820, 1142)
 
 [node name="Camera2D" type="Camera2D" parent="Game" unique_id=307374076]
 position = Vector2(2048, 1080)
 
 [node name="Item usage collider" type="StaticBody2D" parent="Game" unique_id=1690309529]
-position = Vector2(800, 823)
+position = Vector2(822, 1145)
 collision_layer = 512
 collision_mask = 512
 
@@ -98,6 +104,7 @@ anchor_bottom = 1.0
 offset_top = 1526.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI" unique_id=1833918474]
 layout_mode = 1
@@ -233,3 +240,6 @@ theme_override_constants/margin_bottom = -10
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/UI/card_text/MarginContainer" unique_id=2066002643]
 layout_mode = 2
 color = Color(1, 1, 1, 0.4509804)
+
+[connection signal="turn_start" from="." to="Game/Enemy Grids" method="queue_attacks"]
+[connection signal="turn_start" from="." to="Game/Player Grids" method="_reset_turn"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Enemy" format=3 uid="uid://egf8mewt52i0"]
+
+[ext_resource type="Script" uid="uid://uk6lx88nhi5j" path="res://modules/enemy_grid_neils/final_enemies/scripts/create_enemy_class.gd" id="1_8aqtv"]
+
+[resource]
+script = ExtResource("1_8aqtv")
+max_health = 6
+attack = 1
+difficulty_rating = 1
+enemy_name = 1
+sprite_path = "res://art/seaslug_base.tscn"
+metadata/_custom_type_script = "uid://uk6lx88nhi5j"
