@@ -5,7 +5,7 @@ var enemy_data : Enemy
 
 var grid_root : EnemyGridController
 
-var health : int = 0
+var health : int = 10
 
 var grid_column : int = -1
 var grid_row : int = -1
@@ -15,6 +15,9 @@ var col_ref : ColumnSelectionArea
 var remove : Callable
 var deaded = false
 
+func _ready() -> void:
+	$Health.text = str(health)
+	
 
 func full_heal() -> void:
 	health = enemy_data.max_health
@@ -35,6 +38,7 @@ func take_dmg(damage_value):
 		
 
 	health = max(0, health - damage_value)
+	$Health.text = str(health)
 	is_dead()
 
 func is_dead():

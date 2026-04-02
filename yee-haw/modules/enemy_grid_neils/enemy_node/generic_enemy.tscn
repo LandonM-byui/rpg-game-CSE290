@@ -31,3 +31,11 @@ shape = SubResource("RectangleShape2D_vm6d8")
 [node name="seconds" type="Timer" parent="." unique_id=1170098489]
 wait_time = 2.0
 one_shot = true
+
+[node name="Health" type="Label" parent="." unique_id=1239731620]
+offset_left = -19.0
+offset_top = 48.0
+offset_right = 21.0
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 30
+text = "10"
