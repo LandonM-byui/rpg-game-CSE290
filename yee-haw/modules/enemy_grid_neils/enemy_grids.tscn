@@ -6,18 +6,13 @@
 [ext_resource type="Resource" uid="uid://b51osaknm7fmd" path="res://modules/enemy_grid_neils/difficulty/data(resources)/starting_difficulty.tres" id="2_bcvvl"]
 [ext_resource type="PackedScene" uid="uid://dclor804aadnd" path="res://modules/battle/enemy_grid_collider.tscn" id="3_6gl7b"]
 [ext_resource type="PackedScene" uid="uid://wp60yi4mlr0d" path="res://modules/enemy_grid_neils/enemy_node/generic_enemy.tscn" id="3_rreb3"]
-[ext_resource type="Script" uid="uid://blk6hbrougjkp" path="res://modules/enemy_grid_neils/enemy_layout_preset/scripts/create_enemy_layout_class.gd" id="4_0x5mk"]
-[ext_resource type="Resource" uid="uid://d2d6c8kvahjxi" path="res://modules/enemy_grid_neils/enemy_layout_preset/data/ROW.tres" id="5_bcvvl"]
-[ext_resource type="Resource" uid="uid://crw5joqyju4ci" path="res://modules/enemy_grid_neils/enemy_layout_preset/data/COLLUMs.tres" id="6_rreb3"]
 
-[node name="Enemy Grids" type="Node2D" unique_id=2063143689 node_paths=PackedStringArray("col_nodes", "row_nodes")]
+[node name="Enemy Grids" type="Node2D" unique_id=2063143689]
 position = Vector2(1000, 1000)
 script = ExtResource("1_2nmvt")
 current_difficulty = ExtResource("2_bcvvl")
 packed_node = ExtResource("3_rreb3")
-col_nodes = [NodePath("EnemyColumn 0"), NodePath("EnemyColumn 1"), NodePath("EnemyColumn 2")]
-row_nodes = [NodePath("EnemyGridRow 0"), NodePath("EnemyGridRow 1"), NodePath("EnemyGridRow 2"), NodePath("EnemyGridRow 3"), NodePath("EnemyGridRow 4")]
-presets = Array[ExtResource("4_0x5mk")]([ExtResource("5_bcvvl"), ExtResource("6_rreb3")])
+preset_list = Array[String]([])
 
 [node name="EnemyGridRow 0" parent="." unique_id=1478424219 instance=ExtResource("1_wy6m7")]
 position = Vector2(0, -300)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cop3vbh8h87n5"]
 
 [ext_resource type="Texture2D" uid="uid://dww4cbswg1g4w" path="res://art/seaslug_idle_atlas.PNG" id="1_0mvc7"]
+[ext_resource type="Script" uid="uid://dn1smrkktf4ae" path="res://art/seaslug_animation.gd" id="1_j87ue"]
 
 [sub_resource type="Animation" id="Animation_0mvc7"]
 length = 0.001
@@ -156,6 +157,7 @@ tracks/5/keys = {
 [sub_resource type="Animation" id="Animation_ehv84"]
 resource_name = "idle"
 length = 4.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -333,6 +335,8 @@ _data = {
 }
 
 [node name="seaslug_base" type="Node2D" unique_id=327087707]
+position = Vector2(-471, -419)
+script = ExtResource("1_j87ue")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=623469746]
 libraries/ = SubResource("AnimationLibrary_pnwx4")

@@ -21,6 +21,18 @@ func full_heal() -> void:
 
 func take_dmg(damage_value):
 	if damage_value <= 0: return
+	'''hit animations!'''
+	#if enemy_data.sprite_path == 'res://art/ostrich_base.tscn':
+		#var sprite = $ostrich_base
+		#sprite.set_current_animation("hurt")
+		#$second.start()
+		#await $second.timeout
+		#sprite.
+#
+	#elif enemy_data.sprite_path == 'res://art/weasel_base.tscn':
+		#var sprite = $weasel_base
+		#sprite.set_current_animation("hurt")
+		
 
 	health = max(0, health - damage_value)
 	is_dead()

@@ -743,6 +743,7 @@ _data = {
 }
 
 [node name="Ostrich Base" type="Node2D" unique_id=980535264]
+position = Vector2(-236, -403)
 script = ExtResource("1_uwoha")
 metadata/_edit_vertical_guides_ = [335.0]
 

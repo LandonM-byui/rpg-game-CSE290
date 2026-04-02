@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmhurormmr0mk"]
 
-[ext_resource type="Texture2D" uid="uid://cynwov72hmk3b" path="res://icon.svg" id="1_1osjf"]
+[ext_resource type="Texture2D" uid="uid://df06fym6dqjsg" path="res://art/dirt_patch.webp" id="1_h8xek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1osjf"]
 size = Vector2(200, 200)
@@ -13,7 +13,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=362440414]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_1osjf")
+texture = ExtResource("1_h8xek")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357868496]
 shape = SubResource("RectangleShape2D_1osjf")
