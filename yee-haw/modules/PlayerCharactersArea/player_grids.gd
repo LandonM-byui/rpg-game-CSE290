@@ -86,7 +86,7 @@ func _reset_turn() -> void:
 	for child in get_children():
 		if child.has_method("_set_player_position"):
 			child.moved = 0
-			child.defense = 0
+			child.defense -= child.defense
 
 	
 func _path_clear(hero) -> bool:

@@ -73,7 +73,6 @@ func run_enemy_turn():
 		(get_parent().get_parent() as GameHandler)._load_scene(FullSceneButton.GameSceneReference.DeckChoice)
 	
 	# TODO enemies attack players
-	turn_start.emit()
 	var temp_queue = $Game/'Enemy Grids'.attack_queue
 	var temp_players = $Game/'Player Grids'.player_grid_array
 	for r in range(temp_queue.size()):
