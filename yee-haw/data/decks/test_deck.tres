@@ -6,10 +6,12 @@
 [ext_resource type="Resource" uid="uid://bpxy5q0mpar7q" path="res://data/attacks/retreating_shot.tres" id="3_p7n2b"]
 [ext_resource type="Resource" uid="uid://dxdmimq0uvg4" path="res://data/attacks/cover.tres" id="4_52heg"]
 [ext_resource type="Resource" uid="uid://cc2m43djojrb5" path="res://data/attacks/revolver.tres" id="5_hsubf"]
+[ext_resource type="Resource" uid="uid://cgke0ptdp86qs" path="res://modules/ARCHIVE_character_selector/characters/default 1.tres" id="6_p7n2b"]
 
 [resource]
 script = ExtResource("2_nmq1y")
 name = "Test Deck"
+base_hero = ExtResource("6_p7n2b")
 base_cards = Dictionary[ExtResource("1_bfs7x"), int]({
 ExtResource("2_hsubf"): 2,
 ExtResource("3_p7n2b"): 2,

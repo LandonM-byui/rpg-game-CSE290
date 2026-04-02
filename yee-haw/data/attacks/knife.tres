@@ -4,10 +4,7 @@
 
 [resource]
 script = ExtResource("1_pqk7n")
-name = "Knife"
-color = Color(1, 0.8509804, 0.11764706, 1)
-damage_range = Vector2i(3, 0)
-targeting = 1
+color = Color(1, 1, 1, 1)
 card_copies = 1
 create_source = 2
 metadata/_custom_type_script = "uid://47wak76myq0k"

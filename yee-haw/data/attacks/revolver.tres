@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_kyll5")
 name = "Revolver"
-color = Color(0.7764706, 0, 0, 1)
+color = Color(0.9570207, 0.47932905, 0.7666255, 1)
 damage_range = Vector2i(6, 0)
 targeting = 1
 perma_stat_change = -1
