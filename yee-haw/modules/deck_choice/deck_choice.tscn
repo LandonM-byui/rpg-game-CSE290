@@ -6,7 +6,6 @@
 [ext_resource type="Resource" uid="uid://d321m6bx64j5w" path="res://data/decks/atk_type_deck.tres" id="3_72wtl"]
 [ext_resource type="Resource" uid="uid://doyxefwur27xi" path="res://data/decks/test_deck.tres" id="3_ecq2a"]
 [ext_resource type="Script" uid="uid://cdxuup54d36g2" path="res://modules/scene_handling/scripts/sub_scene_button.gd" id="3_pokqm"]
-[ext_resource type="Resource" uid="uid://cssaox756tlrn" path="res://data/decks/Defender.tres" id="5_72wtl"]
 [ext_resource type="PackedScene" uid="uid://dbc26mu03jyca" path="res://modules/battle/card/card_vfx.tscn" id="8_61a7t"]
 [ext_resource type="Theme" uid="uid://bq1laoqhq1ssh" path="res://modules/deck_choice/no_scroll_bar_theme.tres" id="9_r8kvk"]
 
@@ -18,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ah6b3")
-valid_decks = Array[ExtResource("2_xuahw")]([ExtResource("3_72wtl"), ExtResource("3_ecq2a"), ExtResource("5_72wtl")])
+valid_decks = Array[ExtResource("2_xuahw")]([ExtResource("3_72wtl"), ExtResource("3_ecq2a")])
 deck_display_container = NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/ScrollContainer/CardGridContainer")
 card_back_display = NodePath("Main Margin/Window Divider/Deck Selector/Inner Margin/Deck Selection Column/Deck Container/CardVfx")
 deck_name_label = NodePath("Main Margin/Window Divider/Stats Screen/Inner Margin/stat-button divider/Stats screen/deck name")
