@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bg0teixro6jf8"]
 
-[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_nhkmc"]
+[ext_resource type="Script" uid="uid://hsj4gdgipx5r" path="res://modules/cards/card_data.gd" id="1_nhkmc"]
+[ext_resource type="AudioStream" uid="uid://cse4j8gb48y0h" path="res://Assets/SFX/dynamiteSFX.wav" id="2_g7rrb"]
 
 [resource]
 script = ExtResource("1_nhkmc")
@@ -9,4 +10,4 @@ color = Color(2.3584068e-06, 0.8029892, 0.41674015, 1)
 damage_range = Vector2i(1, 0)
 targeting = 3
 create_source = 2
-metadata/_custom_type_script = "uid://47wak76myq0k"
+sound_effect = ExtResource("2_g7rrb")

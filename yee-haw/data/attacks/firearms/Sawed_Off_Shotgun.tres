@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="AttackCard" format=3 uid="uid://upwgiwqdovix"]
+
+[ext_resource type="Script" uid="uid://hsj4gdgipx5r" path="res://modules/cards/card_data.gd" id="1_mb6as"]
+[ext_resource type="Script" path="res://modules/effects/Effect.gd" id="1_par6g"]
+[ext_resource type="Script" path="res://modules/cards/scripts/attack_card.gd" id="2_cmjq7"]
+[ext_resource type="Script" path="res://modules/effects/modifiers/ARModifier.gd" id="2_s8xfl"]
+[ext_resource type="Script" path="res://modules/effects/modifiers/ARRecoil.gd" id="3_s8xfl"]
+[ext_resource type="Script" path="res://modules/effects/AttackResultEffect.gd" id="4_mb6as"]
+[ext_resource type="AudioStream" uid="uid://k5tc1ueovj3a" path="res://Assets/SFX/pistolShot.wav" id="7_uc1ka"]
+
+[sub_resource type="Resource" id="Resource_mgs5d"]
+script = ExtResource("3_s8xfl")
+
+[sub_resource type="Resource" id="Resource_mb6as"]
+script = ExtResource("4_mb6as")
+modifiers = Array[ExtResource("2_s8xfl")]([SubResource("Resource_mgs5d")])
+
+[resource]
+script = ExtResource("2_cmjq7")
+damage = 6
+damage_max = 10
+target = 9
+play_effects = Array[ExtResource("1_par6g")]([SubResource("Resource_mb6as")])
+name = "Sawed-off Shotty"
+color = Color(0.6901961, 0.047058824, 0.07058824, 1)
+sound_effect = ExtResource("7_uc1ka")

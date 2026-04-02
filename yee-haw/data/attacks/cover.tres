@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dxdmimq0uvg4"]
 
-[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_hetle"]
+[ext_resource type="Script" uid="uid://hsj4gdgipx5r" path="res://modules/cards/card_data.gd" id="1_hetle"]
+[ext_resource type="AudioStream" uid="uid://crwx1y0pq4rha" path="res://Assets/SFX/moveSquare.wav" id="2_xjanr"]
 
 [resource]
 script = ExtResource("1_hetle")
@@ -8,5 +9,5 @@ name = "Cover"
 color = Color(0.17118153, 0.7461356, 0.8514302, 1)
 type = 1
 defense = 7
+sound_effect = ExtResource("2_xjanr")
 perma_stat_change = -1
-metadata/_custom_type_script = "uid://47wak76myq0k"

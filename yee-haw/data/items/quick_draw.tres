@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cuybvjfi855kd"]
 
-[ext_resource type="Script" path="res://modules/cards/card_data.gd" id="1_23km5"]
+[ext_resource type="Script" uid="uid://hsj4gdgipx5r" path="res://modules/cards/card_data.gd" id="1_23km5"]
+[ext_resource type="AudioStream" uid="uid://crwx1y0pq4rha" path="res://Assets/SFX/moveSquare.wav" id="2_t54fo"]
 
 [resource]
 script = ExtResource("1_23km5")
@@ -22,5 +23,5 @@ special = null
 after_play = null
 turn_dmg_change = null
 turn_def_change = null
+sound_effect = ExtResource("2_t54fo")
 perma_stat_change = null
-metadata/_custom_type_script = "uid://47wak76myq0k"
