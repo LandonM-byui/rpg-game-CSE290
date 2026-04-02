@@ -1,0 +1,245 @@
+[gd_scene format=3 uid="uid://6yy4qsd2i3qx"]
+
+[ext_resource type="PackedScene" uid="uid://ck0qj3qheef65" path="res://modules/battle/enemy_grid_row.tscn" id="1_niue7"]
+[ext_resource type="Script" uid="uid://c63eauk85svgr" path="res://modules/battle/scripts/battle_scene_controller.gd" id="1_vo2k6"]
+[ext_resource type="Script" uid="uid://dn7qk5td4lxue" path="res://modules/battle/scripts/game_controller.gd" id="1_x5kpi"]
+[ext_resource type="PackedScene" uid="uid://d1anor68t2gd1" path="res://modules/battle/enemy_column_collider.tscn" id="2_g6l2h"]
+[ext_resource type="Texture2D" uid="uid://c8ka73rfk3qtv" path="res://art/AdobeStock_861381995_converted.png" id="3_qsv2q"]
+[ext_resource type="Script" uid="uid://etu70mnxan6g" path="res://modules/enemy_grid_neils/scripts/generate_encounter.gd" id="4_24sfe"]
+[ext_resource type="Resource" uid="uid://b51osaknm7fmd" path="res://modules/enemy_grid_neils/difficulty/data(resources)/starting_difficulty.tres" id="5_lxpvy"]
+[ext_resource type="PackedScene" uid="uid://wp60yi4mlr0d" path="res://modules/enemy_grid_neils/enemy_node/generic_enemy.tscn" id="6_do0iy"]
+[ext_resource type="PackedScene" uid="uid://bk7386qc221vl" path="res://modules/PlayerCharactersArea/player_grids.tscn" id="6_tvlvn"]
+[ext_resource type="PackedScene" uid="uid://dgr7nfksijukm" path="res://modules/battle/hand_container/hand_container.tscn" id="6_ue60r"]
+[ext_resource type="Script" uid="uid://blk6hbrougjkp" path="res://modules/enemy_grid_neils/enemy_layout_preset/scripts/create_enemy_layout_class.gd" id="7_1xga0"]
+[ext_resource type="Resource" uid="uid://d2d6c8kvahjxi" path="res://modules/enemy_grid_neils/enemy_layout_preset/data/ROW.tres" id="8_i7nmn"]
+[ext_resource type="PackedScene" uid="uid://dbc26mu03jyca" path="res://modules/battle/card/card_vfx.tscn" id="9_epfed"]
+[ext_resource type="Resource" uid="uid://crw5joqyju4ci" path="res://modules/enemy_grid_neils/enemy_layout_preset/data/COLLUMs.tres" id="9_oi732"]
+[ext_resource type="Resource" uid="uid://iogd7dbtih6j" path="res://modules/enemy_grid_neils/enemy_layout_preset/data/TEST.tres" id="10_68kf7"]
+[ext_resource type="Resource" uid="uid://bpgk6piejnomb" path="res://modules/enemy_grid_neils/enemy_layout_preset/data/TEST1.tres" id="11_qomfq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_su2q6"]
+size = Vector2(805, 720)
+
+[node name="CardGame" type="Node" unique_id=2120214280 node_paths=PackedStringArray("hand_vfx", "discard_vfx", "discard_vfx_source", "deck_vfx", "deck_vfx_source", "end_turn_button", "deck_count_label", "discard_count_label", "enemy_grid_controller")]
+script = ExtResource("1_vo2k6")
+hand_vfx = NodePath("CanvasLayer/UI/HBoxContainer/HAND")
+discard_vfx = NodePath("CanvasLayer/UI/Discard/CardVfx")
+discard_vfx_source = NodePath("CanvasLayer/UI/Discard")
+deck_vfx = NodePath("CanvasLayer/UI/Deck/CardVfx")
+deck_vfx_source = NodePath("CanvasLayer/UI/Deck")
+end_turn_button = NodePath("CanvasLayer/UI/Button")
+deck_count_label = NodePath("CanvasLayer/UI/Deck/CardVfx/Label")
+discard_count_label = NodePath("CanvasLayer/UI/Discard/CardVfx/Label")
+enemy_grid_controller = NodePath("Game/Enemy Grids")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1805912768]
+offset_top = 1526.0
+offset_right = 4104.0
+offset_bottom = 2322.0
+color = Color(0.67058825, 0.40392157, 0.18431373, 1)
+
+[node name="Game Controller" type="Node" parent="." unique_id=487759638]
+script = ExtResource("1_x5kpi")
+
+[node name="AdobeStock861381995Converted" type="Sprite2D" parent="." unique_id=1637129037]
+position = Vector2(2048, 785)
+scale = Vector2(5.174782, 5.174781)
+texture = ExtResource("3_qsv2q")
+
+[node name="Game" type="Node2D" parent="." unique_id=857822932]
+
+[node name="Enemy Grids" type="Node2D" parent="Game" unique_id=1241919926 node_paths=PackedStringArray("col_nodes", "row_nodes")]
+position = Vector2(3354, 1170)
+script = ExtResource("4_24sfe")
+current_difficulty = ExtResource("5_lxpvy")
+packed_node = ExtResource("6_do0iy")
+col_nodes = [NodePath("EnemyColumn 0"), NodePath("EnemyColumn 1"), NodePath("EnemyColumn 2")]
+row_nodes = [NodePath("EnemyGridRow 0"), NodePath("EnemyGridRow 1"), NodePath("EnemyGridRow 2"), NodePath("EnemyGridRow 3"), NodePath("EnemyGridRow 4")]
+presets = Array[ExtResource("7_1xga0")]([ExtResource("8_i7nmn"), ExtResource("9_oi732"), ExtResource("10_68kf7"), ExtResource("11_qomfq")])
+
+[node name="EnemyGridRow 0" parent="Game/Enemy Grids" unique_id=2144702210 instance=ExtResource("1_niue7")]
+position = Vector2(0, -300)
+
+[node name="EnemyGridRow 1" parent="Game/Enemy Grids" unique_id=154150605 instance=ExtResource("1_niue7")]
+position = Vector2(0, -150)
+
+[node name="EnemyGridRow 2" parent="Game/Enemy Grids" unique_id=1773614729 instance=ExtResource("1_niue7")]
+
+[node name="EnemyGridRow 3" parent="Game/Enemy Grids" unique_id=545857772 instance=ExtResource("1_niue7")]
+position = Vector2(0, 150)
+
+[node name="EnemyGridRow 4" parent="Game/Enemy Grids" unique_id=2090927367 instance=ExtResource("1_niue7")]
+position = Vector2(0, 300)
+
+[node name="EnemyColumn 0" parent="Game/Enemy Grids" unique_id=2073529911 instance=ExtResource("2_g6l2h")]
+position = Vector2(-300, 0)
+
+[node name="EnemyColumn 1" parent="Game/Enemy Grids" unique_id=2140423691 instance=ExtResource("2_g6l2h")]
+
+[node name="EnemyColumn 2" parent="Game/Enemy Grids" unique_id=389549478 instance=ExtResource("2_g6l2h")]
+position = Vector2(300, 0)
+
+[node name="Player Grids" parent="Game" unique_id=600625148 instance=ExtResource("6_tvlvn")]
+position = Vector2(820, 1142)
+
+[node name="Camera2D" type="Camera2D" parent="Game" unique_id=307374076]
+position = Vector2(2048, 1080)
+
+[node name="Item usage collider" type="StaticBody2D" parent="Game" unique_id=1690309529]
+position = Vector2(822, 1145)
+collision_layer = 512
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Item usage collider" unique_id=611765835]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_su2q6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1964407677]
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=1347147915]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1526.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI" unique_id=1833918474]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LSpacer" type="Control" parent="CanvasLayer/UI/HBoxContainer" unique_id=1811335900]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="HAND" parent="CanvasLayer/UI/HBoxContainer" unique_id=306269446 node_paths=PackedStringArray("deck_source", "discard_source", "bc", "card_text") instance=ExtResource("6_ue60r")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+deck_source = NodePath("../../Deck")
+discard_source = NodePath("../../Discard")
+bc = NodePath("../../../..")
+card_text = NodePath("../../card_text")
+
+[node name="RSpacer" type="Control" parent="CanvasLayer/UI/HBoxContainer" unique_id=450901522]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Card Pivot" type="Control" parent="CanvasLayer/UI" unique_id=1474216332]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = 1929.0
+offset_right = -13.0
+offset_bottom = 1929.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Deck" type="Control" parent="CanvasLayer/UI" unique_id=804933803]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = -193.0
+offset_right = 140.0
+offset_bottom = -153.0
+grow_vertical = 0
+
+[node name="CardVfx" parent="CanvasLayer/UI/Deck" unique_id=646182243 instance=ExtResource("9_epfed")]
+layout_mode = 1
+scale = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/Deck/CardVfx" unique_id=698086943]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 114
+text = "9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Discard" type="Control" parent="CanvasLayer/UI" unique_id=78133498]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -193.0
+offset_right = -100.0
+offset_bottom = -153.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CardVfx" parent="CanvasLayer/UI/Discard" unique_id=1274640283 instance=ExtResource("9_epfed")]
+layout_mode = 1
+scale = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/Discard/CardVfx" unique_id=1663618489]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 114
+text = "9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/UI" unique_id=1732261130]
+layout_mode = 0
+offset_left = 3617.0
+offset_top = 111.0
+offset_right = 4063.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 101
+text = "End Turn"
+
+[node name="card_text" type="Label" parent="CanvasLayer/UI" unique_id=1055832439]
+layout_mode = 0
+offset_left = 33.0
+offset_top = -1501.0
+offset_right = 672.0
+offset_bottom = -1436.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 47
+text = "SAMPLE CARD DESCRIPTION"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/card_text" unique_id=821428898]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -10
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -10
+theme_override_constants/margin_bottom = -10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UI/card_text/MarginContainer" unique_id=2066002643]
+layout_mode = 2
+color = Color(1, 1, 1, 0.4509804)
+
+[connection signal="turn_start" from="." to="Game/Enemy Grids" method="queue_attacks"]
+[connection signal="turn_start" from="." to="Game/Player Grids" method="_reset_turn"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cc2m43djojrb5"]
+
+[ext_resource type="Script" uid="uid://hsj4gdgipx5r" path="res://modules/cards/card_data.gd" id="1_kyll5"]
+[ext_resource type="AudioStream" uid="uid://k5tc1ueovj3a" path="res://Assets/SFX/pistolShot.wav" id="2_lcom3"]
+
+[resource]
+script = ExtResource("1_kyll5")
+name = "Revolver"
+color = Color(0.9570207, 0.47932905, 0.7666255, 1)
+damage_range = Vector2i(6, 0)
+targeting = 1
+sound_effect = ExtResource("2_lcom3")
+perma_stat_change = -1

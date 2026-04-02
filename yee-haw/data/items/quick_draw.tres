@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cuybvjfi855kd"]
+
+[ext_resource type="Script" uid="uid://hsj4gdgipx5r" path="res://modules/cards/card_data.gd" id="1_23km5"]
+[ext_resource type="AudioStream" uid="uid://crwx1y0pq4rha" path="res://Assets/SFX/moveSquare.wav" id="2_t54fo"]
+
+[resource]
+script = ExtResource("1_23km5")
+name = "RED CARD"
+color = Color(0.69, 0.26909998, 0.26909998, 1)
+triggers = null
+type = null
+damage_range = null
+defense = null
+targeting = null
+draw_cards = null
+card_copies = null
+create_cards = null
+create_source = null
+destroy_in_deck = null
+destroy_in_hand = null
+block_card_draw = null
+special = null
+after_play = null
+turn_dmg_change = null
+turn_def_change = null
+sound_effect = ExtResource("2_t54fo")
+perma_stat_change = null

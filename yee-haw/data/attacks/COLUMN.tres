@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://nuuilqo1yuo3"]
+
+[ext_resource type="Script" uid="uid://hsj4gdgipx5r" path="res://modules/cards/card_data.gd" id="1_k8mi1"]
+[ext_resource type="AudioStream" uid="uid://crwx1y0pq4rha" path="res://Assets/SFX/moveSquare.wav" id="2_qw5tt"]
+
+[resource]
+script = ExtResource("1_k8mi1")
+name = "COLUMN"
+color = Color(0.6813952, 0.708028, 0, 1)
+damage_range = Vector2i(1, 0)
+targeting = 2
+create_source = 2
+sound_effect = ExtResource("2_qw5tt")

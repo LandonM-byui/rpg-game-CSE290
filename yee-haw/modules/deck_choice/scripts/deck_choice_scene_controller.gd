@@ -13,10 +13,10 @@ var _current_choice : int
 
 @export var valid_decks : Array[DeckPreset]
 @export var deck_display_container : Control
-@export var card_back_display : CardBack
+@export var card_back_display : CardVfx
 @export var deck_name_label : Label
 
-@onready var _small_card_prefab : PackedScene = preload(CRef.SMALL_CARD_PREFAB)
+@onready var _small_card_prefab : PackedScene = preload(CRef.CARD_VFX_PREFAB)
 
 @export var force_reload_vfx: bool:
 	get: return false
@@ -44,16 +44,13 @@ func _update_vfx() -> void:
 	for cd in deck.base_cards:
 		for _i in range(deck.base_cards[cd]):
 			_add_card_to_group(cd)
-	for cd in deck.base_hero.included_cards:
-		for _i in range(deck.base_hero.included_cards[cd]):
-			_add_card_to_group(cd)
 	
-	card_back_display.data = deck
+	card_back_display.initialize(deck.color, "")
 	deck_name_label.text = deck.name
 
 func _add_card_to_group(data: CardData) -> void:
-	var card := _small_card_prefab.instantiate() as SmallCard
-	card.data = data
+	var card := _small_card_prefab.instantiate() as CardVfx
+	card.initialize(data.color, data.name)
 	deck_display_container.add_child(card)
 	card.owner = deck_display_container.owner
 
@@ -96,9 +93,6 @@ func _save_deck_to_project(pd: ProjectData) -> void:
 	
 	for cd in deck.base_cards:
 		for _i in range(deck.base_cards[cd]):
-			pd.add_card_to_deck(cd)
-	for cd in deck.base_hero.included_cards:
-		for _i in range(deck.base_hero.included_cards[cd]):
 			pd.add_card_to_deck(cd)
 	
 	pd.deck_preset = deck

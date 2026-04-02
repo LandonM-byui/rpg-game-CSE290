@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ck0qj3qheef65"]
+
+[ext_resource type="Script" uid="uid://dnovhrvbgshwb" path="res://modules/battle/row_node_ref.gd" id="1_r4q3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aivvq"]
+size = Vector2(850, 252)
+
+[node name="EnemyGridRow" type="StaticBody2D" unique_id=206498599]
+collision_layer = 32
+collision_mask = 32
+script = ExtResource("1_r4q3n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439432105]
+scale = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_aivvq")

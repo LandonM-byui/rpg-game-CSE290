@@ -1,0 +1,61 @@
+EFFECT PLANNING:
+	IHook : Context hook for an action sequence
+		[Before, After]
+	IContext : Pure data
+	IPostContext : Data describing the result of the action
+	IEffect : Effect container
+	IModifier : Alters the context data
+	ICondition : Special conditions that are tied to context
+	ISystem: Translates and modifies data in a consistent way
+
+Hooks:
+	attack_builder
+	damage
+	attack_result
+	card_draw
+	card_discard
+	card_removed
+	card_destroyed
+
+Modular System
+
+IHook:
+	ICondition		Condition to apply modifier
+	IContext		Hook preaction context
+	IPostContext	Hook postaction context
+	IModifier		What is being changed
+	SustainHook		Null or defines sustainment
+
+SustainHook:
+	Duration
+	CounterHook
+	KillCondition
+
+general purpose selection:
+
+
+Context:
+get_hook_id() -> String
+effects work out-of-box
+- conditions
+- parameters
+
+Effect:
+	target_context
+	modifiers : Arr
+	conditions : Arr
+	
+	sustain_conig | None
+
+Modifiers:
+Auto-access parameters, choose a parameter by name to alter
+	int: add/set
+	float: add/set
+	bool: set
+	enum: set
+	resource: set
+
+Conditions:
+	flags: is/nt present
+	bool == expected
+	counter check

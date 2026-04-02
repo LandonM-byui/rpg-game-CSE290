@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DeckPreset" format=3 uid="uid://d321m6bx64j5w"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_17b4l"]
+[ext_resource type="Resource" uid="uid://nuuilqo1yuo3" path="res://data/attacks/COLUMN.tres" id="2_lg87f"]
+[ext_resource type="Script" uid="uid://b5edudh4ld3ja" path="res://modules/deck_choice/scripts/deck_preset.gd" id="2_qr5kg"]
+[ext_resource type="Resource" uid="uid://bg0teixro6jf8" path="res://data/attacks/ROW.tres" id="3_085cn"]
+
+[resource]
+script = ExtResource("2_qr5kg")
+name = "ATTACK TYPE DECK"
+base_cards = Dictionary[ExtResource("1_17b4l"), int]({
+ExtResource("2_lg87f"): 2,
+ExtResource("3_085cn"): 2
+})
+color = Color(1, 0, 0.49019608, 1)
+metadata/_custom_type_script = "uid://b5edudh4ld3ja"

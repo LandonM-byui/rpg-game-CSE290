@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyTypePreset" format=3 uid="uid://g2ha2c1r47b5"]
+
+[ext_resource type="Script" uid="uid://dqwwgmpb7ynm7" path="res://modules/enemy_grid_neils/enemy_type_preset/scripts/create_enemy_type_preset_class.gd" id="1_83qxk"]
+[ext_resource type="Resource" uid="uid://d18mu2dqio58c" path="res://modules/enemy_grid_neils/TEST_enemies/data/two.tres" id="2_eliad"]
+[ext_resource type="Resource" uid="uid://cnqrvtobn67v2" path="res://modules/enemy_grid_neils/TEST_enemies/Four.tres" id="3_3lnxj"]
+[ext_resource type="Resource" uid="uid://dtlu2x53poiu7" path="res://modules/enemy_grid_neils/TEST_enemies/data/SIX.tres" id="4_4lt5b"]
+[ext_resource type="Resource" uid="uid://d3bdjwby3yikj" path="res://modules/enemy_grid_neils/TEST_enemies/data/Ellen.tres" id="5_aaxnr"]
+
+[resource]
+script = ExtResource("1_83qxk")
+type1 = ExtResource("2_eliad")
+type2 = ExtResource("3_3lnxj")
+type3 = ExtResource("4_4lt5b")
+type4 = ExtResource("5_aaxnr")
+metadata/_custom_type_script = "uid://dqwwgmpb7ynm7"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bpxy5q0mpar7q"]
+
+[ext_resource type="Script" uid="uid://47wak76myq0k" path="res://modules/cards/card_data.gd" id="1_r73io"]
+
+[resource]
+script = ExtResource("1_r73io")
+name = "Retreat Shot"
+color = Color(0.6873433, 0.6169693, 0.9121116, 1)
+damage_range = Vector2i(8, 0)
+defense = 3
+targeting = 1
+special = true
+after_play = 2
+metadata/_custom_type_script = "uid://47wak76myq0k"
