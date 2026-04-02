@@ -3,11 +3,11 @@
 [ext_resource type="Resource" uid="uid://ct5djqitmjyox" path="res://modules/enemy_grid_neils/final_enemies/data/NO.tres" id="1_uxnp0"]
 [ext_resource type="Script" uid="uid://blk6hbrougjkp" path="res://modules/enemy_grid_neils/enemy_layout_preset/scripts/create_enemy_layout_class.gd" id="2_bcju0"]
 [ext_resource type="Resource" uid="uid://biyjqfkim7psr" path="res://modules/enemy_grid_neils/final_enemies/data/Weasel.tres" id="2_bhkj3"]
-[ext_resource type="Resource" uid="uid://egf8mewt52i0" path="res://modules/enemy_grid_neils/final_enemies/data/SeaSlug.tres" id="3_blc56"]
+[ext_resource type="Resource" uid="uid://bytsken35vb3s" path="res://modules/enemy_grid_neils/final_enemies/data/Lumostrich.tres" id="3_bhkj3"]
 
 [resource]
 script = ExtResource("2_bcju0")
-enemy2_position = ExtResource("3_blc56")
+enemy2_position = ExtResource("3_bhkj3")
 enemy11_position = ExtResource("2_bhkj3")
 enemy14_position = ExtResource("2_bhkj3")
 layout = null

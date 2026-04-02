@@ -18,12 +18,10 @@ var approved_enemy_preset5 = preload("res://modules/enemy_grid_neils/enemy_type_
 var type_presets : Array = [approved_enemy_preset1, approved_enemy_preset2, approved_enemy_preset3, 
 approved_enemy_preset4, approved_enemy_preset5]
 
-@export var preset_list : Array[String] = ["res://modules/enemy_grid_neils/enemy_layout_preset/data/OneLumostrich.tres",
-											"res://modules/enemy_grid_neils/enemy_layout_preset/data/twoLumostriches.tres",
+@export var preset_list : Array[String] = ["res://modules/enemy_grid_neils/enemy_layout_preset/data/twoLumostriches.tres",
 											"res://modules/enemy_grid_neils/enemy_layout_preset/data/1L,1S,1W.tres", 
 											"res://modules/enemy_grid_neils/enemy_layout_preset/data/1L,2S.tres",
-											"res://modules/enemy_grid_neils/enemy_layout_preset/data/2W,1S.tres", 
-											"res://modules/enemy_grid_neils/enemy_layout_preset/data/1L,1S,1W.tres",]
+											"res://modules/enemy_grid_neils/enemy_layout_preset/data/2W,1S.tres" ]
 
 var layout
 
